@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		334DCEDA2259E9E600043AAF /* KMTileRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCED92259E9E600043AAF /* KMTileRenderer.swift */; };
+		334DCEDC2259EB0700043AAF /* tiles in Resources */ = {isa = PBXBuildFile; fileRef = 334DCEDB2259EB0700043AAF /* tiles */; };
+		334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCEDF225A059700043AAF /* MenuViewController.swift */; };
+		334DCEE4225A07FA00043AAF /* KMSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334DCEE3225A07FA00043AAF /* KMSlider.xib */; };
+		334DCEE6225A086800043AAF /* KMSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCEE5225A086800043AAF /* KMSlider.swift */; };
+		338575122258F9200047D467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338575112258F9200047D467 /* AppDelegate.swift */; };
+		338575142258F9200047D467 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338575132258F9200047D467 /* MapViewController.swift */; };
+		338575172258F9200047D467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338575152258F9200047D467 /* Main.storyboard */; };
+		338575192258F92D0047D467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338575182258F92D0047D467 /* Assets.xcassets */; };
+		3385751C2258F92D0047D467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3385751A2258F92D0047D467 /* LaunchScreen.storyboard */; };
+		BC18203C569CB12E2AD3CDF9 /* Pods_KitchenerMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F51E9658868A3D327C4AD5 /* Pods_KitchenerMap.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		334DCED92259E9E600043AAF /* KMTileRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMTileRenderer.swift; sourceTree = "<group>"; };
+		334DCEDB2259EB0700043AAF /* tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tiles; sourceTree = "<group>"; };
+		334DCEDF225A059700043AAF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		334DCEE3225A07FA00043AAF /* KMSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KMSlider.xib; sourceTree = "<group>"; };
+		334DCEE5225A086800043AAF /* KMSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMSlider.swift; sourceTree = "<group>"; };
+		3385750E2258F9200047D467 /* KitchenerMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitchenerMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338575112258F9200047D467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		338575132258F9200047D467 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		338575162258F9200047D467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		338575182258F92D0047D467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3385751B2258F92D0047D467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3385751D2258F92D0047D467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FF26777AC769553E5ECE228 /* Pods-KitchenerMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitchenerMap.release.xcconfig"; path = "Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap.release.xcconfig"; sourceTree = "<group>"; };
+		951F2ED5D4E99BC21E8028DC /* Pods-KitchenerMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitchenerMap.debug.xcconfig"; path = "Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap.debug.xcconfig"; sourceTree = "<group>"; };
+		B7F51E9658868A3D327C4AD5 /* Pods_KitchenerMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KitchenerMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3385750B2258F9200047D467 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC18203C569CB12E2AD3CDF9 /* Pods_KitchenerMap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2083C9AC9ADF703D5793B6F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7F51E9658868A3D327C4AD5 /* Pods_KitchenerMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		334DCED82259E9C700043AAF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				334DCED92259E9E600043AAF /* KMTileRenderer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		338575052258F91F0047D467 = {
+			isa = PBXGroup;
+			children = (
+				338575102258F9200047D467 /* KitchenerMap */,
+				3385750F2258F9200047D467 /* Products */,
+				B2829102D3BC5DADBCA6C399 /* Pods */,
+				2083C9AC9ADF703D5793B6F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3385750F2258F9200047D467 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3385750E2258F9200047D467 /* KitchenerMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338575102258F9200047D467 /* KitchenerMap */ = {
+			isa = PBXGroup;
+			children = (
+				334DCEDB2259EB0700043AAF /* tiles */,
+				334DCED82259E9C700043AAF /* Utilities */,
+				338575252258F99E0047D467 /* Storyboards */,
+				338575242258F9900047D467 /* CustomViews */,
+				338575232258F9870047D467 /* Controllers */,
+				338575112258F9200047D467 /* AppDelegate.swift */,
+				338575182258F92D0047D467 /* Assets.xcassets */,
+				3385751D2258F92D0047D467 /* Info.plist */,
+			);
+			path = KitchenerMap;
+			sourceTree = "<group>";
+		};
+		338575232258F9870047D467 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				338575132258F9200047D467 /* MapViewController.swift */,
+				334DCEDF225A059700043AAF /* MenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		338575242258F9900047D467 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				334DCEE3225A07FA00043AAF /* KMSlider.xib */,
+				334DCEE5225A086800043AAF /* KMSlider.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		338575252258F99E0047D467 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				338575152258F9200047D467 /* Main.storyboard */,
+				3385751A2258F92D0047D467 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B2829102D3BC5DADBCA6C399 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				951F2ED5D4E99BC21E8028DC /* Pods-KitchenerMap.debug.xcconfig */,
+				5FF26777AC769553E5ECE228 /* Pods-KitchenerMap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3385750D2258F9200047D467 /* KitchenerMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338575202258F92D0047D467 /* Build configuration list for PBXNativeTarget "KitchenerMap" */;
+			buildPhases = (
+				1A9471AC700F5EDC3C8621B4 /* [CP] Check Pods Manifest.lock */,
+				3385750A2258F9200047D467 /* Sources */,
+				3385750B2258F9200047D467 /* Frameworks */,
+				3385750C2258F9200047D467 /* Resources */,
+				9F158EE27908EBE101461763 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KitchenerMap;
+			productName = KitchenerMap;
+			productReference = 3385750E2258F9200047D467 /* KitchenerMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338575062258F91F0047D467 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = GiorgosHadj;
+				TargetAttributes = {
+					3385750D2258F9200047D467 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 338575092258F91F0047D467 /* Build configuration list for PBXProject "KitchenerMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 338575052258F91F0047D467;
+			productRefGroup = 3385750F2258F9200047D467 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3385750D2258F9200047D467 /* KitchenerMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3385750C2258F9200047D467 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3385751C2258F92D0047D467 /* LaunchScreen.storyboard in Resources */,
+				338575192258F92D0047D467 /* Assets.xcassets in Resources */,
+				334DCEDC2259EB0700043AAF /* tiles in Resources */,
+				334DCEE4225A07FA00043AAF /* KMSlider.xib in Resources */,
+				338575172258F9200047D467 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A9471AC700F5EDC3C8621B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KitchenerMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F158EE27908EBE101461763 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3385750A2258F9200047D467 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338575142258F9200047D467 /* MapViewController.swift in Sources */,
+				338575122258F9200047D467 /* AppDelegate.swift in Sources */,
+				334DCEE6225A086800043AAF /* KMSlider.swift in Sources */,
+				334DCEDA2259E9E600043AAF /* KMTileRenderer.swift in Sources */,
+				334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		338575152258F9200047D467 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338575162258F9200047D467 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3385751A2258F92D0047D467 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3385751B2258F92D0047D467 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3385751E2258F92D0047D467 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3385751F2258F92D0047D467 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		338575212258F92D0047D467 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 951F2ED5D4E99BC21E8028DC /* Pods-KitchenerMap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DF476CVYQM;
+				INFOPLIST_FILE = KitchenerMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hua.KitchenerMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		338575222258F92D0047D467 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF26777AC769553E5ECE228 /* Pods-KitchenerMap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DF476CVYQM;
+				INFOPLIST_FILE = KitchenerMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hua.KitchenerMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338575092258F91F0047D467 /* Build configuration list for PBXProject "KitchenerMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3385751E2258F92D0047D467 /* Debug */,
+				3385751F2258F92D0047D467 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338575202258F92D0047D467 /* Build configuration list for PBXNativeTarget "KitchenerMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338575212258F92D0047D467 /* Debug */,
+				338575222258F92D0047D467 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 338575062258F91F0047D467 /* Project object */;
+}
