@@ -55,12 +55,19 @@ class MapViewController: UIViewController {
     }
 
     private func setupTileRenderer() {
-        let overlay = KMTileRenderer()
+//        let overlay = KMTileRendererLocal()
+//        overlay.canReplaceMapContent = false
+//        mapView.addOverlay(overlay, level: MKOverlayLevel.aboveLabels)
+//        tileRenderer = MKTileOverlayRenderer(tileOverlay: overlay)
+//        overlay.minimumZ = 15
+//        overlay.maximumZ = 17
+        
+        let template = "https://gaia.hua.gr/tms/kitchener2/test/{z}/{x}/{y}.png"
+        let overlay = MKTileOverlay(urlTemplate: template)
         overlay.canReplaceMapContent = false
-        mapView.addOverlay(overlay, level: MKOverlayLevel.aboveLabels)
+        overlay.isGeometryFlipped = true
+        mapView.addOverlay(overlay, level: .aboveLabels)
         tileRenderer = MKTileOverlayRenderer(tileOverlay: overlay)
-        overlay.minimumZ = 15
-        overlay.maximumZ = 17
     }
     
     @objc private func toggleDrawer() {
