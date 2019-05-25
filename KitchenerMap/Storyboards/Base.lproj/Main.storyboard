@@ -18,18 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M9a-YW-TGd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                            </mapView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bOB-5e-ymZ">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOB-5e-ymZ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQB-ee-uqc" customClass="KMSlider" customModule="KitchenerMap" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="862" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="862" width="414" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cGL-4E-ERr"/>
+                                    <constraint firstAttribute="height" constant="44" id="cGL-4E-ERr"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-BS-rvS">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
@@ -64,16 +66,12 @@
                             <constraint firstItem="GQB-ee-uqc" firstAttribute="leading" secondItem="0ga-6C-ofl" secondAttribute="trailing" id="Dig-Qe-YGw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GQB-ee-uqc" secondAttribute="trailing" id="E5Q-t5-X1i"/>
                             <constraint firstItem="z4A-BS-rvS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I8Y-0j-zQN"/>
-                            <constraint firstItem="M9a-YW-TGd" firstAttribute="top" secondItem="bOB-5e-ymZ" secondAttribute="top" id="J5t-Tq-Qs3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z4A-BS-rvS" secondAttribute="bottom" id="NJY-Ur-O3f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z4A-BS-rvS" secondAttribute="trailing" id="SeA-kL-1yx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bOB-5e-ymZ" secondAttribute="trailing" id="Tha-Z8-Bau"/>
-                            <constraint firstItem="M9a-YW-TGd" firstAttribute="trailing" secondItem="bOB-5e-ymZ" secondAttribute="trailing" id="UVp-2D-LQJ"/>
                             <constraint firstItem="bOB-5e-ymZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yl3-XH-Fra"/>
-                            <constraint firstItem="M9a-YW-TGd" firstAttribute="leading" secondItem="bOB-5e-ymZ" secondAttribute="leading" id="Zii-gJ-ZMM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ga-6C-ofl" secondAttribute="bottom" id="hhP-n2-5tA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GQB-ee-uqc" secondAttribute="top" id="hww-KP-9mQ"/>
-                            <constraint firstItem="M9a-YW-TGd" firstAttribute="bottom" secondItem="bOB-5e-ymZ" secondAttribute="bottom" id="nUd-LC-ITe"/>
                             <constraint firstItem="z4A-BS-rvS" firstAttribute="leading" secondItem="0ga-6C-ofl" secondAttribute="trailing" id="sFq-i3-nhR"/>
                             <constraint firstItem="0ga-6C-ofl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="trx-LS-1ps"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bOB-5e-ymZ" secondAttribute="bottom" id="tx3-Yl-hW5"/>
@@ -85,7 +83,6 @@
                         <outlet property="lefMenuContainer" destination="0ga-6C-ofl" id="JCz-bD-g4k"/>
                         <outlet property="leftMenuTrailingConstraint" destination="1oI-iY-8aF" id="k7p-WH-kq3"/>
                         <outlet property="mapView" destination="bOB-5e-ymZ" id="OI7-zc-rzm"/>
-                        <outlet property="mapViewDefault" destination="M9a-YW-TGd" id="sbQ-Vh-rHe"/>
                         <outlet property="menuBackground" destination="z4A-BS-rvS" id="Yka-hF-3Ae"/>
                         <outlet property="slider" destination="GQB-ee-uqc" id="J36-1g-I2U"/>
                         <outlet property="sliderTopConstraint" destination="hww-KP-9mQ" id="gFt-LQ-Isi"/>

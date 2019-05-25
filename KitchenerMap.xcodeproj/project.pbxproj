@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33390D05229948C40002B020 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33390D04229948C40002B020 /* UserAnnotation.swift */; };
 		334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCED92259E9E600043AAF /* KMTileRendererLocal.swift */; };
 		334DCEDC2259EB0700043AAF /* tiles in Resources */ = {isa = PBXBuildFile; fileRef = 334DCEDB2259EB0700043AAF /* tiles */; };
 		334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCEDF225A059700043AAF /* MenuViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33390D04229948C40002B020 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		334DCED92259E9E600043AAF /* KMTileRendererLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMTileRendererLocal.swift; sourceTree = "<group>"; };
 		334DCEDB2259EB0700043AAF /* tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tiles; sourceTree = "<group>"; };
 		334DCEDF225A059700043AAF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				334DCEE3225A07FA00043AAF /* KMSlider.xib */,
 				334DCEE5225A086800043AAF /* KMSlider.swift */,
+				33390D04229948C40002B020 /* UserAnnotation.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				338575142258F9200047D467 /* MapViewController.swift in Sources */,
 				338575122258F9200047D467 /* AppDelegate.swift in Sources */,
 				334DCEE6225A086800043AAF /* KMSlider.swift in Sources */,
+				33390D05229948C40002B020 /* UserAnnotation.swift in Sources */,
 				334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */,
 				334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */,
 			);
@@ -338,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -393,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

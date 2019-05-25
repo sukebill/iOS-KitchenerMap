@@ -12,7 +12,6 @@ import MapKit
 
 class MapViewController: UIViewController {
     
-    @IBOutlet weak var mapViewDefault: MKMapView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var leftMenuTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var lefMenuContainer: UIView!
@@ -21,6 +20,10 @@ class MapViewController: UIViewController {
     @IBOutlet weak var sliderTopConstraint: NSLayoutConstraint!
     
     var tileRenderer: MKTileOverlayRenderer!
+    private let cyprusCenter = CLLocationCoordinate2D(latitude: 34.997045, longitude: 33.190684)
+    private let cyprusNEBound = CLLocationCoordinate2D(latitude: 35.831610, longitude: 34.718857)
+    private let cyprusSWBound = CLLocationCoordinate2D(latitude: 34.510659, longitude: 32.266127)
+    private var userAnnotation: UserAnnotation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +41,15 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.showsScale = true
-        mapViewDefault.showsUserLocation = true
-        mapViewDefault.showsScale = true
-        centerMapOnLocation(location: CLLocation(latitude: 37.958294, longitude: 23.699387), map: mapView)
-        centerMapOnLocation(location: CLLocation(latitude: 37.958294, longitude: 23.699387), map: mapViewDefault)
+        centerMapOnLocation(location: cyprusCenter, map: mapView)
+        let uilgr = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
+        mapView.addGestureRecognizer(uilgr)
     }
     
-    private func centerMapOnLocation(location: CLLocation, map: MKMapView) {
-        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    private func centerMapOnLocation(location: CLLocationCoordinate2D, map: MKMapView) {
+        let region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
         DispatchQueue.main.async {
             map.setRegion(region, animated: true)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = location.coordinate
-            map.addAnnotation(annotation)
         }
     }
 
@@ -89,6 +88,47 @@ class MapViewController: UIViewController {
     @IBAction func onMenuBackgroundTapped(_ sender: Any) {
         closeDrawer()
     }
+    
+    @objc private func addAnnotation(gestureRecognizer: UIGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            let touchPoint = gestureRecognizer.location(in: mapView)
+            let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+            let annotation = UserAnnotation(title: "", coordinate: newCoordinates)
+            if userAnnotation != nil {
+                mapView.removeAnnotation(userAnnotation!)
+            }
+            CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: newCoordinates.latitude, longitude: newCoordinates.longitude), completionHandler: {(placemarks, error) -> Void in
+                guard let placemarks = placemarks else {
+                    self.addUserAnnotationOnMap(annotation)
+                    return
+                }
+                if placemarks.count > 0 {
+                    let pm = placemarks[0]
+                    // not all places have thoroughfare & subThoroughfare so validate those values
+                    annotation.title = pm.locality
+                    if annotation.title != nil, let sub = pm.subLocality {
+                        annotation.title = annotation.title?.appending(", \(sub)")
+                    }
+                    self.addUserAnnotationOnMap(annotation)
+                } else {
+                    self.addUserAnnotationOnMap(annotation)
+                }
+            })
+        }
+    }
+    
+    private func addUserAnnotationOnMap(_ annotation: UserAnnotation) {
+        if annotation.title == nil {
+            annotation.title = "Θέλετε να αφήσετε ένα σχόλιο ;"
+        }else {
+            annotation.subtitle = "Θέλετε να αφήσετε ένα σχόλιο ;"
+        }
+        userAnnotation = annotation
+        mapView.addAnnotation(annotation)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.mapView.selectAnnotation(annotation, animated: true)
+        }
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -97,8 +137,27 @@ extension MapViewController: MKMapViewDelegate {
         return tileRenderer
     }
     
-    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-        mapViewDefault.setRegion(mapView.region, animated: false)
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? UserAnnotation, userAnnotation == annotation else {
+            return nil
+        }
+        let identifier = "userMarker"
+        var view: MKMarkerAnnotationView
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: 0, y: 0)
+            view.rightCalloutAccessoryView = UIButton(type: .contactAdd)
+        }
+        return view
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        //TODO: openj screen for comment and photo
     }
 }
 
@@ -108,7 +167,7 @@ extension MapViewController: MenuDelegate {
         closeDrawer()
         openSlider()
         slider.onChangeAction = { newValue in
-            self.mapView.alpha = CGFloat(newValue)
+            self.tileRenderer.alpha = CGFloat(newValue)
         }
         slider.onIdleAction = {
             self.closeSlider()
@@ -120,7 +179,7 @@ extension MapViewController {
     
     private func openSlider() {
         slider.fadeIn(duration: 0.2)
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: {
             self.sliderTopConstraint.constant = self.slider.height
             self.view.layoutIfNeeded()
         })
@@ -129,7 +188,7 @@ extension MapViewController {
     
     private func closeSlider() {
         slider.fadeOut(duration: 0.2)
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseOut], animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: {
             self.sliderTopConstraint.constant = 0
             self.view.layoutIfNeeded()
         })
