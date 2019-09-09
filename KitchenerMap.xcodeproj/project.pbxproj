@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33390D05229948C40002B020 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33390D04229948C40002B020 /* UserAnnotation.swift */; };
+		33390D0722995CFD0002B020 /* TakeCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33390D0622995CFD0002B020 /* TakeCommentViewController.swift */; };
 		334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCED92259E9E600043AAF /* KMTileRendererLocal.swift */; };
 		334DCEDC2259EB0700043AAF /* tiles in Resources */ = {isa = PBXBuildFile; fileRef = 334DCEDB2259EB0700043AAF /* tiles */; };
 		334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCEDF225A059700043AAF /* MenuViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		33390D04229948C40002B020 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
+		33390D0622995CFD0002B020 /* TakeCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCommentViewController.swift; sourceTree = "<group>"; };
 		334DCED92259E9E600043AAF /* KMTileRendererLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMTileRendererLocal.swift; sourceTree = "<group>"; };
 		334DCEDB2259EB0700043AAF /* tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tiles; sourceTree = "<group>"; };
 		334DCEDF225A059700043AAF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				338575132258F9200047D467 /* MapViewController.swift */,
 				334DCEDF225A059700043AAF /* MenuViewController.swift */,
+				33390D0622995CFD0002B020 /* TakeCommentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				3385750B2258F9200047D467 /* Frameworks */,
 				3385750C2258F9200047D467 /* Resources */,
 				9F158EE27908EBE101461763 /* [CP] Embed Pods Frameworks */,
+				EB86B2314796B5073F36DB60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +257,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB86B2314796B5073F36DB60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,6 +292,7 @@
 				33390D05229948C40002B020 /* UserAnnotation.swift in Sources */,
 				334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */,
 				334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */,
+				33390D0722995CFD0002B020 /* TakeCommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

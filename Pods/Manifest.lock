@@ -1,4 +1,9 @@
 PODS:
+  - GoogleMaps (3.0.3):
+    - GoogleMaps/Maps (= 3.0.3)
+  - GoogleMaps/Base (3.0.3)
+  - GoogleMaps/Maps (3.0.3):
+    - GoogleMaps/Base
   - SwifterSwift (5.0.0):
     - SwifterSwift/AppKit (= 5.0.0)
     - SwifterSwift/CoreGraphics (= 5.0.0)
@@ -20,15 +25,18 @@ PODS:
   - SwifterSwift/UIKit (5.0.0)
 
 DEPENDENCIES:
+  - GoogleMaps
   - SwifterSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GoogleMaps
     - SwifterSwift
 
 SPEC CHECKSUMS:
+  GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
 
-PODFILE CHECKSUM: a82392be5ec34d6e7389c72b1c5dfd9dd53180f9
+PODFILE CHECKSUM: ad28ca1fae27ff479d808ca3c4ea78584dbc5eaa
 
 COCOAPODS: 1.6.1
