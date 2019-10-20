@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwifterSwift
 
 struct LayersHelper {
     static let shared = LayersHelper()
@@ -24,6 +25,15 @@ struct LayersHelper {
                                 "kitchener:toponym_po"
     private(set) var data: [Base] = []
     var layers: [String] = []
+    var formattedLayers: String {
+        var result = ""
+        for item in layers {
+            result += item + ","
+        }
+        result = result.replacingOccurrences(of: "null,", with: "")
+        result = result.removingSuffix(",")
+        return result
+    }
     
     private init() {
         do {

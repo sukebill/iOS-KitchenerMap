@@ -30,6 +30,7 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = LocaleHelper.shared.language == .greek ? "Xάρτης Kitchener" : "Kitchener Map"
         setupTileRenderer()
         getCardfromGeoserver()
         setupMapView()
