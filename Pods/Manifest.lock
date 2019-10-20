@@ -1,4 +1,5 @@
 PODS:
+  - CollapsibleTableSectionViewController (2.0.1)
   - GoogleMaps (3.0.3):
     - GoogleMaps/Maps (= 3.0.3)
   - GoogleMaps/Base (3.0.3)
@@ -25,18 +26,21 @@ PODS:
   - SwifterSwift/UIKit (5.0.0)
 
 DEPENDENCIES:
+  - CollapsibleTableSectionViewController
   - GoogleMaps
   - SwifterSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CollapsibleTableSectionViewController
     - GoogleMaps
     - SwifterSwift
 
 SPEC CHECKSUMS:
+  CollapsibleTableSectionViewController: 40d97d684d870044522a0dc29b128a6acaaa99df
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
 
-PODFILE CHECKSUM: ad28ca1fae27ff479d808ca3c4ea78584dbc5eaa
+PODFILE CHECKSUM: f1c9834810e114cc122c3f0ebce593fb9f355ff4
 
 COCOAPODS: 1.6.1

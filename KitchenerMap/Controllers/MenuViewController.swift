@@ -13,15 +13,60 @@ protocol MenuDelegate: class {
 }
 
 class MenuViewController: UIViewController {
+    @IBOutlet weak var languaheLabel: UILabel!
+    @IBOutlet weak var mapLayersButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var aboutButton: UIButton!
+    @IBOutlet weak var transparencyButton: UIButton!
+    @IBOutlet weak var feedbackButton: UIButton!
+    @IBOutlet weak var feedbackView: UIView!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var delegate: MenuDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    @IBAction func onGreekTapped(_ sender: Any) {
+        LocaleHelper.shared.saveLanguage(.greek)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController")
+        parent?.navigationController?.setViewControllers([vc], animated: true)
+    }
+    
+    @IBAction func onEnglishTapped(_ sender: Any) {
+        LocaleHelper.shared.saveLanguage(.other)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController")
+        parent?.navigationController?.setViewControllers([vc], animated: true)
+    }
+    
+    @IBAction func onLayersTapped(_ sender: Any) {
+    }
+    
+    @IBAction func onSearchTapped(_ sender: Any) {
+    }
+    
+    @IBAction func onAboutTapped(_ sender: Any) {
     }
     
     @IBAction func onTransparencyTapped(_ sender: Any) {
         delegate?.didTapFilter()
+    }
+    
+    @IBAction func onFeddbackTapped(_ sender: Any) {
+        titleLabel.text = LocaleHelper.shared.language == .greek ? "Ανατροφοδότηση" : "Feedback"
+        topView.isHidden = false
+        feedbackView.isHidden = false
+    }
+    
+    @IBAction func onCancelTapped(_ sender: Any) {
+        topView.isHidden = true
+        [feedbackView].forEach {
+            $0?.isHidden = true
+        }
     }
 }

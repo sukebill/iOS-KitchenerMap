@@ -16,6 +16,7 @@
 		334122CE235C6A4900DB0F19 /* LocaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122CD235C6A4900DB0F19 /* LocaleHelper.swift */; };
 		334122D0235C6D0E00DB0F19 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122CF235C6D0E00DB0F19 /* SearchResult.swift */; };
 		334122D2235C6DC400DB0F19 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122D1235C6DC400DB0F19 /* Feature.swift */; };
+		334122D4235C858E00DB0F19 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122D3235C858E00DB0F19 /* FeedbackViewController.swift */; };
 		334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCED92259E9E600043AAF /* KMTileRendererLocal.swift */; };
 		334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCEDF225A059700043AAF /* MenuViewController.swift */; };
 		334DCEE4225A07FA00043AAF /* KMSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334DCEE3225A07FA00043AAF /* KMSlider.xib */; };
@@ -39,6 +40,7 @@
 		334122CD235C6A4900DB0F19 /* LocaleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleHelper.swift; sourceTree = "<group>"; };
 		334122CF235C6D0E00DB0F19 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		334122D1235C6DC400DB0F19 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		334122D3235C858E00DB0F19 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		334DCED92259E9E600043AAF /* KMTileRendererLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMTileRendererLocal.swift; sourceTree = "<group>"; };
 		334DCEDF225A059700043AAF /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		334DCEE3225A07FA00043AAF /* KMSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KMSlider.xib; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				338575132258F9200047D467 /* MapViewController.swift */,
 				334DCEDF225A059700043AAF /* MenuViewController.swift */,
 				33390D0622995CFD0002B020 /* TakeCommentViewController.swift */,
+				334122D3235C858E00DB0F19 /* FeedbackViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,12 +278,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +333,7 @@
 				334122D0235C6D0E00DB0F19 /* SearchResult.swift in Sources */,
 				33F5926C235B10AF00B9EC64 /* WmsTileOverlay.swift in Sources */,
 				334122C5235C524500DB0F19 /* WMSHelper.swift in Sources */,
+				334122D4235C858E00DB0F19 /* FeedbackViewController.swift in Sources */,
 				33390D0722995CFD0002B020 /* TakeCommentViewController.swift in Sources */,
 				334122D2235C6DC400DB0F19 /* Feature.swift in Sources */,
 				334122C7235C544B00DB0F19 /* LayersHelper.swift in Sources */,

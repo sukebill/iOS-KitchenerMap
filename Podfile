@@ -6,6 +6,5 @@ target 'KitchenerMap' do
   use_frameworks!
   pod 'SwifterSwift'
   pod 'GoogleMaps'
-  # Pods for KitchenerMap
-
+  pod 'CollapsibleTableSectionViewController'
 end
