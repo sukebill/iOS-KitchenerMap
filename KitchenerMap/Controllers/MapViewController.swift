@@ -63,6 +63,7 @@ class MapViewController: UIViewController {
             urlkin = urlkin.replacingOccurrences(of: "%e", with: "\(bbox.bottom)")
             urlkin = urlkin.replacingOccurrences(of: "%d", with: "\(bbox.right)")
             urlkin = urlkin.replacingOccurrences(of: "%g", with: "\(bbox.top)")
+            urlkin = urlkin.replacingOccurrences(of: "%s", with: LayersHelper.shared.formattedLayers)
             return URL(string: urlkin)
         }
         
@@ -167,6 +168,13 @@ extension MapViewController: MenuDelegate {
         slider.onIdleAction = {
             self.closeSlider()
         }
+    }
+    
+    func didSelectMapLayer() {
+        layerWMS?.clearTileCache()
+        layerWMS?.map = nil
+        layerWMS = nil
+        getCardfromGeoserver()
     }
 }
 

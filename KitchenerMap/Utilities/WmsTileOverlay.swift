@@ -9,7 +9,7 @@ extension String {
 }
 
 class WMSTileOverlay: GMSTileLayer {
-    var url: String =  WMSHelper.shared.mapLayersUrl
+    var url: String {return WMSHelper.shared.mapLayersUrl }
     var image: UIImage?
     
     override init() {
@@ -31,7 +31,10 @@ class WMSTileOverlay: GMSTileLayer {
     }
     
     func bboxFromXYZ(_ x: UInt, y: UInt, z: UInt) -> BBox {
-        let bbox = BBox(left: mercatorXofLongitude(xOfColumn(x,zoom: z)), bottom: mercatorYofLatitude(yOfRow(y+1,zoom: z)), right: mercatorXofLongitude(xOfColumn(x+1,zoom: z)), top: mercatorYofLatitude(yOfRow(y,zoom: z)))
+        let bbox = BBox(left: mercatorXofLongitude(xOfColumn(x,zoom: z)),
+                        bottom: mercatorYofLatitude(yOfRow(y+1,zoom: z)),
+                        right: mercatorXofLongitude(xOfColumn(x+1,zoom: z)),
+                        top: mercatorYofLatitude(yOfRow(y,zoom: z)))
         return bbox
     }
     
@@ -131,7 +134,6 @@ class WMSTileOverlay: GMSTileLayer {
     func getUrlX(_ x1: UInt, y1: UInt, z1: UInt) -> String {
         let bbox = bboxFromXYZ(x1, y: y1, z: z1)
         let resolvedUrl = "\(self.url)&BBOX=\(bbox.left),\(bbox.bottom),\(bbox.right),\(bbox.top)"
-        //       println("Url tile overlay \(resolvedUrl)")
         
         return resolvedUrl
     }

@@ -1,10 +1,11 @@
 PODS:
-  - CollapsibleTableSectionViewController (2.0.1)
+  - ExpandableCell (1.3.0)
   - GoogleMaps (3.0.3):
     - GoogleMaps/Maps (= 3.0.3)
   - GoogleMaps/Base (3.0.3)
   - GoogleMaps/Maps (3.0.3):
     - GoogleMaps/Base
+  - M13Checkbox (3.3.2)
   - SwifterSwift (5.0.0):
     - SwifterSwift/AppKit (= 5.0.0)
     - SwifterSwift/CoreGraphics (= 5.0.0)
@@ -26,21 +27,24 @@ PODS:
   - SwifterSwift/UIKit (5.0.0)
 
 DEPENDENCIES:
-  - CollapsibleTableSectionViewController
+  - ExpandableCell
   - GoogleMaps
+  - M13Checkbox
   - SwifterSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CollapsibleTableSectionViewController
+    - ExpandableCell
     - GoogleMaps
+    - M13Checkbox
     - SwifterSwift
 
 SPEC CHECKSUMS:
-  CollapsibleTableSectionViewController: 40d97d684d870044522a0dc29b128a6acaaa99df
+  ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
+  M13Checkbox: d75dca81d61c9903e7f091f32b35a3254bc97dce
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
 
-PODFILE CHECKSUM: f1c9834810e114cc122c3f0ebce593fb9f355ff4
+PODFILE CHECKSUM: 8a4c10cbb7a961ddaeec57236a109c509a5d310e
 
 COCOAPODS: 1.6.1

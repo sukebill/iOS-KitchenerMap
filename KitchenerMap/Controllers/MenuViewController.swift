@@ -10,6 +10,7 @@ import UIKit
 
 protocol MenuDelegate: class {
     func didTapFilter()
+    func didSelectMapLayer()
 }
 
 class MenuViewController: UIViewController {
@@ -22,12 +23,13 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var feedbackView: UIView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var mapLayersView: UIView!
     
     var delegate: MenuDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mapLayersSetup()
     }
     
     @IBAction func onGreekTapped(_ sender: Any) {
@@ -45,6 +47,9 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onLayersTapped(_ sender: Any) {
+        titleLabel.text = LocaleHelper.shared.language == .greek ? "Χαρτογραφικά επίπεδα" : "Map Layers"
+        topView.isHidden = false
+        mapLayersView.isHidden = false
     }
     
     @IBAction func onSearchTapped(_ sender: Any) {
@@ -65,8 +70,17 @@ class MenuViewController: UIViewController {
     
     @IBAction func onCancelTapped(_ sender: Any) {
         topView.isHidden = true
-        [feedbackView].forEach {
+        [feedbackView, mapLayersView].forEach {
             $0?.isHidden = true
+        }
+    }
+}
+
+extension MenuViewController {
+    private func mapLayersSetup() {
+        let vc = children.filter { $0 is MapLayersViewController }.first as? MapLayersViewController
+        vc?.onMapLayerSelectionChanged = { [weak self] in
+            self?.delegate?.didSelectMapLayer()
         }
     }
 }
