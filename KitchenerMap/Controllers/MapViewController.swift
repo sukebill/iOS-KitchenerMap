@@ -26,6 +26,7 @@ class MapViewController: UIViewController {
     private let cyprusSWBound = CLLocationCoordinate2D(latitude: 34.510659, longitude: 32.266127)
     private var userAnnotation: UserAnnotation?
     private var layer: GMSURLTileLayer?
+    private var secondLayer: GMSURLTileLayer?
     private var layerWMS: GMSURLTileLayer?
 
     override func viewDidLoad() {
@@ -46,7 +47,7 @@ class MapViewController: UIViewController {
     private func setupMapView() {
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
-        mapView.setMinZoom(3, maxZoom: 16)
+        mapView.setMinZoom(7, maxZoom: 17.99)
         centerMapOnLocation(location: cyprusCenter)
 //        let uilgr = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
 //        mapView.addGestureRecognizer(uilgr)
@@ -69,7 +70,7 @@ class MapViewController: UIViewController {
         
         self.layerWMS = GMSURLTileLayer(urlConstructor: urls)
         self.layerWMS?.opacity = 1
-        self.layerWMS?.zIndex = 105
+        self.layerWMS?.zIndex = 200
         self.layerWMS?.tileSize = 256
         self.layerWMS?.map = mapView
     }
@@ -89,6 +90,20 @@ class MapViewController: UIViewController {
         layer?.zIndex = 100
         layer?.tileSize = 256
         layer?.map = mapView
+        setupTileRendererLeukosia()
+    }
+    
+    
+    private func setupTileRendererLeukosia() {
+        let urls: GMSTileURLConstructor = {(x, y, zoom) in
+            let reversedY = Int(pow(Double(2), Double(zoom))) - Int(y) - 1
+            let newTemplate = "https://gaia.hua.gr/tms/kitchener_nicosia_plan/\(zoom)/\(x)/\(reversedY).png"
+            return URL(string: newTemplate)
+        }
+        secondLayer = GMSURLTileLayer(urlConstructor: urls)
+        secondLayer?.zIndex = 101
+        secondLayer?.tileSize = 256
+        secondLayer?.map = mapView
     }
     
     @objc private func toggleDrawer() {
@@ -154,7 +169,21 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        updateNikosiaLayerLevel(mapView)
+    }
 
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        updateNikosiaLayerLevel(mapView)
+    }
+    
+    private func updateNikosiaLayerLevel(_ mapView: GMSMapView) {
+        if (mapView.camera.zoom <= 15) {
+            secondLayer?.opacity = 0
+        } else if let opacity = layer?.opacity {
+            secondLayer?.opacity = opacity
+        }
+    }
 }
 
 extension MapViewController: MenuDelegate {
@@ -164,6 +193,8 @@ extension MapViewController: MenuDelegate {
         openSlider()
         slider.onChangeAction = { newValue in
             self.layer?.opacity = newValue
+            self.updateNikosiaLayerLevel(self.mapView)
+            self.layerWMS?.opacity = newValue
         }
         slider.onIdleAction = {
             self.closeSlider()
@@ -175,6 +206,10 @@ extension MapViewController: MenuDelegate {
         layerWMS?.map = nil
         layerWMS = nil
         getCardfromGeoserver()
+    }
+    
+    func didSelect(feature: Feature) {
+        // TODO: zoom to feature location and open window
     }
 }
 

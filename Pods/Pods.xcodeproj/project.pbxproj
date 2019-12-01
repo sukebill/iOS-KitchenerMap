@@ -19,312 +19,363 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0463D0B2BBF2A5E1A4322E041420C261 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB91B0B8DA60EEACA1FA5C54DD6EFF99 /* CollectionExtensions.swift */; };
-		07102FAD5690B5F51A41817FE92E1CC3 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F51AC8733F3CEAA33D5FD9EE98588 /* UILabelExtensions.swift */; };
-		0BAF7C9012E3E4E2E77AC3B659AF62DC /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDA28933C0EAD009EF541506C09D2C9 /* UIEdgeInsetsExtensions.swift */; };
+		0104B5AA154E780A307232C75776347E /* CharacterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D956A444164A65F72EAEDAC9737414 /* CharacterExtensions.swift */; };
+		03DD3AB4D2E7C0A01F78047EE67F1212 /* Pods-KitchenerMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A3858AAA6DB788B4E277167557E60 /* Pods-KitchenerMap-dummy.m */; };
+		059D92B7BBFBEC53E9A3B6E11C5C3B3A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F5451411987CDE4D358E77A971BED /* Response.swift */; };
+		0652078AAE13B0BAEF82AB6124661BEC /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39A74477380711148AEAF96B015B208 /* UIGestureRecognizerExtensions.swift */; };
+		0A39AF55285A3A4F7CBABB6D822FA4A3 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E156DABC84ECCC57AD7673EEF0270 /* Alamofire.swift */; };
+		0B28AEA191EE8BF61A40C6C8A3444AB8 /* BoolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D3621F87D2883D08461B4EE616CF7 /* BoolExtensions.swift */; };
+		0CD6462266FDC5AC05D8AFF67256994F /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F460EBD72359CDD6856E053E0FA8AF5 /* UserDefaultsExtensions.swift */; };
+		102849973376294B7FF7B675DB8019DE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312BA66298F104FBA0F575B4C763B6C /* UIImageViewExtensions.swift */; };
 		1233A9F39FA94D864F7098BD772EB494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */; };
-		14F212386585118EBACAD3E2E087AA9E /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412CA789F08529CBDA320A950BF8088 /* M13Checkbox-dummy.m */; };
-		19D14CD1C2E37FEBDB364FEE4D711C01 /* MKPolylineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6EB9096CEF9C7F66696B66FF7E9FA8 /* MKPolylineExtensions.swift */; };
-		1B27EFB03111F1DA4960769885E68DB8 /* UIActivityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2515DB644960E5BF22B766EA524BE9E4 /* UIActivityExtensions.swift */; };
-		1B89A58ABD4CD795628EFABFF21E7D40 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9787306E70FC4B8EE91C7E5FC7F30A8 /* UIStoryboardExtensions.swift */; };
-		1B92CF4F6D63DA87FECE672865D14D99 /* SignedNumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B60B61F5542FD0689DCCE7F2FAD98 /* SignedNumericExtensions.swift */; };
+		12AF99F56D707473AD495D245F02F2F0 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1E1FBB99377729D94A3C9F0206173 /* IntExtensions.swift */; };
+		14F212386585118EBACAD3E2E087AA9E /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 016E2702CD0CB031127DC3A7F7A5F29E /* M13Checkbox-dummy.m */; };
+		161EBAA9459E16384C94945DFE96E452 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C99E7F02C6CC32E551D85D1C087558 /* DateExtensions.swift */; };
+		197FCE6A3D5E894C104BC315681DF378 /* UINavigationItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D528A50F2B0EF51AFDA3547627FCB /* UINavigationItemExtensions.swift */; };
+		1D29D2ACADF961F69D32B06FA6A09E28 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26D17D06D0A3E3BAB8D19EF5C10A973 /* Notifications.swift */; };
 		1E9CBFF3D5C52B75B89B97D26E33B1B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D484CFBFE2A7C64F31ED406CB49E7DDE /* UIKit.framework */; };
-		1F168B8E13986A6563797F79D5AEDD2A /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10405CB9CEEA8961F528C60654195DF /* DispatchQueueExtensions.swift */; };
-		22589C4F50CF0E97E8003DF6BFD484F6 /* ExpandableProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AEF00B2C95DB22B66424F504DA39CD /* ExpandableProcessor.swift */; };
-		23F46ECFE2E9000D74E7C09EB31A40B8 /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596C5DEDED605C77CD805B2B6E116246 /* M13CheckboxCheckPathGenerator.swift */; };
-		23FB88573F5D582FB8E1E81F4E151973 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81E2C80A63A2567A2EE8171486178CB /* CLLocationExtensions.swift */; };
-		248FA66AF24DD68A917323A0964C7ACD /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5FCE9F5CF8BB6C578D79FA27DD9CB /* M13CheckboxBounceController.swift */; };
-		2779DA0BBC9CDA756C55A2E3BDE2B1F6 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56808425C247CC0B9471781EBEF97C /* SequenceExtensions.swift */; };
-		2A9C2E7F00D319DBA394C26456E7E752 /* BinaryFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A753D1325C6ED4BB7EC28061E726DB0 /* BinaryFloatingPointExtensions.swift */; };
-		2E2A73CBD78C1442FF7F2535A31D1C8D /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406507F39AAF27A7D312D9CF15624735 /* M13CheckboxGestureRecognizer.swift */; };
-		31D987353A170AE9E50AA5FB887E90BC /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF051BE13CA92546263343F95F1FD7BC /* UIScrollViewExtensions.swift */; };
-		374B392C5557FE99B21B2210B3B305A9 /* Pods-KitchenerMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2336C5194AA74912997A76B0B652593 /* Pods-KitchenerMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383A77EF103AB29A2B4F9A4F8FE1BF9E /* Pods-KitchenerMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A3858AAA6DB788B4E277167557E60 /* Pods-KitchenerMap-dummy.m */; };
-		38B0DD0F6848FC40DAEDB19A470AC00F /* NSViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41EF02CB7DE6525723D186AEFC66DF5 /* NSViewExtensions.swift */; };
-		38D838F0D886FBC8C070637ED538A33C /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172EACECADE9452F6676B9924450FCB /* UIApplicationExtensions.swift */; };
-		3959F2E072E1787F5DD0A14D42BB860E /* SKNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA324F0AB34C432B0FB2542A799F677 /* SKNodeExtensions.swift */; };
-		396466E86C0EBEA41FB87230AF5FD3FF /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB249EE7DA1AC2E0372A1B8CB7DEFB12 /* M13Checkbox+IB.swift */; };
-		3A0AE66A390EC6B9C404EEC2546C86E8 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8114BFE743E983437CB2D87CE1BFC /* ArrayExtensions.swift */; };
-		3A255936358A9742EBFA71DA5B4039FB /* LocaleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE52B4A462A7701EC15888585C191AE /* LocaleExtensions.swift */; };
-		3AFD6D5CD9AE8BEF354B4B4208F23643 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7916B1C410C13B42CACC3AF2ED35397 /* UISearchBarExtensions.swift */; };
-		3C650B4D4C865B43EC5164DF202AC01A /* RandomAccessCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC421888F3234B82B747F6E6BF517CB /* RandomAccessCollectionExtensions.swift */; };
+		20176EF07490B3690D0A010DECFD9887 /* SwifterSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3A39BF7096C3B7A8E6412E8E39CC33 /* SwifterSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		211E5898C10A93B777CD7E3879FD59E2 /* MKPolylineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CA6976283F34F603F34C6F76D07152 /* MKPolylineExtensions.swift */; };
+		22589C4F50CF0E97E8003DF6BFD484F6 /* ExpandableProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A10B3FA5AF25FB40BD042107D69B3EA /* ExpandableProcessor.swift */; };
+		23F46ECFE2E9000D74E7C09EB31A40B8 /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33E0E12756D90CAED681D9891AAD78F /* M13CheckboxCheckPathGenerator.swift */; };
+		248FA66AF24DD68A917323A0964C7ACD /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA3F76622933910BD649C18FA0C227 /* M13CheckboxBounceController.swift */; };
+		27FC5ADD42E638258053B838E0B450D2 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363AA8C5A99DCCA982BDB2A04BF7BC69 /* SequenceExtensions.swift */; };
+		2939A7C5B68608BC055FC4BDBFB541F2 /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB95C851B9614A433FBC15202D31C78C /* CLLocationExtensions.swift */; };
+		2B62004A1D9212D536CC525B27D1A669 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB455B416B08FE7CF8A0C28D099B41D /* UIFontExtensions.swift */; };
+		2DF2A334DE99ED132B27B9A2DA4FE5AC /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1C34BED1BBA7283933AA6004EC50B /* MKMapViewExtensions.swift */; };
+		2E2A73CBD78C1442FF7F2535A31D1C8D /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD72018F14AA100E0C23677F813A45 /* M13CheckboxGestureRecognizer.swift */; };
+		322E453B8FA423E3CE8CF71546206D07 /* NSViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD2DFD40EB7C391BFB1D3D5020BF64 /* NSViewExtensions.swift */; };
+		3544592C14A0479109D2B19B13FC5475 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF285EF789C0BD80F83117FD1E1AA1 /* UIEdgeInsetsExtensions.swift */; };
+		355C18EEC82624A06A6CC93965258E33 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A4950A1F6B06A90E3C23FE13DAA7D4 /* Request.swift */; };
+		36DDFFAB92F5AF6491E82F590B8DB294 /* LocaleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62361DAF95D6C6CD9C3CEE5944E7991 /* LocaleExtensions.swift */; };
+		396466E86C0EBEA41FB87230AF5FD3FF /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62AC187F20DD48918F098AD38D8E9D8 /* M13Checkbox+IB.swift */; };
+		3BD1DAFE1F3E6C9E4EB0F2099B6D6FA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */; };
+		3E0749AF6C51BCF0E4A41CF1D6A76FED /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780575F34BC9A74773D863438E79106 /* DispatchQueue+Alamofire.swift */; };
 		3E1065666685FDAF42E586321470B312 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */; };
-		40628F0AB93C74115A9A753A359B7799 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D549F9B7A37D219576CC0DE72B744D19 /* M13CheckboxController.swift */; };
-		474DC1778921C5F42C4BC8BB2DE758B9 /* SwifterSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0360E7A2CDF70F76FD0BFF547927F29 /* SwifterSwift-dummy.m */; };
-		4C5A8A10DBD24862A532E02005D27F7C /* ExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1995AC7DE5AEDD18AB7A2449348C8F /* ExpandableCell.swift */; };
-		4F1B28FEA34062EC5F2B03C468C3F90D /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F682A5B3FE9DEC4B5CE57FC8E21B4 /* M13CheckboxDotController.swift */; };
-		505F4C9EBB706D5E3B234D22D1952700 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C62CECC636324435D2C938E319315 /* UIButtonExtensions.swift */; };
-		5122ADF16A57C1EC749DEE6B24788CF1 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B9C9C83C56B73E8ADC1D9AB1E4345 /* M13CheckboxFadeController.swift */; };
-		57ACE6FB96EF25A318D52BB77D5C5E84 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB2A44DD54B2E5DD1CEEE3C800B90A /* UITableViewExtensions.swift */; };
-		5C8CC670A555F1DE5D785E76FCAF64C8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB506C08A5D2115E81F87D2070ADF095 /* DateExtensions.swift */; };
-		5CC1433426E960CFDA6682CA4FD4CFE6 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3EA3210D3C60F319B2D973A221E082 /* CalendarExtensions.swift */; };
-		5DEE55BA5808AFB825E2BE76A2CD99EF /* ExpandableCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A7A8E4B36EF136CC7C162D14E16FE5 /* ExpandableCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FDCD0583DD04B854FB0277F566C2BF3 /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4545517DD5D35026B3FFFB820DB4F72 /* MKMapViewExtensions.swift */; };
-		648B3D83676961B4251C9FF7D5619BC4 /* ComparableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598EE17B8AE4CB4508831037820FEA56 /* ComparableExtensions.swift */; };
-		6600092F08A917C619042434770A16D2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C95B7289BF700D1B93139EBD4C5988 /* UIStackViewExtensions.swift */; };
-		6F02800D3A740879CE6271876D03FE21 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC5919131D1ADAEA336C7E1306633F /* FileManagerExtensions.swift */; };
-		71FD3601649AFA16895364088E0A964F /* ExpandableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B15D3E10272DAE154EEFCEB3711CFA /* ExpandableDelegate.swift */; };
-		7335A7C7B3B99647BE99E5A336118C56 /* BidirectionalCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924472FC73A9D9D5AC2D2DBFF3BC2D8F /* BidirectionalCollectionExtensions.swift */; };
-		753992A8C8BBBAF2F99F6A680E13320D /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64021CA49C63AAAC727B3AE4C57DE0A /* UINavigationControllerExtensions.swift */; };
-		78EC2C3D07FBBDFCFEE9E3D18384A94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */; };
-		7A56F2C05D424B586A812E6BE4F467C9 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB455B8D7682464BCD0869D13DE6F8C3 /* DoubleExtensions.swift */; };
-		7F8FA125AC86969EC6992A73BE95200E /* CGVectorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7026ECB719616C5318EE25569B0BB0F6 /* CGVectorExtensions.swift */; };
-		81F31C3DABE90A8363701A72125791EB /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29ADAE571838B08DD6EFF5F082764A /* CGFloatExtensions.swift */; };
-		83ECD7BBB76510F75FBCD71CE2D68615 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E912CB794A8E6274B9373194AD7EE90D /* M13CheckboxAddRemovePathGenerator.swift */; };
-		871C1206BD2FC67D628F280FC2313B16 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D7FB5A5B15A554F0CC9E3EFDD34558 /* M13CheckboxPathGenerator.swift */; };
-		875DEED30B1F611857C6490FA5A3C97B /* UISliderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B3CBE838400796406F95BA54DF7356 /* UISliderExtensions.swift */; };
-		8B2D6A34A17C43149CEFAF554136ACB5 /* UIGestureRecognizerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AB7BD6AAD0092489C9D466B9D95C8 /* UIGestureRecognizerExtensions.swift */; };
-		8B87524FF4A2A0F2143CFA581F0CBA2A /* ExpandableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 466D2994DE025276F7193B9143EAA14C /* ExpandableCell-dummy.m */; };
-		8D6FBE30827FC62FCCBD99C9A355B0F7 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6508D3179DE068778FEC42CB16FD5 /* UIViewControllerExtensions.swift */; };
-		917AA0DAADA5D2DAB1F8134CD893618B /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214E834C3CDDCA33BA60117DFE2F1C1 /* M13Checkbox.swift */; };
-		93CF423AD7680C66024BD4A535F8BEA9 /* ExpandableStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1E0F4009288DC370C2ADA7292FEF1A /* ExpandableStyle.swift */; };
-		97AAD307EC2E359117D8CBAFF0F9FD5E /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C51C3A114E8AC0482939728F452B96 /* UIWindowExtensions.swift */; };
-		99F73633D90CDB3B16AC8AA08CDF349C /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26ECB6367B2915924AF3B94E099713 /* CGSizeExtensions.swift */; };
-		9AD538F13A135428124FCFC745463426 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9791F16836AC0F0A840CF69DEB18D35 /* M13CheckboxAnimationGenerator.swift */; };
-		9C438BA7853A42056443373215E352EB /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272083025F10BB8D7196F620DD43EE2 /* FloatingPointExtensions.swift */; };
-		A0DC33A66D60776FA681704BB222B8D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */; };
-		A1558C87BF159FF5DFE1E10772A93522 /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254CAD58F8B941FE1DD83BF1AD426C1F /* M13CheckboxExpandController.swift */; };
-		A5AF3144835D08DEEFDD8CD2BBABEDA1 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA38950DF235DDC528F7062062673B9 /* UIViewExtensions.swift */; };
-		A6A41198C2BA8D083E170FBAC76ECDCF /* BoolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18163BD599249C87DB1DE3E66F629E5 /* BoolExtensions.swift */; };
-		A6B8D069F456518DE7890A748CA7FB7C /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74049BE8940FFC44C1AEBD46C046B25C /* OptionalExtensions.swift */; };
-		A7CB27F7DE269100E17246148E18286C /* RangeReplaceableCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79173274FCAFA004AB2FC6ED15C6D199 /* RangeReplaceableCollectionExtensions.swift */; };
-		A9F4AB1C1C48FA091E03B5046EB760D5 /* UINavigationItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5DDDE2B7BCE1547511B54325E01051 /* UINavigationItemExtensions.swift */; };
-		ABBBBE052EA4EE8F7D896418EBC1AF74 /* CharacterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49C0C4AD76F3F7FDD1E1286FF8EE02 /* CharacterExtensions.swift */; };
-		AC7DF6162EDC5CBB85BBA1AE4B68CAB6 /* UITextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95B9CC46FB50DAEEAEAA00DF2DA77F2 /* UITextViewExtensions.swift */; };
-		B3891EC1DDD8F1931BFED49B7E962454 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03031A9D9980802632CF6111905136AE /* URLExtensions.swift */; };
-		B999F9AF3B399B25113AB54AE788AEC7 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77823D3146EC25CAFDFB96B7E58D9925 /* UITextFieldExtensions.swift */; };
-		BB1367021A7B7A6FA1FD3060AEEF0852 /* UILayoutPriorityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66A69BC195804F2BCE94E908B4DB560 /* UILayoutPriorityExtensions.swift */; };
-		BD25D6396B4B3C807AB2DB4CF5F17CFD /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF536868B60A8C3249436722F7E30DA /* ExpandableTableView.swift */; };
-		BD9E0B5DBE08E108AFFFC2EF6DE3B991 /* UIBarButtonItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76184DBA56B764188A80F70293D315E5 /* UIBarButtonItemExtensions.swift */; };
-		BFD3585AC53DFF65A6EC447C5959F12C /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E8A4F5B27A3843E27A2C635F6EE72 /* DefaultValues.swift */; };
-		BFFBCB8E6A9568460DAB1B99A69D8666 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D02CDB844B11B5386BBD525C7E524 /* DictionaryExtensions.swift */; };
-		C119DA12EF47E2401BCB286595271E6B /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023661E48FC15F912B4D417BF875716F /* UIImageViewExtensions.swift */; };
-		C1C4BD0986B4D2135780EB5E3493F24A /* StringProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE46F596E4A8C144CB4173B0FCDBE7A3 /* StringProtocolExtensions.swift */; };
-		C370F9313ABD2444DDFD8A7C88FFD91A /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36418832020C37E4B08E1095EB7DAB0 /* UIFontExtensions.swift */; };
-		C463DAC70729BF9E68DD5217283322A6 /* SignedIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7725602D51EDF99B132526DA8FB3B47F /* SignedIntegerExtensions.swift */; };
-		C4EBFC45EF9A34311A2FC271603F68A6 /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7135278BF6ECC1B1431088547662BA4 /* M13CheckboxRadioPathGenerator.swift */; };
-		C9CA11AA3FD6CC1393D388FA588BA380 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EECA2421CEB9DB406D3017E97E0A48E /* NSAttributedStringExtensions.swift */; };
-		CC61B9BE36D14E29191867FFA256E0FE /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA118E1601FCE59D61F39F702DB19C52 /* UICollectionViewExtensions.swift */; };
-		CD086C4CC7497B4A82272B698B515B6E /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E1D9BB31781C981B6AD682465CBCDD /* CGColorExtensions.swift */; };
-		CE392D94C0FF4BE6C0DCFE4BF26CD55B /* UINavigationBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF305FD143A1ECD4149CAE81CAA4E8 /* UINavigationBarExtensions.swift */; };
-		CF21954451795DC3F3EC0EF382D4C094 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BB0BC7598F024248CA7EF4EDECFE8 /* UIImageExtensions.swift */; };
-		CF30A87C20B4F6DF95B96CD41784A5E5 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B865C26420B7CA66268721B2F83636 /* NSImageExtensions.swift */; };
-		D0B0207119D3063FDD708EF79D3543E0 /* UIRefreshControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03BF9A97ABDADC6B6708137C9813202 /* UIRefreshControlExtensions.swift */; };
-		D0FA8B03215BA31F28442410716AB59D /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA289593C9AA251D341667BDC685817 /* IntExtensions.swift */; };
-		D1B0583613A5F4736E32319EE1AAFE5F /* SwifterSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C189DE343490115BD17054013266559E /* SwifterSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D29A2DA8173F55D03C7B95AE6CF94448 /* UIDatePickerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F5E4BB685678EE258537EB2C9E6B0F /* UIDatePickerExtensions.swift */; };
-		D5E0D00C64622A75DCC53EC52853A148 /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DAF498BC2CEAFDD28514B68A153BAE /* M13CheckboxFillController.swift */; };
-		DB4AB7386B547BE593397010B2E7664D /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA872CB292FC7F61BB5DA17713B4D5 /* UserDefaultsExtensions.swift */; };
-		DE7654FD8D8E83DCBCD916FF8B48AAF7 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EECEBC55131DCFDD16554FF51E69C2F /* M13CheckboxDisclosurePathGenerator.swift */; };
-		DFDB53B40DAA6AAC5B970C2D233D9E16 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164388D4F09677ED2B4867C575335EF /* DataExtensions.swift */; };
-		E5AA37D0DCE99073503B06AAC4BFB3F8 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED5EB0790F46568560B05D7202FAB0 /* M13CheckboxFlatController.swift */; };
-		E60DFA22E51888F3CD46ADEAE7F6D329 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAD114572EEB6A6549B3368F20A9E2 /* ColorExtensions.swift */; };
-		E7612EB6D64ACA96593AB5AD2BE0A7DD /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CD644AA80FB38AC88E82C9A54706285 /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8698372C725DDDB361DF138B868B491 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DA72CFD153DDDE755F7098EA19E67 /* StringExtensions.swift */; };
-		E8FC575E9A135224C45815B5B12A1F60 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D62FCE9B70D3D7C5A7B1DF2CDDE353 /* M13CheckboxSpiralController.swift */; };
+		40628F0AB93C74115A9A753A359B7799 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05FE59F37FBBB7D296A55F6BC9336E5 /* M13CheckboxController.swift */; };
+		410589F9F13F04034FB33821551AAABD /* BinaryFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20ACF83AA629898EA34C2302F080D09 /* BinaryFloatingPointExtensions.swift */; };
+		463C2FEB6E7EFF8FDB5724D97EE9C2FD /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B62B2BC17416EF00594250FB4588D9 /* CalendarExtensions.swift */; };
+		48720E44F1B7EC4D4C0A3E89384B6393 /* UIActivityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55C7FD1F325D38E292B59ED9D0E572D /* UIActivityExtensions.swift */; };
+		49CCA780299C24CA2A4406F9D0C7C8F0 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD861FA7F45EC3C9FFF01293C81E079A /* UIViewControllerExtensions.swift */; };
+		4A6C988065F75991E42E781EAD3A1E0F /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8D55A2445BBAF3D2FBE954A599FB4A /* UICollectionViewExtensions.swift */; };
+		4C5A8A10DBD24862A532E02005D27F7C /* ExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA948EF13DF470663326E96B9C1BDCF /* ExpandableCell.swift */; };
+		4F1B28FEA34062EC5F2B03C468C3F90D /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BAC8F8A4327FCC9BB0D20C32D117 /* M13CheckboxDotController.swift */; };
+		4FD09D3CA9F78294953D5587B9EB12FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */; };
+		4FEB4B968C2482F0AA4BB342FED61877 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD6DFE6CD602277CDE5628A40CD7B1 /* DictionaryExtensions.swift */; };
+		5122ADF16A57C1EC749DEE6B24788CF1 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEFE91A3182331BEA633168374BFD /* M13CheckboxFadeController.swift */; };
+		5159192B9F2EFC139548A5458C8E86B1 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74099CD247A65AB258846F12FD8B2885 /* ColorExtensions.swift */; };
+		521E079187A67A7C7A468DE2101B0F48 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667548F4AFBBAB5B7CDE13B7E4C8B5BA /* NSAttributedStringExtensions.swift */; };
+		528D070836DE17C429944F94378CED6A /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82845B0191C590B139C566B4018BFE3 /* UIWindowExtensions.swift */; };
+		57CEB04B61F30CD657A236021D6E08D6 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C4EBCEFB564C8F96CFED4A1FCDE /* UIButtonExtensions.swift */; };
+		57DDD6E24F89F865C712AA1D51C91DB4 /* StringProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3658B102A9D2DFB5590434497CE8F0 /* StringProtocolExtensions.swift */; };
+		58691C3718A23FB34AF4A9ADF6AA4B29 /* UIBarButtonItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4CBF3B3B7491085DBD4E60F6C704F0 /* UIBarButtonItemExtensions.swift */; };
+		5D00CFA0311F7CB389987E4E8C8DA49D /* SKNodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D10AB71C10307986D1BF8496FC667C /* SKNodeExtensions.swift */; };
+		5DEE55BA5808AFB825E2BE76A2CD99EF /* ExpandableCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCF3EC91664BC93302CA1363F84AF6A5 /* ExpandableCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F63EDD95D916C154269DA9F241FC732 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12CD4C455476E56D76B855479FCABC /* CGFloatExtensions.swift */; };
+		60B6C2A003864AAD3A426448152F67BE /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFBF37E3A9BF5BBC3C46A2CD3D1D420 /* Timeline.swift */; };
+		66F5052ED2A1DF13A8BB644F1A783DB7 /* RandomAccessCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9CB85E0D91074B2436C20D703B68DB /* RandomAccessCollectionExtensions.swift */; };
+		6D35927215CB83B0693457ADF5AEC417 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B5B7993C0CA62FC8971CCF3FC19C82 /* FloatExtensions.swift */; };
+		6EABF22634B99C4872FF1EE9AD17D476 /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9497B44CDA9FF8B762788B147658DFE /* UINavigationControllerExtensions.swift */; };
+		6EFD003458AE7F689DEA720A2030C261 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5064EF987B338B012422C91923810141 /* ResponseSerialization.swift */; };
+		700D3D95AF9520CB227846DFD943A2DA /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C101C497205E5638D314A8447CE1BD /* ParameterEncoding.swift */; };
+		703254E75C7852336C8B4A747D834872 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76FBAB4DD92981DC884FD5440E860F /* UISearchBarExtensions.swift */; };
+		71FD3601649AFA16895364088E0A964F /* ExpandableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451857F614A95C0A77862EC7C4CF537 /* ExpandableDelegate.swift */; };
+		730A5362CAE70987B6D2EC779D78333B /* NSPredicateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B02CDC2AC468E3973919DACDC75FC2 /* NSPredicateExtensions.swift */; };
+		73812A0EBEE81C05EEA13BBDD330A0D5 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B3FFFB7ECD974372E53AFBB2568B1 /* DoubleExtensions.swift */; };
+		73AB05789A4982944AF68DBD013E3EB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEB9DB191DAC69432919B471F031B0 /* NetworkReachabilityManager.swift */; };
+		772911DA6E33D1CBBC30131B7C8BDBB3 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE556BAE4DD9FA3401B4291807D3A21 /* Alamofire-dummy.m */; };
+		77E8F0EB9FFBE2E3EB0C77095C644606 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF6251CA4675DB149822E3F17D8881 /* TaskDelegate.swift */; };
+		782A1E709DCF315ECCFA5EAE175B98B5 /* CGVectorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979D2D05134D1D47543DC075C569407 /* CGVectorExtensions.swift */; };
+		78ABEC0A626DA0F2BD40E25BF1CB5950 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D8D20BCB11BA4EFFD36DEE0DEC929 /* UIViewExtensions.swift */; };
+		799B5D785E9B30F6165C8AA81B33F6AB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7BA3CCC45CCCF94F9D4DFACCCBF458 /* StringExtensions.swift */; };
+		7AA458C068F8023C11322CF2006E2A4B /* UITabBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAE6A35B71D9CDA09CF5A2CAC80CB9 /* UITabBarExtensions.swift */; };
+		7D4743224742CF08DFD2304BAE4FC23B /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFD30FBA10DA25DCABB9EF2B89CDF0 /* UIAlertControllerExtensions.swift */; };
+		7E3538A6992A38276764936A9733493D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E543315822841DCECF3BB1DBC409378 /* AFError.swift */; };
+		8053C60F3989381578832202CFD63337 /* Pods-KitchenerMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2336C5194AA74912997A76B0B652593 /* Pods-KitchenerMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83358069525EE900EC48B6735200AF8F /* CGColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3959E10631B0F2F84683D21CDD7BFC2 /* CGColorExtensions.swift */; };
+		83ECD7BBB76510F75FBCD71CE2D68615 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6256855B375A4F8A6901BD2449A895F /* M13CheckboxAddRemovePathGenerator.swift */; };
+		871C1206BD2FC67D628F280FC2313B16 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C58391E3394BBA406756EB1D10FCDC0 /* M13CheckboxPathGenerator.swift */; };
+		885D40091FAF3BD602683721A91CE023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */; };
+		8A57B1F6B8F2F764CBCEF9AA662FF3AA /* UISegmentedControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDD47E72F10BA212BD4A1E2E653130 /* UISegmentedControlExtensions.swift */; };
+		8A719094109F3505384776A42A671200 /* SignedNumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87EFE3162B95DDEA4B2AB62E5BFE8CD /* SignedNumericExtensions.swift */; };
+		8AC7A7C84C91D98E548E4264A15842F4 /* BidirectionalCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6272E5D3266D32DCEE5CA5CE54CBD7 /* BidirectionalCollectionExtensions.swift */; };
+		8B87524FF4A2A0F2143CFA581F0CBA2A /* ExpandableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F27ED3CE66D77AEAC24665A7596A94D /* ExpandableCell-dummy.m */; };
+		8C5D0183CDCF3B137676CC03734497C3 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139A1E923D748F7C057D265890BDFFF /* FileManagerExtensions.swift */; };
+		8D2A6A90A6DDAF75EA52D471258545CC /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6169DC05E67E41C2E948009C54910ACD /* ServerTrustPolicy.swift */; };
+		8F9A8C0296E50BF497FDFD21012B09E8 /* RangeReplaceableCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE70BAF562F317A9F74E4D61986BEC /* RangeReplaceableCollectionExtensions.swift */; };
+		917AA0DAADA5D2DAB1F8134CD893618B /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CF69CF6EDEB74056FCCC18080D8B1 /* M13Checkbox.swift */; };
+		93CF423AD7680C66024BD4A535F8BEA9 /* ExpandableStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6717F9369C40F9F9B1FAE02FDF70546 /* ExpandableStyle.swift */; };
+		988A92DED5B36D907E3B99FB2B7A87AB /* UIRefreshControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E75EE46EE50A717AEF80BB26F73B /* UIRefreshControlExtensions.swift */; };
+		99369161F0C88A8A99643ACA1447EC9E /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2135D81B623C7D024C5BDBA9AC4C683C /* FloatingPointExtensions.swift */; };
+		9AD538F13A135428124FCFC745463426 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5332F6A2F184545D9D13AF888556C50 /* M13CheckboxAnimationGenerator.swift */; };
+		9AEC262559CCF968C3C1A18710598E9D /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0A25BC2E289BE9868334439E8C24A /* ArrayExtensions.swift */; };
+		A0CF777FD58F63E2BA2A433C1AC75977 /* UINavigationBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4381E060D182947404381CCB89DE7 /* UINavigationBarExtensions.swift */; };
+		A13A8438D4C3D3FB77908DA864281E23 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACA39EB83CA841596D560BF9993182 /* UITextFieldExtensions.swift */; };
+		A1558C87BF159FF5DFE1E10772A93522 /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64544C6D62C82DBE73E5AB76C043A401 /* M13CheckboxExpandController.swift */; };
+		A1EC41966B261DCE460BCDE5124A1DBE /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77F44E5E34204BAAFBCD1995E7CA3A /* SessionDelegate.swift */; };
+		A3B2F3DD5F265AD0435CF31397697ACE /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86238EC64720BA4216E4B6E86AC6D941 /* CGSizeExtensions.swift */; };
+		A5728B4C4B04750A9E121BCC55E43765 /* ComparableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF06D154F598A682A12CAAA7B767C4 /* ComparableExtensions.swift */; };
+		A8CF16903A321E4B45B37932D3A7C1D2 /* UIDatePickerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC0280FB5A0E78B10226547AEAB126 /* UIDatePickerExtensions.swift */; };
+		AA56769D8733D3F3E7976742D5ABA998 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFBABA64C8C5FC3E109FBC0E679503D /* Validation.swift */; };
+		AA92301A5BDE8F5B1EEF757B31F64B0A /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB733E995F099A4B235A1C2D0F86DD85 /* URLRequestExtensions.swift */; };
+		AEA48E2D09D9C9B8115F7A6790425F08 /* UITextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC702FA551C37C43946ADD2576A8272 /* UITextViewExtensions.swift */; };
+		AEA829AB1A8AF2AD077A808AED6B178A /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B2A28D68107F10BFC515973A035BA /* MultipartFormData.swift */; };
+		B0CD9C1B83BD1C4A59897C39C7263691 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36492A27873E3D869B6AAD7E0D53902D /* UIImageExtensions.swift */; };
+		B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3D2AEA0F1539CFC9E4A9739229253A /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7C6EDEC28988DB62516B1A905416CDC /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756F03231CFF0201F6AF94D58A76055 /* UIStackViewExtensions.swift */; };
+		BC5F58985C77BE1F6419AB77EBE761CD /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E47E2F68020B0EC692196EAF87894A /* UIScrollViewExtensions.swift */; };
+		BC78AB5B69F004239C84F0C4E1EF53A4 /* UISliderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7CE888279FE48B1539084FA728761 /* UISliderExtensions.swift */; };
+		BD25D6396B4B3C807AB2DB4CF5F17CFD /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29886D278A3C646EA5847FC3059C414 /* ExpandableTableView.swift */; };
+		BFD3585AC53DFF65A6EC447C5959F12C /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C5850A284AEC228AAF8A17296ECF22 /* DefaultValues.swift */; };
+		C1A5CBE548469497FEC18B60267E99A5 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CB092153FFE6CDC39E59CEDFC9F1E /* UIApplicationExtensions.swift */; };
+		C4741C13399D2946B0FF59DF92C4374C /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44932BC1EC00710FAD87D74E9B128E5C /* DispatchQueueExtensions.swift */; };
+		C4EBFC45EF9A34311A2FC271603F68A6 /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CD8C7060B92FDDA972417B82A02151 /* M13CheckboxRadioPathGenerator.swift */; };
+		C5249CDEAA601C20F28612D185068048 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1633A8DC873E2811235F0CD3338B10D5 /* UITableViewExtensions.swift */; };
+		D3FA0AA634AAEA99AB3FABC36BB4958C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E2C7EDE2F5A3DB437465049A72BE2 /* SessionManager.swift */; };
+		D5E0D00C64622A75DCC53EC52853A148 /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEFE50D5A4C1BDBBB84CB31AC1DC9FD /* M13CheckboxFillController.swift */; };
+		D7B8B93090B3B52C0A330C7C143D6537 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0D49A7318FD5EFB46299516106969 /* CGPointExtensions.swift */; };
+		D8BFCF0461F58FA1E7663C95D6059A34 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E91257AB64CCCA3595393E48893E72 /* UIStoryboardExtensions.swift */; };
+		DE7654FD8D8E83DCBCD916FF8B48AAF7 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0030F91765B8203E6B2AA22AD56FDDF5 /* M13CheckboxDisclosurePathGenerator.swift */; };
+		E1B6552FEFCAF2ECF5BF65ADBCDEBAB6 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012F0F846D3046B42B60BFC9B3C5A858 /* CollectionExtensions.swift */; };
+		E5AA37D0DCE99073503B06AAC4BFB3F8 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C00FE0B9333FD8BDE052401612B54 /* M13CheckboxFlatController.swift */; };
+		E5B465D0B14CB16A7B22A1061D4CA950 /* UISwitchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0855218ECEB26AEEB2C6AE723B9F9061 /* UISwitchExtensions.swift */; };
+		E7612EB6D64ACA96593AB5AD2BE0A7DD /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3681E40D5BC0C4F65EC81E5A4BADAEB4 /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E79FF0BA806FEC1FD2CB1B727D51B785 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A581D6D50C2C6087DB5F01D8F770EA2 /* UILabelExtensions.swift */; };
+		E8FC575E9A135224C45815B5B12A1F60 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532A29C89C4FC7F68D0B3FDF47F5D2B6 /* M13CheckboxSpiralController.swift */; };
+		EAB3056B350D3F7AEE77B2245B2B064D /* SwifterSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB00C472218CF03B18DDBC3245936D /* SwifterSwift-dummy.m */; };
+		EB0DD8CEA1A69867A30267439C970440 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B016B0A37C224128B5DF3A198E6C510E /* Result.swift */; };
 		EC02BB9FF1843A3B2DCD7E1BBC4E1F4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC14D54CF483CF531F6412BFC589C4B /* CoreGraphics.framework */; };
-		ECEDE2975437697018E4960684EFBAFE /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DADBE5A4546BA312E1D343BEB6A375F /* M13CheckboxStrokeController.swift */; };
-		ED1E2AA3C7EFDF20CE8B87A9A83C42F4 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F914EA4204D7D89B25C4802E0DDC99E3 /* CGPointExtensions.swift */; };
-		EE1A10D3CE855141F3ED6DD08A5FA120 /* UITabBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE084C52C6C31A4E35F95447292161 /* UITabBarExtensions.swift */; };
+		ECEDE2975437697018E4960684EFBAFE /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9ABEE9E141F696604472B83D21022E /* M13CheckboxStrokeController.swift */; };
 		EE35C2233CA07668E7289EBC7902F490 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D484CFBFE2A7C64F31ED406CB49E7DDE /* UIKit.framework */; };
-		EF07E9A91B6FC8F2ECBD58150228CA03 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05B4AEE3D7DF1736D896365ED88F67 /* FloatExtensions.swift */; };
-		F290D565078344E945E3176ED46822E3 /* NSPredicateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDC8C82851CC025A0C894EA8074B7 /* NSPredicateExtensions.swift */; };
-		F69D68D5C6CF7CE1B33A0C2788C17AAB /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8EF678A85D622F3C5593D13A1D9E2 /* URLRequestExtensions.swift */; };
-		F9EDF376E5B9FECB7291F76EDE08E8CA /* UISwitchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C8640FD57E99424BD66F5BAED34C9 /* UISwitchExtensions.swift */; };
-		FA1B7C10433E8561D0D3F0F047E23596 /* UISegmentedControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9A24BB9DDE446750DAB38FBC40942 /* UISegmentedControlExtensions.swift */; };
-		FA362D7CE23C3570C625B9620C62F637 /* ExpandableCell.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B8E10E550BF147C95D1CEB1DD7845D /* ExpandableCell.xcassets */; };
-		FA48C0E4F566499496AE00F9181C8769 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0921FB29C2D78B50D75DF05F1816F4D /* UIAlertControllerExtensions.swift */; };
+		F0444905BD4B685EC65A7A431D78E886 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10897E695E258EABB68DE4713B91C2 /* URLExtensions.swift */; };
+		F0EDC50907F11BD3881D66FEDCF20EE4 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688343AEA070834CA31E0EDA1ECA2420 /* DataExtensions.swift */; };
+		F1252443BFC9B8E6FF02CDD80AAA9C27 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0BD31CDF56FE1014907FF7E07E27F2 /* NSImageExtensions.swift */; };
+		F39820506B6846015D994C7999906225 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43AF730A1ED3F1980F920E365416B2E /* OptionalExtensions.swift */; };
+		F5F276F683CC456E5EADDD382DC0EFFB /* SignedIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD9C41522A85FEF76B60E987BDC4E8 /* SignedIntegerExtensions.swift */; };
+		FA362D7CE23C3570C625B9620C62F637 /* ExpandableCell.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EED19969FBB800B43077E1694410B4A /* ExpandableCell.xcassets */; };
+		FAFD01909F3B9A0E063134BB71F631F0 /* UILayoutPriorityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2140D06CC6E1386181D4CC92DAF24A /* UILayoutPriorityExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0864310F3E33DA1BFA0AEFD807783564 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4AF4AA190028CFC4A80056742F3BD2C7;
-			remoteInfo = SwifterSwift;
-		};
-		8DA4B46BC5EC24919B61A20E872027FF /* PBXContainerItemProxy */ = {
+		731B2A8338931DB608666A9EAC12E9C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5752DD257FE266E67107B3EEA49B03C9;
 			remoteInfo = M13Checkbox;
 		};
-		993E1018FF0F7FE23DFEB4F288272D60 /* PBXContainerItemProxy */ = {
+		B5BA8334859F7D2B5AD3B9A670981B6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7F3B143A25A918D2D1AE6DB945A550E2;
 			remoteInfo = ExpandableCell;
 		};
-		FFEFC2892918ED4AF1E99AC24F94393D /* PBXContainerItemProxy */ = {
+		B93EF82AF169D43960C390E57DA73180 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3383968E74B5371B20BB519B170DC7FD;
+			remoteInfo = Alamofire;
+		};
+		CB9340E843C22237B9DD0FE12C85446E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BCE3DE68053C99B18AAD56BE1F98BD73;
 			remoteInfo = GoogleMaps;
 		};
+		E88DF80BAEA7EFF6F92BE21AD4A0F182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ADEE14BE43D10F880277B84A0E73E1;
+			remoteInfo = SwifterSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0214E834C3CDDCA33BA60117DFE2F1C1 /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
-		023661E48FC15F912B4D417BF875716F /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIImageViewExtensions.swift; sourceTree = "<group>"; };
-		03031A9D9980802632CF6111905136AE /* URLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLExtensions.swift; path = Sources/SwifterSwift/Foundation/URLExtensions.swift; sourceTree = "<group>"; };
-		05B9A24BB9DDE446750DAB38FBC40942 /* UISegmentedControlExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISegmentedControlExtensions.swift; path = Sources/SwifterSwift/UIKit/UISegmentedControlExtensions.swift; sourceTree = "<group>"; };
-		0A0E8A4F5B27A3843E27A2C635F6EE72 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
+		0030F91765B8203E6B2AA22AD56FDDF5 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		012F0F846D3046B42B60BFC9B3C5A858 /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CollectionExtensions.swift; sourceTree = "<group>"; };
+		016E2702CD0CB031127DC3A7F7A5F29E /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
+		04B0A25BC2E289BE9868334439E8C24A /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ArrayExtensions.swift; sourceTree = "<group>"; };
+		054CF69CF6EDEB74056FCCC18080D8B1 /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
+		07F1E1FBB99377729D94A3C9F0206173 /* IntExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/IntExtensions.swift; sourceTree = "<group>"; };
+		0855218ECEB26AEEB2C6AE723B9F9061 /* UISwitchExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISwitchExtensions.swift; path = Sources/SwifterSwift/UIKit/UISwitchExtensions.swift; sourceTree = "<group>"; };
 		0A2B0F305043FDA626CE6978ABB74030 /* Pods-KitchenerMap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KitchenerMap-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0D6AB7BD6AAD0092489C9D466B9D95C8 /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
-		18CD17DCA66CD2960E9D6822CFF7519A /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
-		1C6EB9096CEF9C7F66696B66FF7E9FA8 /* MKPolylineExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKPolylineExtensions.swift; path = Sources/SwifterSwift/MapKit/MKPolylineExtensions.swift; sourceTree = "<group>"; };
-		1CD644AA80FB38AC88E82C9A54706285 /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
-		1DA324F0AB34C432B0FB2542A799F677 /* SKNodeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SKNodeExtensions.swift; path = Sources/SwifterSwift/SpriteKit/SKNodeExtensions.swift; sourceTree = "<group>"; };
-		24AEF00B2C95DB22B66424F504DA39CD /* ExpandableProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableProcessor.swift; path = ExpandableCell/ExpandableProcessor.swift; sourceTree = "<group>"; };
-		2515DB644960E5BF22B766EA524BE9E4 /* UIActivityExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIActivityExtensions.swift; path = Sources/SwifterSwift/UIKit/UIActivityExtensions.swift; sourceTree = "<group>"; };
-		254CAD58F8B941FE1DD83BF1AD426C1F /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
-		25A39B8CC4DB8159AB9F5DB178C9C27B /* SwifterSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwifterSwift-Info.plist"; sourceTree = "<group>"; };
-		26A3226E016A70EB856AC0459B8AC71D /* ExpandableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExpandableCell.xcconfig; sourceTree = "<group>"; };
-		2DADBE5A4546BA312E1D343BEB6A375F /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		0A581D6D50C2C6087DB5F01D8F770EA2 /* UILabelExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UILabelExtensions.swift; path = Sources/SwifterSwift/UIKit/UILabelExtensions.swift; sourceTree = "<group>"; };
+		0C58391E3394BBA406756EB1D10FCDC0 /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
+		0CD23A245AAC074CE6FF052DEEB3E1D4 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		0CFBABA64C8C5FC3E109FBC0E679503D /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		0F27ED3CE66D77AEAC24665A7596A94D /* ExpandableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ExpandableCell-dummy.m"; sourceTree = "<group>"; };
+		1072316FCAF41FB16C698C813FA5A167 /* SwifterSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwifterSwift-Info.plist"; sourceTree = "<group>"; };
+		10CA6976283F34F603F34C6F76D07152 /* MKPolylineExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKPolylineExtensions.swift; path = Sources/SwifterSwift/MapKit/MKPolylineExtensions.swift; sourceTree = "<group>"; };
+		1633A8DC873E2811235F0CD3338B10D5 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UITableViewExtensions.swift; sourceTree = "<group>"; };
+		1734B58130A265C4FC506647D2147203 /* SwifterSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-prefix.pch"; sourceTree = "<group>"; };
+		17A4950A1F6B06A90E3C23FE13DAA7D4 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		198F5451411987CDE4D358E77A971BED /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		1DE11D7EB5B603100135FB263C4332B7 /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
+		1DEDD47E72F10BA212BD4A1E2E653130 /* UISegmentedControlExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISegmentedControlExtensions.swift; path = Sources/SwifterSwift/UIKit/UISegmentedControlExtensions.swift; sourceTree = "<group>"; };
+		1E1D3621F87D2883D08461B4EE616CF7 /* BoolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BoolExtensions.swift; sourceTree = "<group>"; };
+		2135D81B623C7D024C5BDBA9AC4C683C /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatingPointExtensions.swift; sourceTree = "<group>"; };
+		21E66994E6914ABA2BA25B7DF268E44E /* Pods_KitchenerMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KitchenerMap.framework; path = "Pods-KitchenerMap.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23EFF63D7E3B0907DD1615994AB63F5E /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		29BD54137CCBD9783F1C5E744010F5FF /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		2A10B3FA5AF25FB40BD042107D69B3EA /* ExpandableProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableProcessor.swift; path = ExpandableCell/ExpandableProcessor.swift; sourceTree = "<group>"; };
+		2CE72C4EBCEFB564C8F96CFED4A1FCDE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtensions.swift; path = Sources/SwifterSwift/UIKit/UIButtonExtensions.swift; sourceTree = "<group>"; };
 		2E5B973ED6D523F93811A69EF93B3371 /* Pods-KitchenerMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KitchenerMap.release.xcconfig"; sourceTree = "<group>"; };
-		372C8640FD57E99424BD66F5BAED34C9 /* UISwitchExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISwitchExtensions.swift; path = Sources/SwifterSwift/UIKit/UISwitchExtensions.swift; sourceTree = "<group>"; };
-		39B865C26420B7CA66268721B2F83636 /* NSImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSImageExtensions.swift; path = Sources/SwifterSwift/AppKit/NSImageExtensions.swift; sourceTree = "<group>"; };
-		3A753D1325C6ED4BB7EC28061E726DB0 /* BinaryFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryFloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BinaryFloatingPointExtensions.swift; sourceTree = "<group>"; };
-		3D49C0C4AD76F3F7FDD1E1286FF8EE02 /* CharacterExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CharacterExtensions.swift; sourceTree = "<group>"; };
-		3D6A2C9A2A421957CA28C9DCED6BEC59 /* Pods_KitchenerMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KitchenerMap.framework; path = "Pods-KitchenerMap.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		406507F39AAF27A7D312D9CF15624735 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
-		42DDDEE40AEDF26B5C9C498393F38331 /* SwifterSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwifterSwift.modulemap; sourceTree = "<group>"; };
-		43B8E10E550BF147C95D1CEB1DD7845D /* ExpandableCell.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = ExpandableCell.xcassets; path = ExpandableCell/ExpandableCell.xcassets; sourceTree = "<group>"; };
-		466D2994DE025276F7193B9143EAA14C /* ExpandableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ExpandableCell-dummy.m"; sourceTree = "<group>"; };
-		46A4F84AEDA1AD4E82AF526C21E6B02E /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		47E1D9BB31781C981B6AD682465CBCDD /* CGColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGColorExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGColorExtensions.swift; sourceTree = "<group>"; };
-		483BB0BC7598F024248CA7EF4EDECFE8 /* UIImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = Sources/SwifterSwift/UIKit/UIImageExtensions.swift; sourceTree = "<group>"; };
+		2E9ABEE9E141F696604472B83D21022E /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		35CAE6A35B71D9CDA09CF5A2CAC80CB9 /* UITabBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UITabBarExtensions.swift; sourceTree = "<group>"; };
+		363AA8C5A99DCCA982BDB2A04BF7BC69 /* SequenceExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SequenceExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SequenceExtensions.swift; sourceTree = "<group>"; };
+		36492A27873E3D869B6AAD7E0D53902D /* UIImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = Sources/SwifterSwift/UIKit/UIImageExtensions.swift; sourceTree = "<group>"; };
+		3681E40D5BC0C4F65EC81E5A4BADAEB4 /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
+		395206E0DDA853295155E6F9266A0987 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFFD30FBA10DA25DCABB9EF2B89CDF0 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		3B3658B102A9D2DFB5590434497CE8F0 /* StringProtocolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringProtocolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringProtocolExtensions.swift; sourceTree = "<group>"; };
+		3BD1C34BED1BBA7283933AA6004EC50B /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKMapViewExtensions.swift; path = Sources/SwifterSwift/MapKit/MKMapViewExtensions.swift; sourceTree = "<group>"; };
+		3CBF6251CA4675DB149822E3F17D8881 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		3F2140D06CC6E1386181D4CC92DAF24A /* UILayoutPriorityExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UILayoutPriorityExtensions.swift; path = Sources/SwifterSwift/UIKit/UILayoutPriorityExtensions.swift; sourceTree = "<group>"; };
+		3F4CBF3B3B7491085DBD4E60F6C704F0 /* UIBarButtonItemExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemExtensions.swift; path = Sources/SwifterSwift/UIKit/UIBarButtonItemExtensions.swift; sourceTree = "<group>"; };
+		4427C5A8A9CDF11C2542750E61FF8C77 /* SwifterSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwifterSwift.xcconfig; sourceTree = "<group>"; };
+		4451857F614A95C0A77862EC7C4CF537 /* ExpandableDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDelegate.swift; path = ExpandableCell/ExpandableDelegate.swift; sourceTree = "<group>"; };
+		44932BC1EC00710FAD87D74E9B128E5C /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchQueueExtensions.swift; path = Sources/SwifterSwift/Dispatch/DispatchQueueExtensions.swift; sourceTree = "<group>"; };
+		45BD2DFD40EB7C391BFB1D3D5020BF64 /* NSViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSViewExtensions.swift; path = Sources/SwifterSwift/AppKit/NSViewExtensions.swift; sourceTree = "<group>"; };
+		49CD8C7060B92FDDA972417B82A02151 /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
 		4A24AFDE54D6739071B74218DD16A71E /* Pods-KitchenerMap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KitchenerMap.modulemap"; sourceTree = "<group>"; };
 		4C9A3858AAA6DB788B4E277167557E60 /* Pods-KitchenerMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KitchenerMap-dummy.m"; sourceTree = "<group>"; };
-		4CCF305FD143A1ECD4149CAE81CAA4E8 /* UINavigationBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UINavigationBarExtensions.swift; sourceTree = "<group>"; };
-		5073FEFA37BD837E37297D9EBAA0B21E /* M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.xcconfig; sourceTree = "<group>"; };
-		51D62FCE9B70D3D7C5A7B1DF2CDDE353 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
-		55E8114BFE743E983437CB2D87CE1BFC /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ArrayExtensions.swift; sourceTree = "<group>"; };
+		4E3C00FE0B9333FD8BDE052401612B54 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
+		5064EF987B338B012422C91923810141 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		50FEB9DB191DAC69432919B471F031B0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		51FE70BAF562F317A9F74E4D61986BEC /* RangeReplaceableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeReplaceableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RangeReplaceableCollectionExtensions.swift; sourceTree = "<group>"; };
+		5228E75EE46EE50A717AEF80BB26F73B /* UIRefreshControlExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIRefreshControlExtensions.swift; path = Sources/SwifterSwift/UIKit/UIRefreshControlExtensions.swift; sourceTree = "<group>"; };
+		52C99E7F02C6CC32E551D85D1C087558 /* DateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = Sources/SwifterSwift/Foundation/DateExtensions.swift; sourceTree = "<group>"; };
+		532A29C89C4FC7F68D0B3FDF47F5D2B6 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		5756F03231CFF0201F6AF94D58A76055 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStackViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		57749D6530516DFC0A3E10F50B2353E8 /* Pods-KitchenerMap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KitchenerMap-acknowledgements.plist"; sourceTree = "<group>"; };
-		596C5DEDED605C77CD805B2B6E116246 /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
-		598EE17B8AE4CB4508831037820FEA56 /* ComparableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComparableExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ComparableExtensions.swift; sourceTree = "<group>"; };
-		5D56808425C247CC0B9471781EBEF97C /* SequenceExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SequenceExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SequenceExtensions.swift; sourceTree = "<group>"; };
-		5EECA2421CEB9DB406D3017E97E0A48E /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtensions.swift; path = Sources/SwifterSwift/Foundation/NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
-		60ED5EB0790F46568560B05D7202FAB0 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
-		681B600B2533C4902B5903CFFFE5F618 /* ExpandableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableCell-prefix.pch"; sourceTree = "<group>"; };
-		6AF536868B60A8C3249436722F7E30DA /* ExpandableTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableTableView.swift; path = ExpandableCell/ExpandableTableView.swift; sourceTree = "<group>"; };
-		6CDA28933C0EAD009EF541506C09D2C9 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIEdgeInsetsExtensions.swift; path = Sources/SwifterSwift/UIKit/UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
-		6E6B9C9C83C56B73E8ADC1D9AB1E4345 /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
-		6EECEBC55131DCFDD16554FF51E69C2F /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
-		7026ECB719616C5318EE25569B0BB0F6 /* CGVectorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGVectorExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGVectorExtensions.swift; sourceTree = "<group>"; };
-		7172EACECADE9452F6676B9924450FCB /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIApplicationExtensions.swift; path = Sources/SwifterSwift/UIKit/UIApplicationExtensions.swift; sourceTree = "<group>"; };
-		73A7A8E4B36EF136CC7C162D14E16FE5 /* ExpandableCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableCell-umbrella.h"; sourceTree = "<group>"; };
-		74049BE8940FFC44C1AEBD46C046B25C /* OptionalExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/OptionalExtensions.swift; sourceTree = "<group>"; };
-		7412CA789F08529CBDA320A950BF8088 /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
-		74B3CBE838400796406F95BA54DF7356 /* UISliderExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISliderExtensions.swift; path = Sources/SwifterSwift/UIKit/UISliderExtensions.swift; sourceTree = "<group>"; };
-		75C95B7289BF700D1B93139EBD4C5988 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStackViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIStackViewExtensions.swift; sourceTree = "<group>"; };
-		76184DBA56B764188A80F70293D315E5 /* UIBarButtonItemExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemExtensions.swift; path = Sources/SwifterSwift/UIKit/UIBarButtonItemExtensions.swift; sourceTree = "<group>"; };
-		765491D300579EA8947742C494F85B47 /* ExpandableCell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ExpandableCell-Info.plist"; sourceTree = "<group>"; };
-		7725602D51EDF99B132526DA8FB3B47F /* SignedIntegerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedIntegerExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedIntegerExtensions.swift; sourceTree = "<group>"; };
-		77823D3146EC25CAFDFB96B7E58D9925 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFieldExtensions.swift; path = Sources/SwifterSwift/UIKit/UITextFieldExtensions.swift; sourceTree = "<group>"; };
-		79173274FCAFA004AB2FC6ED15C6D199 /* RangeReplaceableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeReplaceableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RangeReplaceableCollectionExtensions.swift; sourceTree = "<group>"; };
-		7E1E0F4009288DC370C2ADA7292FEF1A /* ExpandableStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableStyle.swift; path = ExpandableCell/ExpandableStyle.swift; sourceTree = "<group>"; };
-		7E5DDDE2B7BCE1547511B54325E01051 /* UINavigationItemExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationItemExtensions.swift; path = Sources/SwifterSwift/UIKit/UINavigationItemExtensions.swift; sourceTree = "<group>"; };
-		843DA72CFD153DDDE755F7098EA19E67 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringExtensions.swift; sourceTree = "<group>"; };
-		8ADB2A44DD54B2E5DD1CEEE3C800B90A /* UITableViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UITableViewExtensions.swift; sourceTree = "<group>"; };
+		591D528A50F2B0EF51AFDA3547627FCB /* UINavigationItemExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationItemExtensions.swift; path = Sources/SwifterSwift/UIKit/UINavigationItemExtensions.swift; sourceTree = "<group>"; };
+		59505230A191318D8484A36533629244 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		5B5E156DABC84ECCC57AD7673EEF0270 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		6169DC05E67E41C2E948009C54910ACD /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		61BA3F76622933910BD649C18FA0C227 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		64544C6D62C82DBE73E5AB76C043A401 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
+		667548F4AFBBAB5B7CDE13B7E4C8B5BA /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtensions.swift; path = Sources/SwifterSwift/Foundation/NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		66AE6CA20515725CD31F5DD3DCD77654 /* SwifterSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwifterSwift.modulemap; sourceTree = "<group>"; };
+		688343AEA070834CA31E0EDA1ECA2420 /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExtensions.swift; path = Sources/SwifterSwift/Foundation/DataExtensions.swift; sourceTree = "<group>"; };
+		6A3D2AEA0F1539CFC9E4A9739229253A /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		6B8D55A2445BBAF3D2FBE954A599FB4A /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		6DB455B416B08FE7CF8A0C28D099B41D /* UIFontExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIFontExtensions.swift; path = Sources/SwifterSwift/UIKit/UIFontExtensions.swift; sourceTree = "<group>"; };
+		71C101C497205E5638D314A8447CE1BD /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		72535699D261B011B16805A699D25455 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		73AD72018F14AA100E0C23677F813A45 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		74099CD247A65AB258846F12FD8B2885 /* ColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtensions.swift; path = Sources/SwifterSwift/Shared/ColorExtensions.swift; sourceTree = "<group>"; };
+		7A0BD31CDF56FE1014907FF7E07E27F2 /* NSImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSImageExtensions.swift; path = Sources/SwifterSwift/AppKit/NSImageExtensions.swift; sourceTree = "<group>"; };
+		7E3A39BF7096C3B7A8E6412E8E39CC33 /* SwifterSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-umbrella.h"; sourceTree = "<group>"; };
+		7E543315822841DCECF3BB1DBC409378 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		7EED19969FBB800B43077E1694410B4A /* ExpandableCell.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = ExpandableCell.xcassets; path = ExpandableCell/ExpandableCell.xcassets; sourceTree = "<group>"; };
+		7F32F76C90E604F458899E24EE3AC4BD /* GoogleMaps.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.xcconfig; sourceTree = "<group>"; };
+		7F460EBD72359CDD6856E053E0FA8AF5 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserDefaultsExtensions.swift; path = Sources/SwifterSwift/Foundation/UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		8139A1E923D748F7C057D265890BDFFF /* FileManagerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtensions.swift; path = Sources/SwifterSwift/Foundation/FileManagerExtensions.swift; sourceTree = "<group>"; };
+		8312BA66298F104FBA0F575B4C763B6C /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		83B0BAC8F8A4327FCC9BB0D20C32D117 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
+		84F2316401F0FBC946CEAD8370E33E9C /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		86238EC64720BA4216E4B6E86AC6D941 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGSizeExtensions.swift; sourceTree = "<group>"; };
+		8B5CB092153FFE6CDC39E59CEDFC9F1E /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIApplicationExtensions.swift; path = Sources/SwifterSwift/UIKit/UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		8CC14D54CF483CF531F6412BFC589C4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		924472FC73A9D9D5AC2D2DBFF3BC2D8F /* BidirectionalCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BidirectionalCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BidirectionalCollectionExtensions.swift; sourceTree = "<group>"; };
-		9272083025F10BB8D7196F620DD43EE2 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatingPointExtensions.swift; sourceTree = "<group>"; };
-		92DAF498BC2CEAFDD28514B68A153BAE /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
-		93F6508D3179DE068778FEC42CB16FD5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		946B60B61F5542FD0689DCCE7F2FAD98 /* SignedNumericExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedNumericExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedNumericExtensions.swift; sourceTree = "<group>"; };
+		8DCF06D154F598A682A12CAAA7B767C4 /* ComparableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComparableExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ComparableExtensions.swift; sourceTree = "<group>"; };
+		91DE17C9C1ECF2C91BF7A4668144A8B9 /* M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.xcconfig; sourceTree = "<group>"; };
+		92D0D49A7318FD5EFB46299516106969 /* CGPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPointExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGPointExtensions.swift; sourceTree = "<group>"; };
 		9631BB5557C259992316146C6D85C71A /* Pods-KitchenerMap-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KitchenerMap-frameworks.sh"; sourceTree = "<group>"; };
-		9673B06B5FDD0CC7990C4A803770E4A9 /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = M13Checkbox.framework; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99A44E199B24C6DBE4BE5D0C36AA9F7A /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
-		9B1995AC7DE5AEDD18AB7A2449348C8F /* ExpandableCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCell.swift; path = ExpandableCell/ExpandableCell.swift; sourceTree = "<group>"; };
-		9B29ADAE571838B08DD6EFF5F082764A /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGFloatExtensions.swift; sourceTree = "<group>"; };
-		9CD00679DDEF0697438013771FA437A9 /* GoogleMaps.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.xcconfig; sourceTree = "<group>"; };
+		96DC0280FB5A0E78B10226547AEAB126 /* UIDatePickerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIDatePickerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIDatePickerExtensions.swift; sourceTree = "<group>"; };
+		9979D2D05134D1D47543DC075C569407 /* CGVectorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGVectorExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGVectorExtensions.swift; sourceTree = "<group>"; };
+		9BBB00C472218CF03B18DDBC3245936D /* SwifterSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwifterSwift-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F77ED5FF2278E2B5C9D260A71D6F202 /* SwifterSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-prefix.pch"; sourceTree = "<group>"; };
+		9E76FBAB4DD92981DC884FD5440E860F /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISearchBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UISearchBarExtensions.swift; sourceTree = "<group>"; };
+		9FAE51D57FB46CB7D3834976C7B914C2 /* ExpandableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExpandableCell.xcconfig; sourceTree = "<group>"; };
+		A0B02CDC2AC468E3973919DACDC75FC2 /* NSPredicateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSPredicateExtensions.swift; path = Sources/SwifterSwift/Foundation/NSPredicateExtensions.swift; sourceTree = "<group>"; };
 		A2AF5EA4D9F769D41042A99A80FFB9ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A44F51AC8733F3CEAA33D5FD9EE98588 /* UILabelExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UILabelExtensions.swift; path = Sources/SwifterSwift/UIKit/UILabelExtensions.swift; sourceTree = "<group>"; };
-		A48CCFE4F93B892F898B0500C1F48504 /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
-		A6F7F26DA4578CEE678A60B45A552472 /* ExpandableCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ExpandableCell.framework; path = ExpandableCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A70D02CDB844B11B5386BBD525C7E524 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DictionaryExtensions.swift; sourceTree = "<group>"; };
-		AB91B0B8DA60EEACA1FA5C54DD6EFF99 /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CollectionExtensions.swift; sourceTree = "<group>"; };
-		AFC421888F3234B82B747F6E6BF517CB /* RandomAccessCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomAccessCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RandomAccessCollectionExtensions.swift; sourceTree = "<group>"; };
-		B18163BD599249C87DB1DE3E66F629E5 /* BoolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BoolExtensions.swift; sourceTree = "<group>"; };
-		B41EF02CB7DE6525723D186AEFC66DF5 /* NSViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSViewExtensions.swift; path = Sources/SwifterSwift/AppKit/NSViewExtensions.swift; sourceTree = "<group>"; };
-		B9791F16836AC0F0A840CF69DEB18D35 /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
-		BA05B4AEE3D7DF1736D896365ED88F67 /* FloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatExtensions.swift; sourceTree = "<group>"; };
-		BA118E1601FCE59D61F39F702DB19C52 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UICollectionViewExtensions.swift; sourceTree = "<group>"; };
-		BB249EE7DA1AC2E0372A1B8CB7DEFB12 /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
-		BB455B8D7682464BCD0869D13DE6F8C3 /* DoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DoubleExtensions.swift; sourceTree = "<group>"; };
-		BBA289593C9AA251D341667BDC685817 /* IntExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/IntExtensions.swift; sourceTree = "<group>"; };
-		BEDE084C52C6C31A4E35F95447292161 /* UITabBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UITabBarExtensions.swift; sourceTree = "<group>"; };
-		C189DE343490115BD17054013266559E /* SwifterSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-umbrella.h"; sourceTree = "<group>"; };
+		A39A74477380711148AEAF96B015B208 /* UIGestureRecognizerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIGestureRecognizerExtensions.swift; sourceTree = "<group>"; };
+		A6E91257AB64CCCA3595393E48893E72 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = Sources/SwifterSwift/UIKit/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		A8B79BBE50822132B30CB1944B9A3A0F /* SwifterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwifterSwift.framework; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9497B44CDA9FF8B762788B147658DFE /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationControllerExtensions.swift; path = Sources/SwifterSwift/UIKit/UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
+		AA6272E5D3266D32DCEE5CA5CE54CBD7 /* BidirectionalCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BidirectionalCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BidirectionalCollectionExtensions.swift; sourceTree = "<group>"; };
+		AB7BA3CCC45CCCF94F9D4DFACCCBF458 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringExtensions.swift; sourceTree = "<group>"; };
+		B016B0A37C224128B5DF3A198E6C510E /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		B20ACF83AA629898EA34C2302F080D09 /* BinaryFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryFloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BinaryFloatingPointExtensions.swift; sourceTree = "<group>"; };
+		B2B62B2BC17416EF00594250FB4588D9 /* CalendarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarExtensions.swift; path = Sources/SwifterSwift/Foundation/CalendarExtensions.swift; sourceTree = "<group>"; };
+		B55C7FD1F325D38E292B59ED9D0E572D /* UIActivityExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIActivityExtensions.swift; path = Sources/SwifterSwift/UIKit/UIActivityExtensions.swift; sourceTree = "<group>"; };
+		B6717F9369C40F9F9B1FAE02FDF70546 /* ExpandableStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableStyle.swift; path = ExpandableCell/ExpandableStyle.swift; sourceTree = "<group>"; };
+		B6FD6DFE6CD602277CDE5628A40CD7B1 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DictionaryExtensions.swift; sourceTree = "<group>"; };
+		B780575F34BC9A74773D863438E79106 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		B82845B0191C590B139C566B4018BFE3 /* UIWindowExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIWindowExtensions.swift; path = Sources/SwifterSwift/UIKit/UIWindowExtensions.swift; sourceTree = "<group>"; };
+		B8AC0DF40549D4C89E679AF7F5E1BFAF /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = M13Checkbox.framework; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D10AB71C10307986D1BF8496FC667C /* SKNodeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SKNodeExtensions.swift; path = Sources/SwifterSwift/SpriteKit/SKNodeExtensions.swift; sourceTree = "<group>"; };
+		BA9CB85E0D91074B2436C20D703B68DB /* RandomAccessCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomAccessCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RandomAccessCollectionExtensions.swift; sourceTree = "<group>"; };
+		BB733E995F099A4B235A1C2D0F86DD85 /* URLRequestExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequestExtensions.swift; path = Sources/SwifterSwift/Foundation/URLRequestExtensions.swift; sourceTree = "<group>"; };
+		BB7B2A28D68107F10BFC515973A035BA /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		BC12CD4C455476E56D76B855479FCABC /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGFloatExtensions.swift; sourceTree = "<group>"; };
+		BCA3ABBD0ED011176783B2AEE30417CD /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		BDE556BAE4DD9FA3401B4291807D3A21 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		BEAD9C41522A85FEF76B60E987BDC4E8 /* SignedIntegerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedIntegerExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedIntegerExtensions.swift; sourceTree = "<group>"; };
+		BEC702FA551C37C43946ADD2576A8272 /* UITextViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UITextViewExtensions.swift; sourceTree = "<group>"; };
+		BF10897E695E258EABB68DE4713B91C2 /* URLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLExtensions.swift; path = Sources/SwifterSwift/Foundation/URLExtensions.swift; sourceTree = "<group>"; };
 		C2336C5194AA74912997A76B0B652593 /* Pods-KitchenerMap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KitchenerMap-umbrella.h"; sourceTree = "<group>"; };
-		C4545517DD5D35026B3FFFB820DB4F72 /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKMapViewExtensions.swift; path = Sources/SwifterSwift/MapKit/MKMapViewExtensions.swift; sourceTree = "<group>"; };
-		C64021CA49C63AAAC727B3AE4C57DE0A /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationControllerExtensions.swift; path = Sources/SwifterSwift/UIKit/UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
-		C7DFDC8C82851CC025A0C894EA8074B7 /* NSPredicateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSPredicateExtensions.swift; path = Sources/SwifterSwift/Foundation/NSPredicateExtensions.swift; sourceTree = "<group>"; };
-		C8C51C3A114E8AC0482939728F452B96 /* UIWindowExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIWindowExtensions.swift; path = Sources/SwifterSwift/UIKit/UIWindowExtensions.swift; sourceTree = "<group>"; };
-		C95B9CC46FB50DAEEAEAA00DF2DA77F2 /* UITextViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UITextViewExtensions.swift; sourceTree = "<group>"; };
+		C26D17D06D0A3E3BAB8D19EF5C10A973 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		C29886D278A3C646EA5847FC3059C414 /* ExpandableTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableTableView.swift; path = ExpandableCell/ExpandableTableView.swift; sourceTree = "<group>"; };
+		C3959E10631B0F2F84683D21CDD7BFC2 /* CGColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGColorExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGColorExtensions.swift; sourceTree = "<group>"; };
+		C5332F6A2F184545D9D13AF888556C50 /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		C62AC187F20DD48918F098AD38D8E9D8 /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
+		C87EFE3162B95DDEA4B2AB62E5BFE8CD /* SignedNumericExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedNumericExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedNumericExtensions.swift; sourceTree = "<group>"; };
+		CA6B3FFFB7ECD974372E53AFBB2568B1 /* DoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DoubleExtensions.swift; sourceTree = "<group>"; };
+		CA77F44E5E34204BAAFBCD1995E7CA3A /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		CAB0CC7325BC4C8D99C4355CAFCFDAC8 /* Pods-KitchenerMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KitchenerMap.debug.xcconfig"; sourceTree = "<group>"; };
+		CB95C851B9614A433FBC15202D31C78C /* CLLocationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CLLocationExtensions.swift; path = Sources/SwifterSwift/CoreLocation/CLLocationExtensions.swift; sourceTree = "<group>"; };
 		CCCBE8AE964CCA2D42145A4D920C9AA1 /* Pods-KitchenerMap-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KitchenerMap-Info.plist"; sourceTree = "<group>"; };
-		CF26ECB6367B2915924AF3B94E099713 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGSizeExtensions.swift; sourceTree = "<group>"; };
-		CFEA872CB292FC7F61BB5DA17713B4D5 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserDefaultsExtensions.swift; path = Sources/SwifterSwift/Foundation/UserDefaultsExtensions.swift; sourceTree = "<group>"; };
-		D2B15D3E10272DAE154EEFCEB3711CFA /* ExpandableDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDelegate.swift; path = ExpandableCell/ExpandableDelegate.swift; sourceTree = "<group>"; };
+		CE6E2C7EDE2F5A3DB437465049A72BE2 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		CEBF285EF789C0BD80F83117FD1E1AA1 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIEdgeInsetsExtensions.swift; path = Sources/SwifterSwift/UIKit/UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
+		D33E0E12756D90CAED681D9891AAD78F /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		D3E47E2F68020B0EC692196EAF87894A /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIScrollViewExtensions.swift; sourceTree = "<group>"; };
+		D402D86C6C23D5A0046C6F18C78BB369 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		D484CFBFE2A7C64F31ED406CB49E7DDE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D53C62CECC636324435D2C938E319315 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtensions.swift; path = Sources/SwifterSwift/UIKit/UIButtonExtensions.swift; sourceTree = "<group>"; };
-		D549F9B7A37D219576CC0DE72B744D19 /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
-		D559272F0B2063AA2500F21431DDBBD6 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		D5F5E4BB685678EE258537EB2C9E6B0F /* UIDatePickerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIDatePickerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIDatePickerExtensions.swift; sourceTree = "<group>"; };
-		D6CC5919131D1ADAEA336C7E1306633F /* FileManagerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtensions.swift; path = Sources/SwifterSwift/Foundation/FileManagerExtensions.swift; sourceTree = "<group>"; };
-		D7135278BF6ECC1B1431088547662BA4 /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
-		D9787306E70FC4B8EE91C7E5FC7F30A8 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensions.swift; path = Sources/SwifterSwift/UIKit/UIStoryboardExtensions.swift; sourceTree = "<group>"; };
-		DB4D139DE9886F16B67630175AF96472 /* ExpandableCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ExpandableCell.modulemap; sourceTree = "<group>"; };
-		DB506C08A5D2115E81F87D2070ADF095 /* DateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = Sources/SwifterSwift/Foundation/DateExtensions.swift; sourceTree = "<group>"; };
-		DC3F682A5B3FE9DEC4B5CE57FC8E21B4 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
-		DCA38950DF235DDC528F7062062673B9 /* UIViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIViewExtensions.swift; sourceTree = "<group>"; };
-		DE46F596E4A8C144CB4173B0FCDBE7A3 /* StringProtocolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringProtocolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringProtocolExtensions.swift; sourceTree = "<group>"; };
-		E0360E7A2CDF70F76FD0BFF547927F29 /* SwifterSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwifterSwift-dummy.m"; sourceTree = "<group>"; };
-		E03BF9A97ABDADC6B6708137C9813202 /* UIRefreshControlExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIRefreshControlExtensions.swift; path = Sources/SwifterSwift/UIKit/UIRefreshControlExtensions.swift; sourceTree = "<group>"; };
-		E0921FB29C2D78B50D75DF05F1816F4D /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
-		E5A5FCE9F5CF8BB6C578D79FA27DD9CB /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
-		E66A69BC195804F2BCE94E908B4DB560 /* UILayoutPriorityExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UILayoutPriorityExtensions.swift; path = Sources/SwifterSwift/UIKit/UILayoutPriorityExtensions.swift; sourceTree = "<group>"; };
-		E8772E50639F5940A54C46FC6C8EE2A1 /* SwifterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwifterSwift.framework; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E912CB794A8E6274B9373194AD7EE90D /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
-		EB6ADC33C52ED2FE87AB4099AA1BD09C /* SwifterSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwifterSwift.xcconfig; sourceTree = "<group>"; };
-		EEF8EF678A85D622F3C5593D13A1D9E2 /* URLRequestExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequestExtensions.swift; path = Sources/SwifterSwift/Foundation/URLRequestExtensions.swift; sourceTree = "<group>"; };
-		F10405CB9CEEA8961F528C60654195DF /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchQueueExtensions.swift; path = Sources/SwifterSwift/Dispatch/DispatchQueueExtensions.swift; sourceTree = "<group>"; };
-		F145E96ED1FEEB1562812CA3208B1494 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		F164388D4F09677ED2B4867C575335EF /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExtensions.swift; path = Sources/SwifterSwift/Foundation/DataExtensions.swift; sourceTree = "<group>"; };
-		F36418832020C37E4B08E1095EB7DAB0 /* UIFontExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIFontExtensions.swift; path = Sources/SwifterSwift/UIKit/UIFontExtensions.swift; sourceTree = "<group>"; };
-		F3DAD114572EEB6A6549B3368F20A9E2 /* ColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtensions.swift; path = Sources/SwifterSwift/Shared/ColorExtensions.swift; sourceTree = "<group>"; };
+		D5C7CE888279FE48B1539084FA728761 /* UISliderExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISliderExtensions.swift; path = Sources/SwifterSwift/UIKit/UISliderExtensions.swift; sourceTree = "<group>"; };
+		D69AEFE91A3182331BEA633168374BFD /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		D70E2A770D86133D4EF350963DC72EC2 /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		D9D4381E060D182947404381CCB89DE7 /* UINavigationBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UINavigationBarExtensions.swift; sourceTree = "<group>"; };
+		DCEFE50D5A4C1BDBBB84CB31AC1DC9FD /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		DEFA6A27D928BDBB8DDCCA1BA4FE7917 /* ExpandableCell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ExpandableCell-Info.plist"; sourceTree = "<group>"; };
+		E05FE59F37FBBB7D296A55F6BC9336E5 /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
+		E1C5850A284AEC228AAF8A17296ECF22 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
+		E43AF730A1ED3F1980F920E365416B2E /* OptionalExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/OptionalExtensions.swift; sourceTree = "<group>"; };
+		E4B5B7993C0CA62FC8971CCF3FC19C82 /* FloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatExtensions.swift; sourceTree = "<group>"; };
+		E62361DAF95D6C6CD9C3CEE5944E7991 /* LocaleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocaleExtensions.swift; path = Sources/SwifterSwift/Foundation/LocaleExtensions.swift; sourceTree = "<group>"; };
+		E6256855B375A4F8A6901BD2449A895F /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
+		EB4D8D20BCB11BA4EFFD36DEE0DEC929 /* UIViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIViewExtensions.swift; sourceTree = "<group>"; };
+		ECACA39EB83CA841596D560BF9993182 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFieldExtensions.swift; path = Sources/SwifterSwift/UIKit/UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		ED9222524E224C65792C48C0E51BBB92 /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
 		F41E914EC09538D0CEC7935C1FD02245 /* Pods-KitchenerMap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KitchenerMap-resources.sh"; sourceTree = "<group>"; };
-		F777D887F54981AAD1E20B7D0F30D0A4 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		F7916B1C410C13B42CACC3AF2ED35397 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISearchBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UISearchBarExtensions.swift; sourceTree = "<group>"; };
-		F7D7FB5A5B15A554F0CC9E3EFDD34558 /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
-		F81E2C80A63A2567A2EE8171486178CB /* CLLocationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CLLocationExtensions.swift; path = Sources/SwifterSwift/CoreLocation/CLLocationExtensions.swift; sourceTree = "<group>"; };
-		F914EA4204D7D89B25C4802E0DDC99E3 /* CGPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPointExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGPointExtensions.swift; sourceTree = "<group>"; };
-		FBE52B4A462A7701EC15888585C191AE /* LocaleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocaleExtensions.swift; path = Sources/SwifterSwift/Foundation/LocaleExtensions.swift; sourceTree = "<group>"; };
-		FF051BE13CA92546263343F95F1FD7BC /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIScrollViewExtensions.swift; sourceTree = "<group>"; };
-		FF3EA3210D3C60F319B2D973A221E082 /* CalendarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarExtensions.swift; path = Sources/SwifterSwift/Foundation/CalendarExtensions.swift; sourceTree = "<group>"; };
+		F4D956A444164A65F72EAEDAC9737414 /* CharacterExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CharacterExtensions.swift; sourceTree = "<group>"; };
+		F7EA26CFF5DD9DBE98AA11F7EC2FE5B0 /* ExpandableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableCell-prefix.pch"; sourceTree = "<group>"; };
+		FA95EF10EA6A14D84A187B976558B36E /* ExpandableCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ExpandableCell.modulemap; sourceTree = "<group>"; };
+		FA984E6A34DDC161A36FC57AA90ABB07 /* ExpandableCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ExpandableCell.framework; path = ExpandableCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA948EF13DF470663326E96B9C1BDCF /* ExpandableCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCell.swift; path = ExpandableCell/ExpandableCell.swift; sourceTree = "<group>"; };
+		FCF3EC91664BC93302CA1363F84AF6A5 /* ExpandableCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableCell-umbrella.h"; sourceTree = "<group>"; };
+		FD861FA7F45EC3C9FFF01293C81E079A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		FFFBF37E3A9BF5BBC3C46A2CD3D1D420 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		388515673174A82632B2D40418381EC5 /* Frameworks */ = {
+		5AEDC5818ACD27782D708A108DD27263 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0DC33A66D60776FA681704BB222B8D0 /* Foundation.framework in Frameworks */,
+				885D40091FAF3BD602683721A91CE023 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6DE83927CA831FFA992844B53EC058A4 /* Frameworks */ = {
+		83DC795E1A0F4AD7B9CF303BDE76C689 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78EC2C3D07FBBDFCFEE9E3D18384A94B /* Foundation.framework in Frameworks */,
+				4FD09D3CA9F78294953D5587B9EB12FD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +398,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD1DAFE1F3E6C9E4EB0F2099B6D6FA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0277466285B3B27C4980829D3752EDE4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F32F76C90E604F458899E24EE3AC4BD /* GoogleMaps.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
 		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,75 +426,164 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		04883C9A460FEF937FDF061F97CE1114 /* CoreGraphics */ = {
+		08080BAB6386B6FE4A4092C795F32C4D /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = CoreGraphics;
 			sourceTree = "<group>";
 		};
-		05DBC5A8393D8A09F8127150F7C2B017 /* ExpandableCell */ = {
+		0A8DCB0328D4345DBD1CFB87ECF627FB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9B1995AC7DE5AEDD18AB7A2449348C8F /* ExpandableCell.swift */,
-				D2B15D3E10272DAE154EEFCEB3711CFA /* ExpandableDelegate.swift */,
-				24AEF00B2C95DB22B66424F504DA39CD /* ExpandableProcessor.swift */,
-				7E1E0F4009288DC370C2ADA7292FEF1A /* ExpandableStyle.swift */,
-				6AF536868B60A8C3249436722F7E30DA /* ExpandableTableView.swift */,
-				16B390233FC7BE9DC3248A445193128A /* Resources */,
-				70DCE36B2F31F85A879A260E1D844F2F /* Support Files */,
+				14A4BF832D98344B159401A6A9CAEE24 /* Alamofire */,
+				51244DD1745BB6F64DED5E02AF5A151A /* ExpandableCell */,
+				B149583147855E54540817337C2DF022 /* GoogleMaps */,
+				0C02E94EF37B683DF216D3EDD48B60B7 /* M13Checkbox */,
+				77B200E201DA3A0FB5F08164D6A62018 /* SwifterSwift */,
 			);
-			name = ExpandableCell;
-			path = ExpandableCell;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		0B04130B4CF705186510DF7BE0D2A8F4 /* UIKit */ = {
+		0C02E94EF37B683DF216D3EDD48B60B7 /* M13Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				E1C5850A284AEC228AAF8A17296ECF22 /* DefaultValues.swift */,
+				054CF69CF6EDEB74056FCCC18080D8B1 /* M13Checkbox.swift */,
+				C62AC187F20DD48918F098AD38D8E9D8 /* M13Checkbox+IB.swift */,
+				E6256855B375A4F8A6901BD2449A895F /* M13CheckboxAddRemovePathGenerator.swift */,
+				C5332F6A2F184545D9D13AF888556C50 /* M13CheckboxAnimationGenerator.swift */,
+				61BA3F76622933910BD649C18FA0C227 /* M13CheckboxBounceController.swift */,
+				D33E0E12756D90CAED681D9891AAD78F /* M13CheckboxCheckPathGenerator.swift */,
+				E05FE59F37FBBB7D296A55F6BC9336E5 /* M13CheckboxController.swift */,
+				0030F91765B8203E6B2AA22AD56FDDF5 /* M13CheckboxDisclosurePathGenerator.swift */,
+				83B0BAC8F8A4327FCC9BB0D20C32D117 /* M13CheckboxDotController.swift */,
+				64544C6D62C82DBE73E5AB76C043A401 /* M13CheckboxExpandController.swift */,
+				D69AEFE91A3182331BEA633168374BFD /* M13CheckboxFadeController.swift */,
+				DCEFE50D5A4C1BDBBB84CB31AC1DC9FD /* M13CheckboxFillController.swift */,
+				4E3C00FE0B9333FD8BDE052401612B54 /* M13CheckboxFlatController.swift */,
+				73AD72018F14AA100E0C23677F813A45 /* M13CheckboxGestureRecognizer.swift */,
+				0C58391E3394BBA406756EB1D10FCDC0 /* M13CheckboxPathGenerator.swift */,
+				49CD8C7060B92FDDA972417B82A02151 /* M13CheckboxRadioPathGenerator.swift */,
+				532A29C89C4FC7F68D0B3FDF47F5D2B6 /* M13CheckboxSpiralController.swift */,
+				2E9ABEE9E141F696604472B83D21022E /* M13CheckboxStrokeController.swift */,
+				3F741058D27EF450D0801F3B34E351A6 /* Support Files */,
+			);
+			name = M13Checkbox;
+			path = M13Checkbox;
+			sourceTree = "<group>";
+		};
+		1089A1ACB46BFCDF48AB1A150A85B545 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C9BCD74933758F77B72D5117F56976AB /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		14A4BF832D98344B159401A6A9CAEE24 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				7E543315822841DCECF3BB1DBC409378 /* AFError.swift */,
+				5B5E156DABC84ECCC57AD7673EEF0270 /* Alamofire.swift */,
+				B780575F34BC9A74773D863438E79106 /* DispatchQueue+Alamofire.swift */,
+				BB7B2A28D68107F10BFC515973A035BA /* MultipartFormData.swift */,
+				50FEB9DB191DAC69432919B471F031B0 /* NetworkReachabilityManager.swift */,
+				C26D17D06D0A3E3BAB8D19EF5C10A973 /* Notifications.swift */,
+				71C101C497205E5638D314A8447CE1BD /* ParameterEncoding.swift */,
+				17A4950A1F6B06A90E3C23FE13DAA7D4 /* Request.swift */,
+				198F5451411987CDE4D358E77A971BED /* Response.swift */,
+				5064EF987B338B012422C91923810141 /* ResponseSerialization.swift */,
+				B016B0A37C224128B5DF3A198E6C510E /* Result.swift */,
+				6169DC05E67E41C2E948009C54910ACD /* ServerTrustPolicy.swift */,
+				CA77F44E5E34204BAAFBCD1995E7CA3A /* SessionDelegate.swift */,
+				CE6E2C7EDE2F5A3DB437465049A72BE2 /* SessionManager.swift */,
+				3CBF6251CA4675DB149822E3F17D8881 /* TaskDelegate.swift */,
+				FFFBF37E3A9BF5BBC3C46A2CD3D1D420 /* Timeline.swift */,
+				0CFBABA64C8C5FC3E109FBC0E679503D /* Validation.swift */,
+				30EAEFF09E33A975B60EF4FBD6ECBB55 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		255688D7F337D8370DDB47C1B4316FA5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = UIKit;
 			sourceTree = "<group>";
 		};
-		16B390233FC7BE9DC3248A445193128A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				43B8E10E550BF147C95D1CEB1DD7845D /* ExpandableCell.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		28CB5F372D396627E8107A9158081FF3 /* Dispatch */ = {
+		261A1ADA9B17EB75E6777B27A1E75D07 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Dispatch;
+			name = Foundation;
 			sourceTree = "<group>";
 		};
-		351329106C95ED2E386B933FB1EC9B0E /* SwiftStdlib */ = {
+		26882B503FD7AC23C41D4164F06ACD59 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = SwiftStdlib;
-			sourceTree = "<group>";
-		};
-		380706EE508F9D2C769A8739F6DC7AD5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9CD00679DDEF0697438013771FA437A9 /* GoogleMaps.xcconfig */,
+				66AE6CA20515725CD31F5DD3DCD77654 /* SwifterSwift.modulemap */,
+				4427C5A8A9CDF11C2542750E61FF8C77 /* SwifterSwift.xcconfig */,
+				9BBB00C472218CF03B18DDBC3245936D /* SwifterSwift-dummy.m */,
+				1072316FCAF41FB16C698C813FA5A167 /* SwifterSwift-Info.plist */,
+				1734B58130A265C4FC506647D2147203 /* SwifterSwift-prefix.pch */,
+				7E3A39BF7096C3B7A8E6412E8E39CC33 /* SwifterSwift-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GoogleMaps";
+			path = "../Target Support Files/SwifterSwift";
 			sourceTree = "<group>";
 		};
-		3E831FBABA7DFA0E78D6A18D41A1CF8A /* Pods */ = {
+		30EAEFF09E33A975B60EF4FBD6ECBB55 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				05DBC5A8393D8A09F8127150F7C2B017 /* ExpandableCell */,
-				50FE4D81E5E26D3685A4CDAC4EFE23F9 /* GoogleMaps */,
-				D8BD01306D8D76E27BC5CF0E7596D66A /* M13Checkbox */,
-				EE943B32F2D831B1F3597D5659FA0965 /* SwifterSwift */,
+				29BD54137CCBD9783F1C5E744010F5FF /* Alamofire.modulemap */,
+				BCA3ABBD0ED011176783B2AEE30417CD /* Alamofire.xcconfig */,
+				BDE556BAE4DD9FA3401B4291807D3A21 /* Alamofire-dummy.m */,
+				72535699D261B011B16805A699D25455 /* Alamofire-Info.plist */,
+				84F2316401F0FBC946CEAD8370E33E9C /* Alamofire-prefix.pch */,
+				6A3D2AEA0F1539CFC9E4A9739229253A /* Alamofire-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		35A3288FFEE7ABB33B6213798E3863A9 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MapKit;
+			sourceTree = "<group>";
+		};
+		3DD514F5958BDAEE6368284D69100C95 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				7814BB77D5BE6614460BDDC472D23757 /* Frameworks */,
+				F214325BCAEF98C8E93DA50A3D7AAA8F /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		3F741058D27EF450D0801F3B34E351A6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2A770D86133D4EF350963DC72EC2 /* M13Checkbox.modulemap */,
+				91DE17C9C1ECF2C91BF7A4668144A8B9 /* M13Checkbox.xcconfig */,
+				016E2702CD0CB031127DC3A7F7A5F29E /* M13Checkbox-dummy.m */,
+				ED9222524E224C65792C48C0E51BBB92 /* M13Checkbox-Info.plist */,
+				1DE11D7EB5B603100135FB263C4332B7 /* M13Checkbox-prefix.pch */,
+				3681E40D5BC0C4F65EC81E5A4BADAEB4 /* M13Checkbox-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/M13Checkbox";
+			sourceTree = "<group>";
+		};
+		479A298A9C5D02F49D3B9AB1819FBB29 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreLocation;
 			sourceTree = "<group>";
 		};
 		4E56FAE6E1BD397D24F17A0918F4C479 /* Pods-KitchenerMap */ = {
@@ -447,51 +604,119 @@
 			path = "Target Support Files/Pods-KitchenerMap";
 			sourceTree = "<group>";
 		};
-		50FE4D81E5E26D3685A4CDAC4EFE23F9 /* GoogleMaps */ = {
+		51244DD1745BB6F64DED5E02AF5A151A /* ExpandableCell */ = {
 			isa = PBXGroup;
 			children = (
-				9612FCA93D4C51D2570D019F5B3C2D52 /* Base */,
-				F083A3B92F95AB46FDEB6C74ED0CB496 /* Maps */,
-				380706EE508F9D2C769A8739F6DC7AD5 /* Support Files */,
+				FAA948EF13DF470663326E96B9C1BDCF /* ExpandableCell.swift */,
+				4451857F614A95C0A77862EC7C4CF537 /* ExpandableDelegate.swift */,
+				2A10B3FA5AF25FB40BD042107D69B3EA /* ExpandableProcessor.swift */,
+				B6717F9369C40F9F9B1FAE02FDF70546 /* ExpandableStyle.swift */,
+				C29886D278A3C646EA5847FC3059C414 /* ExpandableTableView.swift */,
+				C6AE3A678FB5119751843631B1CB76BC /* Resources */,
+				A63FE230ABF586DA4C4FD39E8738DF4C /* Support Files */,
 			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = ExpandableCell;
+			path = ExpandableCell;
 			sourceTree = "<group>";
 		};
-		68F2F06672747E3DF1953646A8E0D52D /* Frameworks */ = {
+		77B200E201DA3A0FB5F08164D6A62018 /* SwifterSwift */ = {
 			isa = PBXGroup;
 			children = (
-				D559272F0B2063AA2500F21431DDBBD6 /* GoogleMaps.framework */,
-				F145E96ED1FEEB1562812CA3208B1494 /* GoogleMapsCore.framework */,
+				04B0A25BC2E289BE9868334439E8C24A /* ArrayExtensions.swift */,
+				AA6272E5D3266D32DCEE5CA5CE54CBD7 /* BidirectionalCollectionExtensions.swift */,
+				B20ACF83AA629898EA34C2302F080D09 /* BinaryFloatingPointExtensions.swift */,
+				1E1D3621F87D2883D08461B4EE616CF7 /* BoolExtensions.swift */,
+				B2B62B2BC17416EF00594250FB4588D9 /* CalendarExtensions.swift */,
+				C3959E10631B0F2F84683D21CDD7BFC2 /* CGColorExtensions.swift */,
+				BC12CD4C455476E56D76B855479FCABC /* CGFloatExtensions.swift */,
+				92D0D49A7318FD5EFB46299516106969 /* CGPointExtensions.swift */,
+				86238EC64720BA4216E4B6E86AC6D941 /* CGSizeExtensions.swift */,
+				9979D2D05134D1D47543DC075C569407 /* CGVectorExtensions.swift */,
+				F4D956A444164A65F72EAEDAC9737414 /* CharacterExtensions.swift */,
+				CB95C851B9614A433FBC15202D31C78C /* CLLocationExtensions.swift */,
+				012F0F846D3046B42B60BFC9B3C5A858 /* CollectionExtensions.swift */,
+				74099CD247A65AB258846F12FD8B2885 /* ColorExtensions.swift */,
+				8DCF06D154F598A682A12CAAA7B767C4 /* ComparableExtensions.swift */,
+				688343AEA070834CA31E0EDA1ECA2420 /* DataExtensions.swift */,
+				52C99E7F02C6CC32E551D85D1C087558 /* DateExtensions.swift */,
+				B6FD6DFE6CD602277CDE5628A40CD7B1 /* DictionaryExtensions.swift */,
+				44932BC1EC00710FAD87D74E9B128E5C /* DispatchQueueExtensions.swift */,
+				CA6B3FFFB7ECD974372E53AFBB2568B1 /* DoubleExtensions.swift */,
+				8139A1E923D748F7C057D265890BDFFF /* FileManagerExtensions.swift */,
+				E4B5B7993C0CA62FC8971CCF3FC19C82 /* FloatExtensions.swift */,
+				2135D81B623C7D024C5BDBA9AC4C683C /* FloatingPointExtensions.swift */,
+				07F1E1FBB99377729D94A3C9F0206173 /* IntExtensions.swift */,
+				E62361DAF95D6C6CD9C3CEE5944E7991 /* LocaleExtensions.swift */,
+				3BD1C34BED1BBA7283933AA6004EC50B /* MKMapViewExtensions.swift */,
+				10CA6976283F34F603F34C6F76D07152 /* MKPolylineExtensions.swift */,
+				667548F4AFBBAB5B7CDE13B7E4C8B5BA /* NSAttributedStringExtensions.swift */,
+				7A0BD31CDF56FE1014907FF7E07E27F2 /* NSImageExtensions.swift */,
+				A0B02CDC2AC468E3973919DACDC75FC2 /* NSPredicateExtensions.swift */,
+				45BD2DFD40EB7C391BFB1D3D5020BF64 /* NSViewExtensions.swift */,
+				E43AF730A1ED3F1980F920E365416B2E /* OptionalExtensions.swift */,
+				BA9CB85E0D91074B2436C20D703B68DB /* RandomAccessCollectionExtensions.swift */,
+				51FE70BAF562F317A9F74E4D61986BEC /* RangeReplaceableCollectionExtensions.swift */,
+				363AA8C5A99DCCA982BDB2A04BF7BC69 /* SequenceExtensions.swift */,
+				BEAD9C41522A85FEF76B60E987BDC4E8 /* SignedIntegerExtensions.swift */,
+				C87EFE3162B95DDEA4B2AB62E5BFE8CD /* SignedNumericExtensions.swift */,
+				B9D10AB71C10307986D1BF8496FC667C /* SKNodeExtensions.swift */,
+				AB7BA3CCC45CCCF94F9D4DFACCCBF458 /* StringExtensions.swift */,
+				3B3658B102A9D2DFB5590434497CE8F0 /* StringProtocolExtensions.swift */,
+				B55C7FD1F325D38E292B59ED9D0E572D /* UIActivityExtensions.swift */,
+				3AFFD30FBA10DA25DCABB9EF2B89CDF0 /* UIAlertControllerExtensions.swift */,
+				8B5CB092153FFE6CDC39E59CEDFC9F1E /* UIApplicationExtensions.swift */,
+				3F4CBF3B3B7491085DBD4E60F6C704F0 /* UIBarButtonItemExtensions.swift */,
+				2CE72C4EBCEFB564C8F96CFED4A1FCDE /* UIButtonExtensions.swift */,
+				6B8D55A2445BBAF3D2FBE954A599FB4A /* UICollectionViewExtensions.swift */,
+				96DC0280FB5A0E78B10226547AEAB126 /* UIDatePickerExtensions.swift */,
+				CEBF285EF789C0BD80F83117FD1E1AA1 /* UIEdgeInsetsExtensions.swift */,
+				6DB455B416B08FE7CF8A0C28D099B41D /* UIFontExtensions.swift */,
+				A39A74477380711148AEAF96B015B208 /* UIGestureRecognizerExtensions.swift */,
+				36492A27873E3D869B6AAD7E0D53902D /* UIImageExtensions.swift */,
+				8312BA66298F104FBA0F575B4C763B6C /* UIImageViewExtensions.swift */,
+				0A581D6D50C2C6087DB5F01D8F770EA2 /* UILabelExtensions.swift */,
+				3F2140D06CC6E1386181D4CC92DAF24A /* UILayoutPriorityExtensions.swift */,
+				D9D4381E060D182947404381CCB89DE7 /* UINavigationBarExtensions.swift */,
+				A9497B44CDA9FF8B762788B147658DFE /* UINavigationControllerExtensions.swift */,
+				591D528A50F2B0EF51AFDA3547627FCB /* UINavigationItemExtensions.swift */,
+				5228E75EE46EE50A717AEF80BB26F73B /* UIRefreshControlExtensions.swift */,
+				D3E47E2F68020B0EC692196EAF87894A /* UIScrollViewExtensions.swift */,
+				9E76FBAB4DD92981DC884FD5440E860F /* UISearchBarExtensions.swift */,
+				1DEDD47E72F10BA212BD4A1E2E653130 /* UISegmentedControlExtensions.swift */,
+				D5C7CE888279FE48B1539084FA728761 /* UISliderExtensions.swift */,
+				5756F03231CFF0201F6AF94D58A76055 /* UIStackViewExtensions.swift */,
+				A6E91257AB64CCCA3595393E48893E72 /* UIStoryboardExtensions.swift */,
+				0855218ECEB26AEEB2C6AE723B9F9061 /* UISwitchExtensions.swift */,
+				35CAE6A35B71D9CDA09CF5A2CAC80CB9 /* UITabBarExtensions.swift */,
+				1633A8DC873E2811235F0CD3338B10D5 /* UITableViewExtensions.swift */,
+				ECACA39EB83CA841596D560BF9993182 /* UITextFieldExtensions.swift */,
+				BEC702FA551C37C43946ADD2576A8272 /* UITextViewExtensions.swift */,
+				FD861FA7F45EC3C9FFF01293C81E079A /* UIViewControllerExtensions.swift */,
+				EB4D8D20BCB11BA4EFFD36DEE0DEC929 /* UIViewExtensions.swift */,
+				B82845B0191C590B139C566B4018BFE3 /* UIWindowExtensions.swift */,
+				BF10897E695E258EABB68DE4713B91C2 /* URLExtensions.swift */,
+				BB733E995F099A4B235A1C2D0F86DD85 /* URLRequestExtensions.swift */,
+				7F460EBD72359CDD6856E053E0FA8AF5 /* UserDefaultsExtensions.swift */,
+				B6CE1E42907E126C69A141E26A57AFFD /* AppKit */,
+				08080BAB6386B6FE4A4092C795F32C4D /* CoreGraphics */,
+				479A298A9C5D02F49D3B9AB1819FBB29 /* CoreLocation */,
+				C21776B532CFDD2C88CAB779DB827A3D /* Dispatch */,
+				261A1ADA9B17EB75E6777B27A1E75D07 /* Foundation */,
+				35A3288FFEE7ABB33B6213798E3863A9 /* MapKit */,
+				E54649CBCE4BAFA1546191E088FFE982 /* SpriteKit */,
+				26882B503FD7AC23C41D4164F06ACD59 /* Support Files */,
+				A519F54F152F28E3574616A854209EA9 /* SwiftStdlib */,
+				255688D7F337D8370DDB47C1B4316FA5 /* UIKit */,
 			);
-			name = Frameworks;
+			name = SwifterSwift;
+			path = SwifterSwift;
 			sourceTree = "<group>";
 		};
-		6DE2FB1C590351A97F3AC027B448D3D6 /* Foundation */ = {
+		7814BB77D5BE6614460BDDC472D23757 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Foundation;
-			sourceTree = "<group>";
-		};
-		70DCE36B2F31F85A879A260E1D844F2F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DB4D139DE9886F16B67630175AF96472 /* ExpandableCell.modulemap */,
-				26A3226E016A70EB856AC0459B8AC71D /* ExpandableCell.xcconfig */,
-				466D2994DE025276F7193B9143EAA14C /* ExpandableCell-dummy.m */,
-				765491D300579EA8947742C494F85B47 /* ExpandableCell-Info.plist */,
-				681B600B2533C4902B5903CFFFE5F618 /* ExpandableCell-prefix.pch */,
-				73A7A8E4B36EF136CC7C162D14E16FE5 /* ExpandableCell-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ExpandableCell";
-			sourceTree = "<group>";
-		};
-		7C8DBCA5AFB27900208347038EB30BFD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F777D887F54981AAD1E20B7D0F30D0A4 /* GoogleMapsBase.framework */,
+				D402D86C6C23D5A0046C6F18C78BB369 /* GoogleMaps.framework */,
+				23EFF63D7E3B0907DD1615994AB63F5E /* GoogleMapsCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -506,51 +731,66 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		95CC540C2D6D323348E2F66038BD1947 /* CoreLocation */ = {
+		A519F54F152F28E3574616A854209EA9 /* SwiftStdlib */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = CoreLocation;
+			name = SwiftStdlib;
 			sourceTree = "<group>";
 		};
-		9612FCA93D4C51D2570D019F5B3C2D52 /* Base */ = {
+		A63FE230ABF586DA4C4FD39E8738DF4C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C8DBCA5AFB27900208347038EB30BFD /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		99044A4711A87796DA70CE51207FF723 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A6F7F26DA4578CEE678A60B45A552472 /* ExpandableCell.framework */,
-				9673B06B5FDD0CC7990C4A803770E4A9 /* M13Checkbox.framework */,
-				3D6A2C9A2A421957CA28C9DCED6BEC59 /* Pods_KitchenerMap.framework */,
-				E8772E50639F5940A54C46FC6C8EE2A1 /* SwifterSwift.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A2D591A4FE55E71D03D5CD71DE055ADB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				42DDDEE40AEDF26B5C9C498393F38331 /* SwifterSwift.modulemap */,
-				EB6ADC33C52ED2FE87AB4099AA1BD09C /* SwifterSwift.xcconfig */,
-				E0360E7A2CDF70F76FD0BFF547927F29 /* SwifterSwift-dummy.m */,
-				25A39B8CC4DB8159AB9F5DB178C9C27B /* SwifterSwift-Info.plist */,
-				9F77ED5FF2278E2B5C9D260A71D6F202 /* SwifterSwift-prefix.pch */,
-				C189DE343490115BD17054013266559E /* SwifterSwift-umbrella.h */,
+				FA95EF10EA6A14D84A187B976558B36E /* ExpandableCell.modulemap */,
+				9FAE51D57FB46CB7D3834976C7B914C2 /* ExpandableCell.xcconfig */,
+				0F27ED3CE66D77AEAC24665A7596A94D /* ExpandableCell-dummy.m */,
+				DEFA6A27D928BDBB8DDCCA1BA4FE7917 /* ExpandableCell-Info.plist */,
+				F7EA26CFF5DD9DBE98AA11F7EC2FE5B0 /* ExpandableCell-prefix.pch */,
+				FCF3EC91664BC93302CA1363F84AF6A5 /* ExpandableCell-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwifterSwift";
+			path = "../Target Support Files/ExpandableCell";
 			sourceTree = "<group>";
 		};
-		BD8A8A537220260277016584CFAE11DF /* SpriteKit */ = {
+		B149583147855E54540817337C2DF022 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				1089A1ACB46BFCDF48AB1A150A85B545 /* Base */,
+				3DD514F5958BDAEE6368284D69100C95 /* Maps */,
+				0277466285B3B27C4980829D3752EDE4 /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		B6CE1E42907E126C69A141E26A57AFFD /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = SpriteKit;
+			name = AppKit;
+			sourceTree = "<group>";
+		};
+		C21776B532CFDD2C88CAB779DB827A3D /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dispatch;
+			sourceTree = "<group>";
+		};
+		C6AE3A678FB5119751843631B1CB76BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7EED19969FBB800B43077E1694410B4A /* ExpandableCell.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C9BCD74933758F77B72D5117F56976AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CD23A245AAC074CE6FF052DEEB3E1D4 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -558,67 +798,22 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				3E831FBABA7DFA0E78D6A18D41A1CF8A /* Pods */,
-				99044A4711A87796DA70CE51207FF723 /* Products */,
+				0A8DCB0328D4345DBD1CFB87ECF627FB /* Pods */,
+				D09FAE946F6BA8992B1810E7E6CC5ED9 /* Products */,
 				E0FFF274CA430C74D2FCFEA283719AEF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D0341589FD5D3D1622A6B8727372468D /* MapKit */ = {
+		D09FAE946F6BA8992B1810E7E6CC5ED9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				395206E0DDA853295155E6F9266A0987 /* Alamofire.framework */,
+				FA984E6A34DDC161A36FC57AA90ABB07 /* ExpandableCell.framework */,
+				B8AC0DF40549D4C89E679AF7F5E1BFAF /* M13Checkbox.framework */,
+				21E66994E6914ABA2BA25B7DF268E44E /* Pods_KitchenerMap.framework */,
+				A8B79BBE50822132B30CB1944B9A3A0F /* SwifterSwift.framework */,
 			);
-			name = MapKit;
-			sourceTree = "<group>";
-		};
-		D89CECDA33D771AC23369F1B137DE781 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				46A4F84AEDA1AD4E82AF526C21E6B02E /* GoogleMaps.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		D8BD01306D8D76E27BC5CF0E7596D66A /* M13Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-				0A0E8A4F5B27A3843E27A2C635F6EE72 /* DefaultValues.swift */,
-				0214E834C3CDDCA33BA60117DFE2F1C1 /* M13Checkbox.swift */,
-				BB249EE7DA1AC2E0372A1B8CB7DEFB12 /* M13Checkbox+IB.swift */,
-				E912CB794A8E6274B9373194AD7EE90D /* M13CheckboxAddRemovePathGenerator.swift */,
-				B9791F16836AC0F0A840CF69DEB18D35 /* M13CheckboxAnimationGenerator.swift */,
-				E5A5FCE9F5CF8BB6C578D79FA27DD9CB /* M13CheckboxBounceController.swift */,
-				596C5DEDED605C77CD805B2B6E116246 /* M13CheckboxCheckPathGenerator.swift */,
-				D549F9B7A37D219576CC0DE72B744D19 /* M13CheckboxController.swift */,
-				6EECEBC55131DCFDD16554FF51E69C2F /* M13CheckboxDisclosurePathGenerator.swift */,
-				DC3F682A5B3FE9DEC4B5CE57FC8E21B4 /* M13CheckboxDotController.swift */,
-				254CAD58F8B941FE1DD83BF1AD426C1F /* M13CheckboxExpandController.swift */,
-				6E6B9C9C83C56B73E8ADC1D9AB1E4345 /* M13CheckboxFadeController.swift */,
-				92DAF498BC2CEAFDD28514B68A153BAE /* M13CheckboxFillController.swift */,
-				60ED5EB0790F46568560B05D7202FAB0 /* M13CheckboxFlatController.swift */,
-				406507F39AAF27A7D312D9CF15624735 /* M13CheckboxGestureRecognizer.swift */,
-				F7D7FB5A5B15A554F0CC9E3EFDD34558 /* M13CheckboxPathGenerator.swift */,
-				D7135278BF6ECC1B1431088547662BA4 /* M13CheckboxRadioPathGenerator.swift */,
-				51D62FCE9B70D3D7C5A7B1DF2CDDE353 /* M13CheckboxSpiralController.swift */,
-				2DADBE5A4546BA312E1D343BEB6A375F /* M13CheckboxStrokeController.swift */,
-				D92E881D47EE1DA13C581F017335FD63 /* Support Files */,
-			);
-			name = M13Checkbox;
-			path = M13Checkbox;
-			sourceTree = "<group>";
-		};
-		D92E881D47EE1DA13C581F017335FD63 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A48CCFE4F93B892F898B0500C1F48504 /* M13Checkbox.modulemap */,
-				5073FEFA37BD837E37297D9EBAA0B21E /* M13Checkbox.xcconfig */,
-				7412CA789F08529CBDA320A950BF8088 /* M13Checkbox-dummy.m */,
-				18CD17DCA66CD2960E9D6822CFF7519A /* M13Checkbox-Info.plist */,
-				99A44E199B24C6DBE4BE5D0C36AA9F7A /* M13Checkbox-prefix.pch */,
-				1CD644AA80FB38AC88E82C9A54706285 /* M13Checkbox-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/M13Checkbox";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		E0FFF274CA430C74D2FCFEA283719AEF /* Targets Support Files */ = {
@@ -629,118 +824,40 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E401EF2DFEEEFB1A6AF169CBBE862466 /* AppKit */ = {
+		E54649CBCE4BAFA1546191E088FFE982 /* SpriteKit */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = AppKit;
+			name = SpriteKit;
 			sourceTree = "<group>";
 		};
-		EE943B32F2D831B1F3597D5659FA0965 /* SwifterSwift */ = {
+		F214325BCAEF98C8E93DA50A3D7AAA8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				55E8114BFE743E983437CB2D87CE1BFC /* ArrayExtensions.swift */,
-				924472FC73A9D9D5AC2D2DBFF3BC2D8F /* BidirectionalCollectionExtensions.swift */,
-				3A753D1325C6ED4BB7EC28061E726DB0 /* BinaryFloatingPointExtensions.swift */,
-				B18163BD599249C87DB1DE3E66F629E5 /* BoolExtensions.swift */,
-				FF3EA3210D3C60F319B2D973A221E082 /* CalendarExtensions.swift */,
-				47E1D9BB31781C981B6AD682465CBCDD /* CGColorExtensions.swift */,
-				9B29ADAE571838B08DD6EFF5F082764A /* CGFloatExtensions.swift */,
-				F914EA4204D7D89B25C4802E0DDC99E3 /* CGPointExtensions.swift */,
-				CF26ECB6367B2915924AF3B94E099713 /* CGSizeExtensions.swift */,
-				7026ECB719616C5318EE25569B0BB0F6 /* CGVectorExtensions.swift */,
-				3D49C0C4AD76F3F7FDD1E1286FF8EE02 /* CharacterExtensions.swift */,
-				F81E2C80A63A2567A2EE8171486178CB /* CLLocationExtensions.swift */,
-				AB91B0B8DA60EEACA1FA5C54DD6EFF99 /* CollectionExtensions.swift */,
-				F3DAD114572EEB6A6549B3368F20A9E2 /* ColorExtensions.swift */,
-				598EE17B8AE4CB4508831037820FEA56 /* ComparableExtensions.swift */,
-				F164388D4F09677ED2B4867C575335EF /* DataExtensions.swift */,
-				DB506C08A5D2115E81F87D2070ADF095 /* DateExtensions.swift */,
-				A70D02CDB844B11B5386BBD525C7E524 /* DictionaryExtensions.swift */,
-				F10405CB9CEEA8961F528C60654195DF /* DispatchQueueExtensions.swift */,
-				BB455B8D7682464BCD0869D13DE6F8C3 /* DoubleExtensions.swift */,
-				D6CC5919131D1ADAEA336C7E1306633F /* FileManagerExtensions.swift */,
-				BA05B4AEE3D7DF1736D896365ED88F67 /* FloatExtensions.swift */,
-				9272083025F10BB8D7196F620DD43EE2 /* FloatingPointExtensions.swift */,
-				BBA289593C9AA251D341667BDC685817 /* IntExtensions.swift */,
-				FBE52B4A462A7701EC15888585C191AE /* LocaleExtensions.swift */,
-				C4545517DD5D35026B3FFFB820DB4F72 /* MKMapViewExtensions.swift */,
-				1C6EB9096CEF9C7F66696B66FF7E9FA8 /* MKPolylineExtensions.swift */,
-				5EECA2421CEB9DB406D3017E97E0A48E /* NSAttributedStringExtensions.swift */,
-				39B865C26420B7CA66268721B2F83636 /* NSImageExtensions.swift */,
-				C7DFDC8C82851CC025A0C894EA8074B7 /* NSPredicateExtensions.swift */,
-				B41EF02CB7DE6525723D186AEFC66DF5 /* NSViewExtensions.swift */,
-				74049BE8940FFC44C1AEBD46C046B25C /* OptionalExtensions.swift */,
-				AFC421888F3234B82B747F6E6BF517CB /* RandomAccessCollectionExtensions.swift */,
-				79173274FCAFA004AB2FC6ED15C6D199 /* RangeReplaceableCollectionExtensions.swift */,
-				5D56808425C247CC0B9471781EBEF97C /* SequenceExtensions.swift */,
-				7725602D51EDF99B132526DA8FB3B47F /* SignedIntegerExtensions.swift */,
-				946B60B61F5542FD0689DCCE7F2FAD98 /* SignedNumericExtensions.swift */,
-				1DA324F0AB34C432B0FB2542A799F677 /* SKNodeExtensions.swift */,
-				843DA72CFD153DDDE755F7098EA19E67 /* StringExtensions.swift */,
-				DE46F596E4A8C144CB4173B0FCDBE7A3 /* StringProtocolExtensions.swift */,
-				2515DB644960E5BF22B766EA524BE9E4 /* UIActivityExtensions.swift */,
-				E0921FB29C2D78B50D75DF05F1816F4D /* UIAlertControllerExtensions.swift */,
-				7172EACECADE9452F6676B9924450FCB /* UIApplicationExtensions.swift */,
-				76184DBA56B764188A80F70293D315E5 /* UIBarButtonItemExtensions.swift */,
-				D53C62CECC636324435D2C938E319315 /* UIButtonExtensions.swift */,
-				BA118E1601FCE59D61F39F702DB19C52 /* UICollectionViewExtensions.swift */,
-				D5F5E4BB685678EE258537EB2C9E6B0F /* UIDatePickerExtensions.swift */,
-				6CDA28933C0EAD009EF541506C09D2C9 /* UIEdgeInsetsExtensions.swift */,
-				F36418832020C37E4B08E1095EB7DAB0 /* UIFontExtensions.swift */,
-				0D6AB7BD6AAD0092489C9D466B9D95C8 /* UIGestureRecognizerExtensions.swift */,
-				483BB0BC7598F024248CA7EF4EDECFE8 /* UIImageExtensions.swift */,
-				023661E48FC15F912B4D417BF875716F /* UIImageViewExtensions.swift */,
-				A44F51AC8733F3CEAA33D5FD9EE98588 /* UILabelExtensions.swift */,
-				E66A69BC195804F2BCE94E908B4DB560 /* UILayoutPriorityExtensions.swift */,
-				4CCF305FD143A1ECD4149CAE81CAA4E8 /* UINavigationBarExtensions.swift */,
-				C64021CA49C63AAAC727B3AE4C57DE0A /* UINavigationControllerExtensions.swift */,
-				7E5DDDE2B7BCE1547511B54325E01051 /* UINavigationItemExtensions.swift */,
-				E03BF9A97ABDADC6B6708137C9813202 /* UIRefreshControlExtensions.swift */,
-				FF051BE13CA92546263343F95F1FD7BC /* UIScrollViewExtensions.swift */,
-				F7916B1C410C13B42CACC3AF2ED35397 /* UISearchBarExtensions.swift */,
-				05B9A24BB9DDE446750DAB38FBC40942 /* UISegmentedControlExtensions.swift */,
-				74B3CBE838400796406F95BA54DF7356 /* UISliderExtensions.swift */,
-				75C95B7289BF700D1B93139EBD4C5988 /* UIStackViewExtensions.swift */,
-				D9787306E70FC4B8EE91C7E5FC7F30A8 /* UIStoryboardExtensions.swift */,
-				372C8640FD57E99424BD66F5BAED34C9 /* UISwitchExtensions.swift */,
-				BEDE084C52C6C31A4E35F95447292161 /* UITabBarExtensions.swift */,
-				8ADB2A44DD54B2E5DD1CEEE3C800B90A /* UITableViewExtensions.swift */,
-				77823D3146EC25CAFDFB96B7E58D9925 /* UITextFieldExtensions.swift */,
-				C95B9CC46FB50DAEEAEAA00DF2DA77F2 /* UITextViewExtensions.swift */,
-				93F6508D3179DE068778FEC42CB16FD5 /* UIViewControllerExtensions.swift */,
-				DCA38950DF235DDC528F7062062673B9 /* UIViewExtensions.swift */,
-				C8C51C3A114E8AC0482939728F452B96 /* UIWindowExtensions.swift */,
-				03031A9D9980802632CF6111905136AE /* URLExtensions.swift */,
-				EEF8EF678A85D622F3C5593D13A1D9E2 /* URLRequestExtensions.swift */,
-				CFEA872CB292FC7F61BB5DA17713B4D5 /* UserDefaultsExtensions.swift */,
-				E401EF2DFEEEFB1A6AF169CBBE862466 /* AppKit */,
-				04883C9A460FEF937FDF061F97CE1114 /* CoreGraphics */,
-				95CC540C2D6D323348E2F66038BD1947 /* CoreLocation */,
-				28CB5F372D396627E8107A9158081FF3 /* Dispatch */,
-				6DE2FB1C590351A97F3AC027B448D3D6 /* Foundation */,
-				D0341589FD5D3D1622A6B8727372468D /* MapKit */,
-				BD8A8A537220260277016584CFAE11DF /* SpriteKit */,
-				A2D591A4FE55E71D03D5CD71DE055ADB /* Support Files */,
-				351329106C95ED2E386B933FB1EC9B0E /* SwiftStdlib */,
-				0B04130B4CF705186510DF7BE0D2A8F4 /* UIKit */,
+				59505230A191318D8484A36533629244 /* GoogleMaps.bundle */,
 			);
-			name = SwifterSwift;
-			path = SwifterSwift;
-			sourceTree = "<group>";
-		};
-		F083A3B92F95AB46FDEB6C74ED0CB496 /* Maps */ = {
-			isa = PBXGroup;
-			children = (
-				68F2F06672747E3DF1953646A8E0D52D /* Frameworks */,
-				D89CECDA33D771AC23369F1B137DE781 /* Resources */,
-			);
-			name = Maps;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1F7F34773E5ECB0AB34C311D70FBD99B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20176EF07490B3690D0A010DECFD9887 /* SwifterSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		672046E1548398FE6102BB9E95312AA3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,55 +874,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C8A3948A92AF412C5E4162F0DD40FD2 /* Headers */ = {
+		E43516EAAB56885E0C94858EAB2B431D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B0583613A5F4736E32319EE1AAFE5F /* SwifterSwift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC4C6A819B7F8756209DE5D33C6A32E3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				374B392C5557FE99B21B2210B3B305A9 /* Pods-KitchenerMap-umbrella.h in Headers */,
+				8053C60F3989381578832202CFD63337 /* Pods-KitchenerMap-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2905732B95BF03C8D140156B971C0FE3 /* Pods-KitchenerMap */ = {
+		19ADEE14BE43D10F880277B84A0E73E1 /* SwifterSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8DDCBC6B46B76FDAAA9ED72F9368A8F9 /* Build configuration list for PBXNativeTarget "Pods-KitchenerMap" */;
+			buildConfigurationList = DB071FE0C771E0AA6C6F37D1D199FC36 /* Build configuration list for PBXNativeTarget "SwifterSwift" */;
 			buildPhases = (
-				AC4C6A819B7F8756209DE5D33C6A32E3 /* Headers */,
-				EEF27F674286FA083407109E2E0ED49A /* Sources */,
-				388515673174A82632B2D40418381EC5 /* Frameworks */,
-				AB5AECB8AA9A8BD13814DD420545696D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4C181F032C56C9A0894B6BE1001ADA70 /* PBXTargetDependency */,
-				B4B9970E8343290068D71C706F93DE50 /* PBXTargetDependency */,
-				308F0182B4FB37CFBA7327C6B1A7C252 /* PBXTargetDependency */,
-				DE64CEBF7B0C619BA205F2A4855AD6B1 /* PBXTargetDependency */,
-			);
-			name = "Pods-KitchenerMap";
-			productName = "Pods-KitchenerMap";
-			productReference = 3D6A2C9A2A421957CA28C9DCED6BEC59 /* Pods_KitchenerMap.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4AF4AA190028CFC4A80056742F3BD2C7 /* SwifterSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 89F92A1C2EDE521C0833B8C7C6A00CD7 /* Build configuration list for PBXNativeTarget "SwifterSwift" */;
-			buildPhases = (
-				8C8A3948A92AF412C5E4162F0DD40FD2 /* Headers */,
-				6F000AB6BB7A573AC2B370454E6DC1FC /* Sources */,
-				6DE83927CA831FFA992844B53EC058A4 /* Frameworks */,
-				F367540FAD45312ABD58D25D67EC11E5 /* Resources */,
+				1F7F34773E5ECB0AB34C311D70FBD99B /* Headers */,
+				BC7865F664AE99D92A2DC948BF397B81 /* Sources */,
+				83DC795E1A0F4AD7B9CF303BDE76C689 /* Frameworks */,
+				EDDF93E5FAAD31F58FC48A0583572DC6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -813,7 +900,48 @@
 			);
 			name = SwifterSwift;
 			productName = SwifterSwift;
-			productReference = E8772E50639F5940A54C46FC6C8EE2A1 /* SwifterSwift.framework */;
+			productReference = A8B79BBE50822132B30CB1944B9A3A0F /* SwifterSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3383968E74B5371B20BB519B170DC7FD /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */,
+				A1C8B029F600160149A2404C342F6E50 /* Sources */,
+				F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */,
+				28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 395206E0DDA853295155E6F9266A0987 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4A5E383FA8BB7D00B6295273318B6B0A /* Pods-KitchenerMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 931FDF40FC5D44669D2E24E5FC21BA65 /* Build configuration list for PBXNativeTarget "Pods-KitchenerMap" */;
+			buildPhases = (
+				E43516EAAB56885E0C94858EAB2B431D /* Headers */,
+				B545320AC6562B2E30C7B814054DBBA6 /* Sources */,
+				5AEDC5818ACD27782D708A108DD27263 /* Frameworks */,
+				0B0F68A28D5D1B88EFD0961E0EFBAF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DED2D7627F29D7A8114D38FD30A66B42 /* PBXTargetDependency */,
+				930266D83F90C741C4EC5001BD0753F8 /* PBXTargetDependency */,
+				8BD8114D67C6AA35EEF4166DF6C610A1 /* PBXTargetDependency */,
+				886D4CB963705A8450C2AF7F2C1DB9A8 /* PBXTargetDependency */,
+				F935402FF1325700BA470F18DA2323EA /* PBXTargetDependency */,
+			);
+			name = "Pods-KitchenerMap";
+			productName = "Pods-KitchenerMap";
+			productReference = 21E66994E6914ABA2BA25B7DF268E44E /* Pods_KitchenerMap.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5752DD257FE266E67107B3EEA49B03C9 /* M13Checkbox */ = {
@@ -831,7 +959,7 @@
 			);
 			name = M13Checkbox;
 			productName = M13Checkbox;
-			productReference = 9673B06B5FDD0CC7990C4A803770E4A9 /* M13Checkbox.framework */;
+			productReference = B8AC0DF40549D4C89E679AF7F5E1BFAF /* M13Checkbox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7F3B143A25A918D2D1AE6DB945A550E2 /* ExpandableCell */ = {
@@ -849,7 +977,7 @@
 			);
 			name = ExpandableCell;
 			productName = ExpandableCell;
-			productReference = A6F7F26DA4578CEE678A60B45A552472 /* ExpandableCell.framework */;
+			productReference = FA984E6A34DDC161A36FC57AA90ABB07 /* ExpandableCell.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -869,32 +997,40 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 99044A4711A87796DA70CE51207FF723 /* Products */;
+			productRefGroup = D09FAE946F6BA8992B1810E7E6CC5ED9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				3383968E74B5371B20BB519B170DC7FD /* Alamofire */,
 				7F3B143A25A918D2D1AE6DB945A550E2 /* ExpandableCell */,
 				BCE3DE68053C99B18AAD56BE1F98BD73 /* GoogleMaps */,
 				5752DD257FE266E67107B3EEA49B03C9 /* M13Checkbox */,
-				2905732B95BF03C8D140156B971C0FE3 /* Pods-KitchenerMap */,
-				4AF4AA190028CFC4A80056742F3BD2C7 /* SwifterSwift */,
+				4A5E383FA8BB7D00B6295273318B6B0A /* Pods-KitchenerMap */,
+				19ADEE14BE43D10F880277B84A0E73E1 /* SwifterSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B0F68A28D5D1B88EFD0961E0EFBAF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		734AE0A246A7FE225FA0A1C91E22AF90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FA362D7CE23C3570C625B9620C62F637 /* ExpandableCell.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB5AECB8AA9A8BD13814DD420545696D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,7 +1041,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F367540FAD45312ABD58D25D67EC11E5 /* Resources */ = {
+		EDDF93E5FAAD31F58FC48A0583572DC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -915,89 +1051,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6F000AB6BB7A573AC2B370454E6DC1FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A0AE66A390EC6B9C404EEC2546C86E8 /* ArrayExtensions.swift in Sources */,
-				7335A7C7B3B99647BE99E5A336118C56 /* BidirectionalCollectionExtensions.swift in Sources */,
-				2A9C2E7F00D319DBA394C26456E7E752 /* BinaryFloatingPointExtensions.swift in Sources */,
-				A6A41198C2BA8D083E170FBAC76ECDCF /* BoolExtensions.swift in Sources */,
-				5CC1433426E960CFDA6682CA4FD4CFE6 /* CalendarExtensions.swift in Sources */,
-				CD086C4CC7497B4A82272B698B515B6E /* CGColorExtensions.swift in Sources */,
-				81F31C3DABE90A8363701A72125791EB /* CGFloatExtensions.swift in Sources */,
-				ED1E2AA3C7EFDF20CE8B87A9A83C42F4 /* CGPointExtensions.swift in Sources */,
-				99F73633D90CDB3B16AC8AA08CDF349C /* CGSizeExtensions.swift in Sources */,
-				7F8FA125AC86969EC6992A73BE95200E /* CGVectorExtensions.swift in Sources */,
-				ABBBBE052EA4EE8F7D896418EBC1AF74 /* CharacterExtensions.swift in Sources */,
-				23FB88573F5D582FB8E1E81F4E151973 /* CLLocationExtensions.swift in Sources */,
-				0463D0B2BBF2A5E1A4322E041420C261 /* CollectionExtensions.swift in Sources */,
-				E60DFA22E51888F3CD46ADEAE7F6D329 /* ColorExtensions.swift in Sources */,
-				648B3D83676961B4251C9FF7D5619BC4 /* ComparableExtensions.swift in Sources */,
-				DFDB53B40DAA6AAC5B970C2D233D9E16 /* DataExtensions.swift in Sources */,
-				5C8CC670A555F1DE5D785E76FCAF64C8 /* DateExtensions.swift in Sources */,
-				BFFBCB8E6A9568460DAB1B99A69D8666 /* DictionaryExtensions.swift in Sources */,
-				1F168B8E13986A6563797F79D5AEDD2A /* DispatchQueueExtensions.swift in Sources */,
-				7A56F2C05D424B586A812E6BE4F467C9 /* DoubleExtensions.swift in Sources */,
-				6F02800D3A740879CE6271876D03FE21 /* FileManagerExtensions.swift in Sources */,
-				EF07E9A91B6FC8F2ECBD58150228CA03 /* FloatExtensions.swift in Sources */,
-				9C438BA7853A42056443373215E352EB /* FloatingPointExtensions.swift in Sources */,
-				D0FA8B03215BA31F28442410716AB59D /* IntExtensions.swift in Sources */,
-				3A255936358A9742EBFA71DA5B4039FB /* LocaleExtensions.swift in Sources */,
-				5FDCD0583DD04B854FB0277F566C2BF3 /* MKMapViewExtensions.swift in Sources */,
-				19D14CD1C2E37FEBDB364FEE4D711C01 /* MKPolylineExtensions.swift in Sources */,
-				C9CA11AA3FD6CC1393D388FA588BA380 /* NSAttributedStringExtensions.swift in Sources */,
-				CF30A87C20B4F6DF95B96CD41784A5E5 /* NSImageExtensions.swift in Sources */,
-				F290D565078344E945E3176ED46822E3 /* NSPredicateExtensions.swift in Sources */,
-				38B0DD0F6848FC40DAEDB19A470AC00F /* NSViewExtensions.swift in Sources */,
-				A6B8D069F456518DE7890A748CA7FB7C /* OptionalExtensions.swift in Sources */,
-				3C650B4D4C865B43EC5164DF202AC01A /* RandomAccessCollectionExtensions.swift in Sources */,
-				A7CB27F7DE269100E17246148E18286C /* RangeReplaceableCollectionExtensions.swift in Sources */,
-				2779DA0BBC9CDA756C55A2E3BDE2B1F6 /* SequenceExtensions.swift in Sources */,
-				C463DAC70729BF9E68DD5217283322A6 /* SignedIntegerExtensions.swift in Sources */,
-				1B92CF4F6D63DA87FECE672865D14D99 /* SignedNumericExtensions.swift in Sources */,
-				3959F2E072E1787F5DD0A14D42BB860E /* SKNodeExtensions.swift in Sources */,
-				E8698372C725DDDB361DF138B868B491 /* StringExtensions.swift in Sources */,
-				C1C4BD0986B4D2135780EB5E3493F24A /* StringProtocolExtensions.swift in Sources */,
-				474DC1778921C5F42C4BC8BB2DE758B9 /* SwifterSwift-dummy.m in Sources */,
-				1B27EFB03111F1DA4960769885E68DB8 /* UIActivityExtensions.swift in Sources */,
-				FA48C0E4F566499496AE00F9181C8769 /* UIAlertControllerExtensions.swift in Sources */,
-				38D838F0D886FBC8C070637ED538A33C /* UIApplicationExtensions.swift in Sources */,
-				BD9E0B5DBE08E108AFFFC2EF6DE3B991 /* UIBarButtonItemExtensions.swift in Sources */,
-				505F4C9EBB706D5E3B234D22D1952700 /* UIButtonExtensions.swift in Sources */,
-				CC61B9BE36D14E29191867FFA256E0FE /* UICollectionViewExtensions.swift in Sources */,
-				D29A2DA8173F55D03C7B95AE6CF94448 /* UIDatePickerExtensions.swift in Sources */,
-				0BAF7C9012E3E4E2E77AC3B659AF62DC /* UIEdgeInsetsExtensions.swift in Sources */,
-				C370F9313ABD2444DDFD8A7C88FFD91A /* UIFontExtensions.swift in Sources */,
-				8B2D6A34A17C43149CEFAF554136ACB5 /* UIGestureRecognizerExtensions.swift in Sources */,
-				CF21954451795DC3F3EC0EF382D4C094 /* UIImageExtensions.swift in Sources */,
-				C119DA12EF47E2401BCB286595271E6B /* UIImageViewExtensions.swift in Sources */,
-				07102FAD5690B5F51A41817FE92E1CC3 /* UILabelExtensions.swift in Sources */,
-				BB1367021A7B7A6FA1FD3060AEEF0852 /* UILayoutPriorityExtensions.swift in Sources */,
-				CE392D94C0FF4BE6C0DCFE4BF26CD55B /* UINavigationBarExtensions.swift in Sources */,
-				753992A8C8BBBAF2F99F6A680E13320D /* UINavigationControllerExtensions.swift in Sources */,
-				A9F4AB1C1C48FA091E03B5046EB760D5 /* UINavigationItemExtensions.swift in Sources */,
-				D0B0207119D3063FDD708EF79D3543E0 /* UIRefreshControlExtensions.swift in Sources */,
-				31D987353A170AE9E50AA5FB887E90BC /* UIScrollViewExtensions.swift in Sources */,
-				3AFD6D5CD9AE8BEF354B4B4208F23643 /* UISearchBarExtensions.swift in Sources */,
-				FA1B7C10433E8561D0D3F0F047E23596 /* UISegmentedControlExtensions.swift in Sources */,
-				875DEED30B1F611857C6490FA5A3C97B /* UISliderExtensions.swift in Sources */,
-				6600092F08A917C619042434770A16D2 /* UIStackViewExtensions.swift in Sources */,
-				1B89A58ABD4CD795628EFABFF21E7D40 /* UIStoryboardExtensions.swift in Sources */,
-				F9EDF376E5B9FECB7291F76EDE08E8CA /* UISwitchExtensions.swift in Sources */,
-				EE1A10D3CE855141F3ED6DD08A5FA120 /* UITabBarExtensions.swift in Sources */,
-				57ACE6FB96EF25A318D52BB77D5C5E84 /* UITableViewExtensions.swift in Sources */,
-				B999F9AF3B399B25113AB54AE788AEC7 /* UITextFieldExtensions.swift in Sources */,
-				AC7DF6162EDC5CBB85BBA1AE4B68CAB6 /* UITextViewExtensions.swift in Sources */,
-				8D6FBE30827FC62FCCBD99C9A355B0F7 /* UIViewControllerExtensions.swift in Sources */,
-				A5AF3144835D08DEEFDD8CD2BBABEDA1 /* UIViewExtensions.swift in Sources */,
-				97AAD307EC2E359117D8CBAFF0F9FD5E /* UIWindowExtensions.swift in Sources */,
-				B3891EC1DDD8F1931BFED49B7E962454 /* URLExtensions.swift in Sources */,
-				F69D68D5C6CF7CE1B33A0C2788C17AAB /* URLRequestExtensions.swift in Sources */,
-				DB4AB7386B547BE593397010B2E7664D /* UserDefaultsExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A013165DACD7221FD8AA41B76C9C1074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1025,6 +1078,122 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1C8B029F600160149A2404C342F6E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E3538A6992A38276764936A9733493D /* AFError.swift in Sources */,
+				772911DA6E33D1CBBC30131B7C8BDBB3 /* Alamofire-dummy.m in Sources */,
+				0A39AF55285A3A4F7CBABB6D822FA4A3 /* Alamofire.swift in Sources */,
+				3E0749AF6C51BCF0E4A41CF1D6A76FED /* DispatchQueue+Alamofire.swift in Sources */,
+				AEA829AB1A8AF2AD077A808AED6B178A /* MultipartFormData.swift in Sources */,
+				73AB05789A4982944AF68DBD013E3EB7 /* NetworkReachabilityManager.swift in Sources */,
+				1D29D2ACADF961F69D32B06FA6A09E28 /* Notifications.swift in Sources */,
+				700D3D95AF9520CB227846DFD943A2DA /* ParameterEncoding.swift in Sources */,
+				355C18EEC82624A06A6CC93965258E33 /* Request.swift in Sources */,
+				059D92B7BBFBEC53E9A3B6E11C5C3B3A /* Response.swift in Sources */,
+				6EFD003458AE7F689DEA720A2030C261 /* ResponseSerialization.swift in Sources */,
+				EB0DD8CEA1A69867A30267439C970440 /* Result.swift in Sources */,
+				8D2A6A90A6DDAF75EA52D471258545CC /* ServerTrustPolicy.swift in Sources */,
+				A1EC41966B261DCE460BCDE5124A1DBE /* SessionDelegate.swift in Sources */,
+				D3FA0AA634AAEA99AB3FABC36BB4958C /* SessionManager.swift in Sources */,
+				77E8F0EB9FFBE2E3EB0C77095C644606 /* TaskDelegate.swift in Sources */,
+				60B6C2A003864AAD3A426448152F67BE /* Timeline.swift in Sources */,
+				AA56769D8733D3F3E7976742D5ABA998 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B545320AC6562B2E30C7B814054DBBA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DD3AB4D2E7C0A01F78047EE67F1212 /* Pods-KitchenerMap-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC7865F664AE99D92A2DC948BF397B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AEC262559CCF968C3C1A18710598E9D /* ArrayExtensions.swift in Sources */,
+				8AC7A7C84C91D98E548E4264A15842F4 /* BidirectionalCollectionExtensions.swift in Sources */,
+				410589F9F13F04034FB33821551AAABD /* BinaryFloatingPointExtensions.swift in Sources */,
+				0B28AEA191EE8BF61A40C6C8A3444AB8 /* BoolExtensions.swift in Sources */,
+				463C2FEB6E7EFF8FDB5724D97EE9C2FD /* CalendarExtensions.swift in Sources */,
+				83358069525EE900EC48B6735200AF8F /* CGColorExtensions.swift in Sources */,
+				5F63EDD95D916C154269DA9F241FC732 /* CGFloatExtensions.swift in Sources */,
+				D7B8B93090B3B52C0A330C7C143D6537 /* CGPointExtensions.swift in Sources */,
+				A3B2F3DD5F265AD0435CF31397697ACE /* CGSizeExtensions.swift in Sources */,
+				782A1E709DCF315ECCFA5EAE175B98B5 /* CGVectorExtensions.swift in Sources */,
+				0104B5AA154E780A307232C75776347E /* CharacterExtensions.swift in Sources */,
+				2939A7C5B68608BC055FC4BDBFB541F2 /* CLLocationExtensions.swift in Sources */,
+				E1B6552FEFCAF2ECF5BF65ADBCDEBAB6 /* CollectionExtensions.swift in Sources */,
+				5159192B9F2EFC139548A5458C8E86B1 /* ColorExtensions.swift in Sources */,
+				A5728B4C4B04750A9E121BCC55E43765 /* ComparableExtensions.swift in Sources */,
+				F0EDC50907F11BD3881D66FEDCF20EE4 /* DataExtensions.swift in Sources */,
+				161EBAA9459E16384C94945DFE96E452 /* DateExtensions.swift in Sources */,
+				4FEB4B968C2482F0AA4BB342FED61877 /* DictionaryExtensions.swift in Sources */,
+				C4741C13399D2946B0FF59DF92C4374C /* DispatchQueueExtensions.swift in Sources */,
+				73812A0EBEE81C05EEA13BBDD330A0D5 /* DoubleExtensions.swift in Sources */,
+				8C5D0183CDCF3B137676CC03734497C3 /* FileManagerExtensions.swift in Sources */,
+				6D35927215CB83B0693457ADF5AEC417 /* FloatExtensions.swift in Sources */,
+				99369161F0C88A8A99643ACA1447EC9E /* FloatingPointExtensions.swift in Sources */,
+				12AF99F56D707473AD495D245F02F2F0 /* IntExtensions.swift in Sources */,
+				36DDFFAB92F5AF6491E82F590B8DB294 /* LocaleExtensions.swift in Sources */,
+				2DF2A334DE99ED132B27B9A2DA4FE5AC /* MKMapViewExtensions.swift in Sources */,
+				211E5898C10A93B777CD7E3879FD59E2 /* MKPolylineExtensions.swift in Sources */,
+				521E079187A67A7C7A468DE2101B0F48 /* NSAttributedStringExtensions.swift in Sources */,
+				F1252443BFC9B8E6FF02CDD80AAA9C27 /* NSImageExtensions.swift in Sources */,
+				730A5362CAE70987B6D2EC779D78333B /* NSPredicateExtensions.swift in Sources */,
+				322E453B8FA423E3CE8CF71546206D07 /* NSViewExtensions.swift in Sources */,
+				F39820506B6846015D994C7999906225 /* OptionalExtensions.swift in Sources */,
+				66F5052ED2A1DF13A8BB644F1A783DB7 /* RandomAccessCollectionExtensions.swift in Sources */,
+				8F9A8C0296E50BF497FDFD21012B09E8 /* RangeReplaceableCollectionExtensions.swift in Sources */,
+				27FC5ADD42E638258053B838E0B450D2 /* SequenceExtensions.swift in Sources */,
+				F5F276F683CC456E5EADDD382DC0EFFB /* SignedIntegerExtensions.swift in Sources */,
+				8A719094109F3505384776A42A671200 /* SignedNumericExtensions.swift in Sources */,
+				5D00CFA0311F7CB389987E4E8C8DA49D /* SKNodeExtensions.swift in Sources */,
+				799B5D785E9B30F6165C8AA81B33F6AB /* StringExtensions.swift in Sources */,
+				57DDD6E24F89F865C712AA1D51C91DB4 /* StringProtocolExtensions.swift in Sources */,
+				EAB3056B350D3F7AEE77B2245B2B064D /* SwifterSwift-dummy.m in Sources */,
+				48720E44F1B7EC4D4C0A3E89384B6393 /* UIActivityExtensions.swift in Sources */,
+				7D4743224742CF08DFD2304BAE4FC23B /* UIAlertControllerExtensions.swift in Sources */,
+				C1A5CBE548469497FEC18B60267E99A5 /* UIApplicationExtensions.swift in Sources */,
+				58691C3718A23FB34AF4A9ADF6AA4B29 /* UIBarButtonItemExtensions.swift in Sources */,
+				57CEB04B61F30CD657A236021D6E08D6 /* UIButtonExtensions.swift in Sources */,
+				4A6C988065F75991E42E781EAD3A1E0F /* UICollectionViewExtensions.swift in Sources */,
+				A8CF16903A321E4B45B37932D3A7C1D2 /* UIDatePickerExtensions.swift in Sources */,
+				3544592C14A0479109D2B19B13FC5475 /* UIEdgeInsetsExtensions.swift in Sources */,
+				2B62004A1D9212D536CC525B27D1A669 /* UIFontExtensions.swift in Sources */,
+				0652078AAE13B0BAEF82AB6124661BEC /* UIGestureRecognizerExtensions.swift in Sources */,
+				B0CD9C1B83BD1C4A59897C39C7263691 /* UIImageExtensions.swift in Sources */,
+				102849973376294B7FF7B675DB8019DE /* UIImageViewExtensions.swift in Sources */,
+				E79FF0BA806FEC1FD2CB1B727D51B785 /* UILabelExtensions.swift in Sources */,
+				FAFD01909F3B9A0E063134BB71F631F0 /* UILayoutPriorityExtensions.swift in Sources */,
+				A0CF777FD58F63E2BA2A433C1AC75977 /* UINavigationBarExtensions.swift in Sources */,
+				6EABF22634B99C4872FF1EE9AD17D476 /* UINavigationControllerExtensions.swift in Sources */,
+				197FCE6A3D5E894C104BC315681DF378 /* UINavigationItemExtensions.swift in Sources */,
+				988A92DED5B36D907E3B99FB2B7A87AB /* UIRefreshControlExtensions.swift in Sources */,
+				BC5F58985C77BE1F6419AB77EBE761CD /* UIScrollViewExtensions.swift in Sources */,
+				703254E75C7852336C8B4A747D834872 /* UISearchBarExtensions.swift in Sources */,
+				8A57B1F6B8F2F764CBCEF9AA662FF3AA /* UISegmentedControlExtensions.swift in Sources */,
+				BC78AB5B69F004239C84F0C4E1EF53A4 /* UISliderExtensions.swift in Sources */,
+				B7C6EDEC28988DB62516B1A905416CDC /* UIStackViewExtensions.swift in Sources */,
+				D8BFCF0461F58FA1E7663C95D6059A34 /* UIStoryboardExtensions.swift in Sources */,
+				E5B465D0B14CB16A7B22A1061D4CA950 /* UISwitchExtensions.swift in Sources */,
+				7AA458C068F8023C11322CF2006E2A4B /* UITabBarExtensions.swift in Sources */,
+				C5249CDEAA601C20F28612D185068048 /* UITableViewExtensions.swift in Sources */,
+				A13A8438D4C3D3FB77908DA864281E23 /* UITextFieldExtensions.swift in Sources */,
+				AEA48E2D09D9C9B8115F7A6790425F08 /* UITextViewExtensions.swift in Sources */,
+				49CCA780299C24CA2A4406F9D0C7C8F0 /* UIViewControllerExtensions.swift in Sources */,
+				78ABEC0A626DA0F2BD40E25BF1CB5950 /* UIViewExtensions.swift in Sources */,
+				528D070836DE17C429944F94378CED6A /* UIWindowExtensions.swift in Sources */,
+				F0444905BD4B685EC65A7A431D78E886 /* URLExtensions.swift in Sources */,
+				AA92301A5BDE8F5B1EEF757B31F64B0A /* URLRequestExtensions.swift in Sources */,
+				0CD6462266FDC5AC05D8AFF67256994F /* UserDefaultsExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E00ED0937423730113C1C0ACB8661ED8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1038,47 +1207,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEF27F674286FA083407109E2E0ED49A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				383A77EF103AB29A2B4F9A4F8FE1BF9E /* Pods-KitchenerMap-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		308F0182B4FB37CFBA7327C6B1A7C252 /* PBXTargetDependency */ = {
+		886D4CB963705A8450C2AF7F2C1DB9A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = M13Checkbox;
 			target = 5752DD257FE266E67107B3EEA49B03C9 /* M13Checkbox */;
-			targetProxy = 8DA4B46BC5EC24919B61A20E872027FF /* PBXContainerItemProxy */;
+			targetProxy = 731B2A8338931DB608666A9EAC12E9C5 /* PBXContainerItemProxy */;
 		};
-		4C181F032C56C9A0894B6BE1001ADA70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ExpandableCell;
-			target = 7F3B143A25A918D2D1AE6DB945A550E2 /* ExpandableCell */;
-			targetProxy = 993E1018FF0F7FE23DFEB4F288272D60 /* PBXContainerItemProxy */;
-		};
-		B4B9970E8343290068D71C706F93DE50 /* PBXTargetDependency */ = {
+		8BD8114D67C6AA35EEF4166DF6C610A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleMaps;
 			target = BCE3DE68053C99B18AAD56BE1F98BD73 /* GoogleMaps */;
-			targetProxy = FFEFC2892918ED4AF1E99AC24F94393D /* PBXContainerItemProxy */;
+			targetProxy = CB9340E843C22237B9DD0FE12C85446E /* PBXContainerItemProxy */;
 		};
-		DE64CEBF7B0C619BA205F2A4855AD6B1 /* PBXTargetDependency */ = {
+		930266D83F90C741C4EC5001BD0753F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ExpandableCell;
+			target = 7F3B143A25A918D2D1AE6DB945A550E2 /* ExpandableCell */;
+			targetProxy = B5BA8334859F7D2B5AD3B9A670981B6D /* PBXContainerItemProxy */;
+		};
+		DED2D7627F29D7A8114D38FD30A66B42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 3383968E74B5371B20BB519B170DC7FD /* Alamofire */;
+			targetProxy = B93EF82AF169D43960C390E57DA73180 /* PBXContainerItemProxy */;
+		};
+		F935402FF1325700BA470F18DA2323EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwifterSwift;
-			target = 4AF4AA190028CFC4A80056742F3BD2C7 /* SwifterSwift */;
-			targetProxy = 0864310F3E33DA1BFA0AEFD807783564 /* PBXContainerItemProxy */;
+			target = 19ADEE14BE43D10F880277B84A0E73E1 /* SwifterSwift */;
+			targetProxy = E88DF80BAEA7EFF6F92BE21AD4A0F182 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		35099C588C478FB3AB5FEED067F82AD1 /* Release */ = {
+		0455349151D02E3523B130F8026921F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB6ADC33C52ED2FE87AB4099AA1BD09C /* SwifterSwift.xcconfig */;
+			baseConfigurationReference = 4427C5A8A9CDF11C2542750E61FF8C77 /* SwifterSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1112,58 +1279,7 @@
 			};
 			name = Release;
 		};
-		48A601B7E6E64EDD5AFDB5ADE56A5C3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26A3226E016A70EB856AC0459B8AC71D /* ExpandableCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ExpandableCell/ExpandableCell-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ExpandableCell/ExpandableCell-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ExpandableCell/ExpandableCell.modulemap";
-				PRODUCT_MODULE_NAME = ExpandableCell;
-				PRODUCT_NAME = ExpandableCell;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4AA46832D8A16AA4E4811383B204D2A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CD00679DDEF0697438013771FA437A9 /* GoogleMaps.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5960BA50B0035FA54E48E992E159E18A /* Debug */ = {
+		2F74CA82C7AB7859BB9A7B223798D414 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CAB0CC7325BC4C8D99C4355CAFCFDAC8 /* Pods-KitchenerMap.debug.xcconfig */;
 			buildSettings = {
@@ -1201,12 +1317,10 @@
 			};
 			name = Debug;
 		};
-		6151C1FE4F6B360F83254455C691797B /* Release */ = {
+		48A601B7E6E64EDD5AFDB5ADE56A5C3B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E5B973ED6D523F93811A69EF93B3371 /* Pods-KitchenerMap.release.xcconfig */;
+			baseConfigurationReference = 9FAE51D57FB46CB7D3834976C7B914C2 /* ExpandableCell.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1216,29 +1330,43 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ExpandableCell/ExpandableCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ExpandableCell/ExpandableCell-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/ExpandableCell/ExpandableCell.modulemap";
+				PRODUCT_MODULE_NAME = ExpandableCell;
+				PRODUCT_NAME = ExpandableCell;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		4AA46832D8A16AA4E4811383B204D2A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F32F76C90E604F458899E24EE3AC4BD /* GoogleMaps.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		84A06F28E9E7D9EB0A9B476A8668FD60 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1300,9 +1428,48 @@
 			};
 			name = Release;
 		};
-		B8699C3BE26106DF0859E3A845EA66D9 /* Debug */ = {
+		93AAA2FBC8EC66ACB5F0D9CA91859EA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB6ADC33C52ED2FE87AB4099AA1BD09C /* SwifterSwift.xcconfig */;
+			baseConfigurationReference = 2E5B973ED6D523F93811A69EF93B3371 /* Pods-KitchenerMap.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9CF36E6AA46D597086D835E1724A4D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCA3ABBD0ED011176783B2AEE30417CD /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1313,8 +1480,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwifterSwift/SwifterSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwifterSwift/SwifterSwift-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1322,13 +1489,49 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SwifterSwift/SwifterSwift.modulemap";
-				PRODUCT_MODULE_NAME = SwifterSwift;
-				PRODUCT_NAME = SwifterSwift;
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B914025A518B53556696F19D8D477057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCA3ABBD0ED011176783B2AEE30417CD /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1337,7 +1540,7 @@
 		};
 		C7565AEA7FCD8F66CAF546DC5AF1404F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CD00679DDEF0697438013771FA437A9 /* GoogleMaps.xcconfig */;
+			baseConfigurationReference = 7F32F76C90E604F458899E24EE3AC4BD /* GoogleMaps.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1354,7 +1557,7 @@
 		};
 		CDF8B91A7DACF277A73A4893DBAACD3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5073FEFA37BD837E37297D9EBAA0B21E /* M13Checkbox.xcconfig */;
+			baseConfigurationReference = 91DE17C9C1ECF2C91BF7A4668144A8B9 /* M13Checkbox.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1452,9 +1655,44 @@
 			};
 			name = Debug;
 		};
+		DCAFF5FC4B585FBB12E9018711057F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4427C5A8A9CDF11C2542750E61FF8C77 /* SwifterSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwifterSwift/SwifterSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwifterSwift/SwifterSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwifterSwift/SwifterSwift.modulemap";
+				PRODUCT_MODULE_NAME = SwifterSwift;
+				PRODUCT_NAME = SwifterSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E1A74A0061174EECC555C0FAECD71195 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26A3226E016A70EB856AC0459B8AC71D /* ExpandableCell.xcconfig */;
+			baseConfigurationReference = 9FAE51D57FB46CB7D3834976C7B914C2 /* ExpandableCell.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1490,7 +1728,7 @@
 		};
 		EEFE3E5C6704E33A5814419449B1D0D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5073FEFA37BD837E37297D9EBAA0B21E /* M13Checkbox.xcconfig */;
+			baseConfigurationReference = 91DE17C9C1ECF2C91BF7A4668144A8B9 /* M13Checkbox.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1544,20 +1782,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89F92A1C2EDE521C0833B8C7C6A00CD7 /* Build configuration list for PBXNativeTarget "SwifterSwift" */ = {
+		931FDF40FC5D44669D2E24E5FC21BA65 /* Build configuration list for PBXNativeTarget "Pods-KitchenerMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8699C3BE26106DF0859E3A845EA66D9 /* Debug */,
-				35099C588C478FB3AB5FEED067F82AD1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8DDCBC6B46B76FDAAA9ED72F9368A8F9 /* Build configuration list for PBXNativeTarget "Pods-KitchenerMap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5960BA50B0035FA54E48E992E159E18A /* Debug */,
-				6151C1FE4F6B360F83254455C691797B /* Release */,
+				2F74CA82C7AB7859BB9A7B223798D414 /* Debug */,
+				93AAA2FBC8EC66ACB5F0D9CA91859EA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1576,6 +1805,24 @@
 			buildConfigurations = (
 				48A601B7E6E64EDD5AFDB5ADE56A5C3B /* Debug */,
 				E1A74A0061174EECC555C0FAECD71195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB071FE0C771E0AA6C6F37D1D199FC36 /* Build configuration list for PBXNativeTarget "SwifterSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCAFF5FC4B585FBB12E9018711057F19 /* Debug */,
+				0455349151D02E3523B130F8026921F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B914025A518B53556696F19D8D477057 /* Debug */,
+				9CF36E6AA46D597086D835E1724A4D87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

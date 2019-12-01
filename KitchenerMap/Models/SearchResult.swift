@@ -28,6 +28,9 @@ struct SearchResult {
             isGreek ? ($0.properties?.values?.nameEL ?? "" < $1.properties?.values?.nameEL ?? "")
                 : ($0.properties?.values?.nameEN ?? "" < $1.properties?.values?.nameEN ?? "")
         }
+        featureArray.removeAll {
+            $0.geometry?.point == nil && $0.geometry?.points == nil
+        }
         features = featureArray
     }
 }

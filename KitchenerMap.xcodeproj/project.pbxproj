@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3306345923940D6700DD3857 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306345823940D6700DD3857 /* SearchViewController.swift */; };
+		3306345B239413A500DD3857 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306345A239413A500DD3857 /* Interactor.swift */; };
+		3306345D23941D4000DD3857 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306345C23941D4000DD3857 /* SearchResultTableViewCell.swift */; };
 		33390D05229948C40002B020 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33390D04229948C40002B020 /* UserAnnotation.swift */; };
 		33390D0722995CFD0002B020 /* TakeCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33390D0622995CFD0002B020 /* TakeCommentViewController.swift */; };
 		334122C5235C524500DB0F19 /* WMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122C4235C524500DB0F19 /* WMSHelper.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3306345823940D6700DD3857 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3306345A239413A500DD3857 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		3306345C23941D4000DD3857 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		33390D04229948C40002B020 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		33390D0622995CFD0002B020 /* TakeCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCommentViewController.swift; sourceTree = "<group>"; };
 		334122C4235C524500DB0F19 /* WMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMSHelper.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 				334122C4235C524500DB0F19 /* WMSHelper.swift */,
 				334122C6235C544B00DB0F19 /* LayersHelper.swift */,
 				334122CD235C6A4900DB0F19 /* LocaleHelper.swift */,
+				3306345A239413A500DD3857 /* Interactor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 				33390D0622995CFD0002B020 /* TakeCommentViewController.swift */,
 				334122D3235C858E00DB0F19 /* FeedbackViewController.swift */,
 				334122D5235C8C5700DB0F19 /* MapLayersViewController.swift */,
+				3306345823940D6700DD3857 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 				33390D04229948C40002B020 /* UserAnnotation.swift */,
 				339A5F8423815F3000C5E511 /* MapLayerGroupCell.swift */,
 				339A5F862381A53000C5E511 /* MapLayerTableViewCell.swift */,
+				3306345C23941D4000DD3857 /* SearchResultTableViewCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -287,6 +296,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ExpandableCell/ExpandableCell.framework",
 				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
@@ -295,6 +305,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandableCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
@@ -343,7 +354,10 @@
 				334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */,
 				339A5F872381A53000C5E511 /* MapLayerTableViewCell.swift in Sources */,
 				334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */,
+				3306345923940D6700DD3857 /* SearchViewController.swift in Sources */,
 				339A5F8523815F3000C5E511 /* MapLayerGroupCell.swift in Sources */,
+				3306345D23941D4000DD3857 /* SearchResultTableViewCell.swift in Sources */,
+				3306345B239413A500DD3857 /* Interactor.swift in Sources */,
 				334122D0235C6D0E00DB0F19 /* SearchResult.swift in Sources */,
 				33F5926C235B10AF00B9EC64 /* WmsTileOverlay.swift in Sources */,
 				334122C5235C524500DB0F19 /* WMSHelper.swift in Sources */,

@@ -8,4 +8,5 @@ target 'KitchenerMap' do
   pod 'GoogleMaps'
   pod 'ExpandableCell'
   pod 'M13Checkbox'
+  pod 'Alamofire'
 end

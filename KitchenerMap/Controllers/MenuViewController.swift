@@ -11,6 +11,7 @@ import UIKit
 protocol MenuDelegate: class {
     func didTapFilter()
     func didSelectMapLayer()
+    func didSelect(feature: Feature)
 }
 
 class MenuViewController: UIViewController {
@@ -24,12 +25,14 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mapLayersView: UIView!
+    @IBOutlet weak var searchView: UIView!
     
     var delegate: MenuDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         mapLayersSetup()
+        searchViewSetup()
     }
     
     @IBAction func onGreekTapped(_ sender: Any) {
@@ -53,6 +56,9 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onSearchTapped(_ sender: Any) {
+        titleLabel.text = LocaleHelper.shared.language == .greek ? "Αναζήτηση σημείου" : "Search for a place"
+        topView.isHidden = false
+        searchView.isHidden = false
     }
     
     @IBAction func onAboutTapped(_ sender: Any) {
@@ -69,8 +75,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onCancelTapped(_ sender: Any) {
-        topView.isHidden = true
-        [feedbackView, mapLayersView].forEach {
+        [feedbackView, mapLayersView, searchView, topView].forEach {
             $0?.isHidden = true
         }
     }
@@ -81,6 +86,15 @@ extension MenuViewController {
         let vc = children.filter { $0 is MapLayersViewController }.first as? MapLayersViewController
         vc?.onMapLayerSelectionChanged = { [weak self] in
             self?.delegate?.didSelectMapLayer()
+        }
+    }
+}
+
+extension MenuViewController {
+    private func searchViewSetup() {
+        let vc = children.filter { $0 is SearchViewController }.first as? SearchViewController
+        vc?.onFeatureSelected = { [weak self] feature in
+            self?.delegate?.didSelect(feature: feature)
         }
     }
 }
