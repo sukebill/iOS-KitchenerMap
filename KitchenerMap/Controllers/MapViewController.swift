@@ -28,6 +28,8 @@ class MapViewController: UIViewController {
     private var layer: GMSURLTileLayer?
     private var secondLayer: GMSURLTileLayer?
     private var layerWMS: GMSURLTileLayer?
+    
+    private var longPressMarker: GMSMarker?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,21 +156,31 @@ class MapViewController: UIViewController {
 //        }
     }
     
-    private func addUserAnnotationOnMap(_ annotation: UserAnnotation) {
-//        if annotation.title == nil {
-//            annotation.title = "Θέλετε να αφήσετε ένα σχόλιο ;"
-//        }else {
-//            annotation.subtitle = "Θέλετε να αφήσετε ένα σχόλιο ;"
-//        }
-//        userAnnotation = annotation
-//        mapView.addAnnotation(annotation)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-//            self.mapView.selectAnnotation(annotation, animated: true)
-//        }
+    private func addUserAnnotationOnMap(at coordinate: CLLocationCoordinate2D) {
+        longPressMarker?.map = nil
+        mapView.selectedMarker = nil
+        let marker = GMSMarker(position: coordinate)
+        let isGreek = LocaleHelper.shared.language == .greek
+        marker.title = isGreek ? "Επιλεγμένο σημείο" : "Selected point"
+        marker.snippet = isGreek ? "Θέλετε να αφήσετε σχόλιο;" : "would you like to add a comment?"
+        marker.appearAnimation = .pop
+        marker.map = mapView
+        longPressMarker = marker
+        mapView.selectedMarker = longPressMarker
     }
 }
 
 extension MapViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        addUserAnnotationOnMap(at: coordinate)
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        if marker == longPressMarker {
+            
+        }
+    }
+    
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         updateNikosiaLayerLevel(mapView)
     }
