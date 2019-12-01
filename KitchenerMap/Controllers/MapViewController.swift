@@ -43,7 +43,10 @@ class MapViewController: UIViewController {
     }
     
     private func setUpNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(toggleDrawer))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(toggleDrawer))
     }
     
     private func setupMapView() {
@@ -51,8 +54,6 @@ class MapViewController: UIViewController {
         mapView.isMyLocationEnabled = true
         mapView.setMinZoom(7, maxZoom: 17.99)
         centerMapOnLocation(location: cyprusCenter)
-//        let uilgr = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
-//        mapView.addGestureRecognizer(uilgr)
     }
     
     private func getCardfromGeoserver() {
@@ -128,34 +129,6 @@ class MapViewController: UIViewController {
         closeDrawer()
     }
     
-    @objc private func addAnnotation(gestureRecognizer: UIGestureRecognizer) {
-//        if gestureRecognizer.state == .began {
-//            let touchPoint = gestureRecognizer.location(in: mapView)
-//            let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
-//            let annotation = UserAnnotation(title: "", coordinate: newCoordinates)
-//            if userAnnotation != nil {
-//                mapView.removeAnnotation(userAnnotation!)
-//            }
-//            CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: newCoordinates.latitude, longitude: newCoordinates.longitude), completionHandler: {(placemarks, error) -> Void in
-//                guard let placemarks = placemarks else {
-//                    self.addUserAnnotationOnMap(annotation)
-//                    return
-//                }
-//                if placemarks.count > 0 {
-//                    let pm = placemarks[0]
-//                    // not all places have thoroughfare & subThoroughfare so validate those values
-//                    annotation.title = pm.locality
-//                    if annotation.title != nil, let sub = pm.subLocality {
-//                        annotation.title = annotation.title?.appending(", \(sub)")
-//                    }
-//                    self.addUserAnnotationOnMap(annotation)
-//                } else {
-//                    self.addUserAnnotationOnMap(annotation)
-//                }
-//            })
-//        }
-    }
-    
     private func addUserAnnotationOnMap(at coordinate: CLLocationCoordinate2D) {
         longPressMarker?.map = nil
         mapView.selectedMarker = nil
@@ -177,7 +150,7 @@ extension MapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         if marker == longPressMarker {
-            
+            Route.feedback(coordinates: marker.position).push(from: self)
         }
     }
     

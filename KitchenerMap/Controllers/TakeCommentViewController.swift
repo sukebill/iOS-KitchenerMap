@@ -9,20 +9,27 @@
 import UIKit
 import CoreLocation
 import SwifterSwift
+import MessageUI
 
 class TakeCommentViewController: UIViewController {
     
+    @IBOutlet weak var commentTitle: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var sendButton: UIButton!
+    
     var location: CLLocationCoordinate2D!
     private var imagePicker: UIImagePickerController?
+    private let isGreek: Bool = LocaleHelper.shared.language == .greek
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let ui = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(ui)
+        commentTitle.text = isGreek ? "Γράψτε το σχόλιο σας" : "Type your feedback"
+        button.setTitleForAllStates(isGreek ? "Προσθήκη Φωτογραφίας" : "Add Photo")
+        sendButton.setTitleForAllStates(isGreek ? "Αποστολή" : "Send")
     }
     
     @objc private func closeKeyboard() {
@@ -31,16 +38,16 @@ class TakeCommentViewController: UIViewController {
     
     @IBAction func onPhotoAdditionTapped(_ sender: Any) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
+        alert.addAction(UIAlertAction(title: isGreek ? "Κάμερα" : "Camera", style: .default, handler: { (_) in
             self.openCameraPicker()
         }))
-        alert.addAction(UIAlertAction(title: "Library", style: .default, handler: { (_) in
+        alert.addAction(UIAlertAction(title: isGreek ? "Φωτογραφίες" : "Library", style: .default, handler: { (_) in
             self.openLibraryPicker()
         }))
         if imageView.image != nil {
-            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
+            alert.addAction(UIAlertAction(title: isGreek ? "Διαγραφή" : "Delete", style: .destructive, handler: { (_) in
                 self.imageView.image = nil
-                self.button.setTitleForAllStates("Προσθήκη Φωτογραφίας")
+                self.button.setTitleForAllStates(self.isGreek ? "Προσθήκη Φωτογραφίας" : "Add Photo")
             }))
         }
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -70,10 +77,26 @@ class TakeCommentViewController: UIViewController {
     }
     
     @IBAction func onSendTapped(_ sender: Any) {
-        guard textView.text.count > 0 else {
+        guard textView.text.count > 0 else { return }
+        openMailApp()
+    }
+    
+    private func openMailApp() {
+        guard MFMailComposeViewController.canSendMail() else {
+            sendButton.setTitleForAllStates("No Account in Mail")
             return
         }
-        //TODO: send comment, image and location
+        let emailTitle = "Feedback"
+        let messageBody = "Coordinates \(location.latitude), \(location.longitude)\n\n\(textView.text ?? "")"
+        let toRecipents = ["gaia_webmaster@hua.gr"]
+        let mc: MFMailComposeViewController = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        mc.setSubject(emailTitle)
+        mc.setMessageBody(messageBody, isHTML: false)
+        mc.setToRecipients(toRecipents)
+        guard let image = imageView.image?.compressedData() else { return }
+        mc.addAttachmentData(image, mimeType: "image/jpeg", fileName: "feedback_\(location.latitude)_\(location.longitude)_\(Date().string()).jpg")
+        present(mc, animated: true)
     }
 }
 
@@ -89,9 +112,14 @@ extension TakeCommentViewController: UIImagePickerControllerDelegate, UINavigati
             return picker.dismiss(animated: true)
         }
         imageView.image = image
-        button.setTitleForAllStates("Αλλαγή Φωτογραφίας")
+        button.setTitleForAllStates(isGreek ? "Αλλαγή Φωτογραφίας" : "Change Photo")
         picker.dismiss(animated: true)
     }
 }
 
+extension TakeCommentViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
 

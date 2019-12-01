@@ -202,7 +202,9 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="iHE-vf-cIC" id="OYF-ka-MC2"/>
+                        <outlet property="commentTitle" destination="0Pl-Se-8UA" id="rKS-2u-GEG"/>
                         <outlet property="imageView" destination="f3D-pP-HAo" id="EnP-pq-SUM"/>
+                        <outlet property="sendButton" destination="Iu8-HP-4wC" id="b1U-yh-Plp"/>
                         <outlet property="textView" destination="yac-2o-uhZ" id="GOu-v0-wXy"/>
                     </connections>
                 </viewController>
