@@ -44,11 +44,19 @@ class SearchViewController: UIViewController {
         tableView.reloadData()
     }
 
+    private func searchCleared() {
+        searchResult = nil
+        subtitle.text = LocaleHelper.shared.language == .greek ? "Πληκτρολογήστε τουλάχιστον 3 χαρακτήρες" : "Please type at least 3 characters"
+        tableView.reloadData()
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard let text = searchBar.text, text.count > 2 else { return }
+        guard let text = searchBar.text, text.count > 2 else {
+            searchCleared()
+            return
+        }
         Interactor.shared.textSearch(text) { [weak self] (result) in
             self?.refreshSearch(searchResult: result)
             debugPrint(result)
