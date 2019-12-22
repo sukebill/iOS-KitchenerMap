@@ -53,6 +53,8 @@ class MenuViewController: UIViewController {
         titleLabel.text = LocaleHelper.shared.language == .greek ? "Χαρτογραφικά επίπεδα" : "Map Layers"
         topView.isHidden = false
         mapLayersView.isHidden = false
+        let vc = children.filter { $0 is MapLayersViewController }.first as? MapLayersViewController
+        vc?.tableView.reloadData()
     }
     
     @IBAction func onSearchTapped(_ sender: Any) {

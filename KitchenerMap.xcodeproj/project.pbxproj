@@ -13,10 +13,10 @@
 		3306345F239428F300DD3857 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3306345E239428F300DD3857 /* Router.swift */; };
 		33390D05229948C40002B020 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33390D04229948C40002B020 /* UserAnnotation.swift */; };
 		33390D0722995CFD0002B020 /* TakeCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33390D0622995CFD0002B020 /* TakeCommentViewController.swift */; };
+		333CE1BA23AEB5B900A0C2EA /* HUASettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CE1B923AEB5B900A0C2EA /* HUASettings.swift */; };
 		334122C5235C524500DB0F19 /* WMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122C4235C524500DB0F19 /* WMSHelper.swift */; };
 		334122C7235C544B00DB0F19 /* LayersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122C6235C544B00DB0F19 /* LayersHelper.swift */; };
 		334122CA235C558000DB0F19 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122C9235C558000DB0F19 /* Base.swift */; };
-		334122CC235C560F00DB0F19 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122CB235C560F00DB0F19 /* Layer.swift */; };
 		334122CE235C6A4900DB0F19 /* LocaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122CD235C6A4900DB0F19 /* LocaleHelper.swift */; };
 		334122D0235C6D0E00DB0F19 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122CF235C6D0E00DB0F19 /* SearchResult.swift */; };
 		334122D2235C6DC400DB0F19 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334122D1235C6DC400DB0F19 /* Feature.swift */; };
@@ -44,10 +44,10 @@
 		3306345E239428F300DD3857 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		33390D04229948C40002B020 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		33390D0622995CFD0002B020 /* TakeCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCommentViewController.swift; sourceTree = "<group>"; };
+		333CE1B923AEB5B900A0C2EA /* HUASettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUASettings.swift; sourceTree = "<group>"; };
 		334122C4235C524500DB0F19 /* WMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMSHelper.swift; sourceTree = "<group>"; };
 		334122C6235C544B00DB0F19 /* LayersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayersHelper.swift; sourceTree = "<group>"; };
 		334122C9235C558000DB0F19 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		334122CB235C560F00DB0F19 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		334122CD235C6A4900DB0F19 /* LocaleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleHelper.swift; sourceTree = "<group>"; };
 		334122CF235C6D0E00DB0F19 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		334122D1235C6DC400DB0F19 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
@@ -97,9 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				334122C9235C558000DB0F19 /* Base.swift */,
-				334122CB235C560F00DB0F19 /* Layer.swift */,
 				334122CF235C6D0E00DB0F19 /* SearchResult.swift */,
 				334122D1235C6DC400DB0F19 /* Feature.swift */,
+				333CE1B923AEB5B900A0C2EA /* HUASettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,8 +350,8 @@
 				338575142258F9200047D467 /* MapViewController.swift in Sources */,
 				334122CE235C6A4900DB0F19 /* LocaleHelper.swift in Sources */,
 				338575122258F9200047D467 /* AppDelegate.swift in Sources */,
+				333CE1BA23AEB5B900A0C2EA /* HUASettings.swift in Sources */,
 				334DCEE6225A086800043AAF /* KMSlider.swift in Sources */,
-				334122CC235C560F00DB0F19 /* Layer.swift in Sources */,
 				334122D6235C8C5700DB0F19 /* MapLayersViewController.swift in Sources */,
 				33390D05229948C40002B020 /* UserAnnotation.swift in Sources */,
 				334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */,
