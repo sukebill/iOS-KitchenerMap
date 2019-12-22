@@ -25,6 +25,7 @@ struct HuaSettings {
         if let array = json?["layerGroups"] as? [NSDictionary] {
             array.forEach { layers.append(LayerGroup(with: $0)) }
         }
+        layers.removeAll { $0.type == "WMSContainer" }
         layerGroups = layers
         settings = Settings(with: json?["settings"] as? NSDictionary)
     }
@@ -60,6 +61,7 @@ struct BaseMapGroup {
         for item in array {
             layers.append(LayerX(with: item))
         }
+        layers.removeAll { $0.type == "OSM" }
         self.layers = layers
     }
 }
