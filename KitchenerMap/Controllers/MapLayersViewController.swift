@@ -19,12 +19,16 @@ class MapLayersViewController: UIViewController {
     private let isGreek = LocaleHelper.shared.language == .greek
     private var selectedIndexPaths: [IndexPath] = []
     
-    var onMapLayerSelectionChanged: (() -> Void)?
+    var onMapLayerSelectionChanged: ((LayerX?) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.expandableDelegate = self
         tableView.animation = .automatic
+    }
+    
+    func clearSelections() {
+        tableView.reloadData()
     }
 }
 
@@ -47,7 +51,7 @@ extension MapLayersViewController: ExpandableDelegate {
         var cells: [UITableViewCell] = []
         for item in layers {
             let cell = tableView.dequeueReusableCell(withClass: MapLayerTableViewCell.self)
-            cell.setUp(name: isGreek ? item.name.el : item.name.en, layerId: item.src) 
+            cell.setUp(name: isGreek ? item.name.el : item.name.en, layerId: item.src, layerX: item) 
             cells.append(cell)
         }
         return cells
@@ -55,12 +59,7 @@ extension MapLayersViewController: ExpandableDelegate {
     
     func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCell: UITableViewCell, didSelectExpandedRowAt indexPath: IndexPath) {
         (expandedCell as? MapLayerTableViewCell)?.toggle()
-        onMapLayerSelectionChanged?()
-        print("kfjhnvkjvfn")
-    }
-    
-    func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectRowAt indexPath: IndexPath) {
-        print("dfhjkbvdfhjkbvj")
+        onMapLayerSelectionChanged?((expandedCell as? MapLayerTableViewCell)?.layerX)
     }
     
     func expandableTableView(_ expandableTableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

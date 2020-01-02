@@ -14,22 +14,24 @@ class MapLayerTableViewCell: UITableViewCell {
     @IBOutlet weak var layerName: UILabel!
     @IBOutlet weak var checkbox: M13Checkbox!
     
-    private var layerId: String = ""
+    var layerX: LayerX?
+    private var id: String = ""
 
-    func setUp(name: String?, layerId: String?) {
-        self.layerId = layerId ?? ""
+    func setUp(name: String?, layerId: String?, layerX: LayerX?) {
+        self.layerX = layerX
+        checkbox.isUserInteractionEnabled = false
+        id = layerId ?? ""
         layerName.text = name
-        let isSelected = LayersHelper.shared.layers.contains(self.layerId)
+        let isSelected = LayersHelper.shared.layers.contains(id)
         checkbox.setCheckState(isSelected ? .checked : .unchecked, animated: false)
     }
     
     func toggle() {
         checkbox.toggleCheckState()
-        if LayersHelper.shared.layers.contains(layerId) {
-            LayersHelper.shared.layers.removeAll(layerId)
+        if LayersHelper.shared.layers.contains(id) {
+            LayersHelper.shared.layers.removeAll(id)
         } else {
-            LayersHelper.shared.layers.append(layerId)
+            LayersHelper.shared.layers.append(id)
         }
     }
-
 }

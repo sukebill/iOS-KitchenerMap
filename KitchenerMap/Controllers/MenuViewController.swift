@@ -12,6 +12,7 @@ protocol MenuDelegate: class {
     func didTapFilter()
     func didSelectMapLayer()
     func didSelect(feature: Feature)
+    func didSelectMapLayer(_ layer: LayerX) 
 }
 
 class MenuViewController: UIViewController {
@@ -86,9 +87,19 @@ class MenuViewController: UIViewController {
 extension MenuViewController {
     private func mapLayersSetup() {
         let vc = children.filter { $0 is MapLayersViewController }.first as? MapLayersViewController
-        vc?.onMapLayerSelectionChanged = { [weak self] in
+        vc?.onMapLayerSelectionChanged = { [weak self] layer in
             self?.delegate?.didSelectMapLayer()
         }
+    }
+    
+    func clearMapLayers() {
+        let vc = children.filter { $0 is MapLayersViewController }.first as? MapLayersViewController
+        vc?.clearSelections()
+    }
+    
+    func reloadSelections() {
+        let vc = children.filter { $0 is MapLayersViewController }.first as? MapLayersViewController
+        vc?.tableView.reloadData()
     }
 }
 

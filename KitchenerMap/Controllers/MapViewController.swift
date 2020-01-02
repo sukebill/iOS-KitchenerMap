@@ -47,12 +47,18 @@ class MapViewController: UIViewController {
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(toggleDrawer))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear",
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(clearFilters))
     }
     
     private func setupMapView() {
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
         mapView.setMinZoom(7, maxZoom: 17.99)
+        mapView.isIndoorEnabled = false
+        mapView.settings.myLocationButton = true
         centerMapOnLocation(location: cyprusCenter)
     }
     
@@ -109,12 +115,26 @@ class MapViewController: UIViewController {
         secondLayer?.map = mapView
     }
     
+    @objc private func clearFilters() {
+        LayersHelper.shared.layers = []
+        children.forEach {
+            ($0 as? MenuViewController)?.clearMapLayers()
+        }
+        layerWMS?.clearTileCache()
+        layerWMS?.map = nil
+        layerWMS = nil
+        getCardfromGeoserver()
+    }
+    
     @objc private func toggleDrawer() {
         menuBackground.isHidden = leftMenuTrailingConstraint.constant != 0
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseInOut], animations: {
             self.leftMenuTrailingConstraint.constant = self.leftMenuTrailingConstraint.constant == 0 ? self.lefMenuContainer.frame.width : 0
             self.view.layoutIfNeeded()
         })
+        children.forEach {
+            ($0 as? MenuViewController)?.reloadSelections()
+        }
     }
     
     private func closeDrawer() {
@@ -184,6 +204,10 @@ extension MapViewController: MenuDelegate {
         slider.onIdleAction = {
             self.closeSlider()
         }
+    }
+    
+    func didSelectMapLayer(_ layer: LayerX) {
+        // TODO: add or remove map layers
     }
     
     func didSelectMapLayer() {
