@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol MenuDelegate: class {
     func didTapFilter()
@@ -27,6 +28,9 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mapLayersView: UIView!
     @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var aboutView: UIView!
+    @IBOutlet weak var termsView: UIView!
+    @IBOutlet weak var policyView: UIView!
     
     var delegate: MenuDelegate?
 
@@ -65,6 +69,38 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onAboutTapped(_ sender: Any) {
+        titleLabel.text = LocaleHelper.shared.language == .greek ? "Σχετικά με την εφαρμογή" : "About this app"
+
+        topView.isHidden = false
+        aboutView.isHidden = false
+    }
+    
+    @IBAction func onTermsTapped(_ sender: Any) {
+//        titleLabel.text = LocaleHelper.shared.language == .greek ? "Όροι χρήσης" : "Terms of service"
+//
+//        topView.isHidden = false
+//        termsView.isHidden = false
+        let isGreek = LocaleHelper.shared.language == .greek
+        var urlString = "https://gaia.hua.gr/kitchener_review/terms_$.html"
+        urlString = urlString.replacingOccurrences(of: "$", with: isGreek ? "el" : "en")
+        guard let url = URL(string: urlString) else { return }
+        let svc = SFSafariViewController(url: url)
+        parent?.present(svc, animated: true, completion: nil)
+    }
+    
+    @IBAction func onPolicyTapped(_ sender: Any) {
+//        titleLabel.text = LocaleHelper.shared.language == .greek ? "Πολιτική απορρήτου" : "Privacy policy"
+//
+//        topView.isHidden = false
+//        policyView.isHidden = false
+//        let vc = children.filter { $0 is PolicyViewController }.first as? PolicyViewController
+//        vc?.load()
+        let isGreek = LocaleHelper.shared.language == .greek
+        var urlString = "https://gaia.hua.gr/kitchener_review/privacy_$.html"
+        urlString = urlString.replacingOccurrences(of: "$", with: isGreek ? "el" : "en")
+        guard let url = URL(string: urlString) else { return }
+        let svc = SFSafariViewController(url: url)
+        parent?.present(svc, animated: true, completion: nil)
     }
     
     @IBAction func onTransparencyTapped(_ sender: Any) {
@@ -77,8 +113,23 @@ class MenuViewController: UIViewController {
         feedbackView.isHidden = false
     }
     
+    @IBAction func onSilviaTapped(_ sender: Any) {
+        let isGreek = LocaleHelper.shared.language == .greek
+        let urlString = isGreek ? "https://www.sylviaioannoufoundation.org/el/" : "https://www.sylviaioannoufoundation.org/en/"
+        guard let url = URL(string: urlString) else { return }
+        let svc = SFSafariViewController(url: url)
+        parent?.present(svc, animated: true, completion: nil)
+    }
+    
+    @IBAction func onHarokopioTapped(_ sender: Any) {
+        let urlString = "https://www.hua.gr"
+        guard let url = URL(string: urlString) else { return }
+        let svc = SFSafariViewController(url: url)
+        parent?.present(svc, animated: true, completion: nil)
+    }
+    
     @IBAction func onCancelTapped(_ sender: Any) {
-        [feedbackView, mapLayersView, searchView, topView].forEach {
+        [feedbackView, mapLayersView, searchView, topView, aboutView, termsView, policyView].forEach {
             $0?.isHidden = true
         }
     }

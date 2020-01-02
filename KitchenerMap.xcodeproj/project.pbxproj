@@ -33,6 +33,9 @@
 		3385751C2258F92D0047D467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3385751A2258F92D0047D467 /* LaunchScreen.storyboard */; };
 		339A5F8523815F3000C5E511 /* MapLayerGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339A5F8423815F3000C5E511 /* MapLayerGroupCell.swift */; };
 		339A5F872381A53000C5E511 /* MapLayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339A5F862381A53000C5E511 /* MapLayerTableViewCell.swift */; };
+		33D894DA23BE240A00B95CF0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D894D923BE240A00B95CF0 /* AboutViewController.swift */; };
+		33D894DC23BE2EB200B95CF0 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D894DB23BE2EB200B95CF0 /* TermsViewController.swift */; };
+		33D894DE23BE313E00B95CF0 /* PolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D894DD23BE313E00B95CF0 /* PolicyViewController.swift */; };
 		33F5926C235B10AF00B9EC64 /* WmsTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5926B235B10AF00B9EC64 /* WmsTileOverlay.swift */; };
 		BC18203C569CB12E2AD3CDF9 /* Pods_KitchenerMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F51E9658868A3D327C4AD5 /* Pods_KitchenerMap.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		3385751D2258F92D0047D467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		339A5F8423815F3000C5E511 /* MapLayerGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayerGroupCell.swift; sourceTree = "<group>"; };
 		339A5F862381A53000C5E511 /* MapLayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayerTableViewCell.swift; sourceTree = "<group>"; };
+		33D894D923BE240A00B95CF0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		33D894DB23BE2EB200B95CF0 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		33D894DD23BE313E00B95CF0 /* PolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyViewController.swift; sourceTree = "<group>"; };
 		33F5926B235B10AF00B9EC64 /* WmsTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WmsTileOverlay.swift; sourceTree = "<group>"; };
 		33F5926D235B123300B9EC64 /* KitchenerMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KitchenerMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		5FF26777AC769553E5ECE228 /* Pods-KitchenerMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KitchenerMap.release.xcconfig"; path = "Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +167,9 @@
 				334122D3235C858E00DB0F19 /* FeedbackViewController.swift */,
 				334122D5235C8C5700DB0F19 /* MapLayersViewController.swift */,
 				3306345823940D6700DD3857 /* SearchViewController.swift */,
+				33D894D923BE240A00B95CF0 /* AboutViewController.swift */,
+				33D894DB23BE2EB200B95CF0 /* TermsViewController.swift */,
+				33D894DD23BE313E00B95CF0 /* PolicyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -353,10 +362,13 @@
 				333CE1BA23AEB5B900A0C2EA /* HUASettings.swift in Sources */,
 				334DCEE6225A086800043AAF /* KMSlider.swift in Sources */,
 				334122D6235C8C5700DB0F19 /* MapLayersViewController.swift in Sources */,
+				33D894DA23BE240A00B95CF0 /* AboutViewController.swift in Sources */,
 				33390D05229948C40002B020 /* UserAnnotation.swift in Sources */,
 				334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */,
+				33D894DC23BE2EB200B95CF0 /* TermsViewController.swift in Sources */,
 				339A5F872381A53000C5E511 /* MapLayerTableViewCell.swift in Sources */,
 				334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */,
+				33D894DE23BE313E00B95CF0 /* PolicyViewController.swift in Sources */,
 				3306345923940D6700DD3857 /* SearchViewController.swift in Sources */,
 				339A5F8523815F3000C5E511 /* MapLayerGroupCell.swift in Sources */,
 				3306345D23941D4000DD3857 /* SearchResultTableViewCell.swift in Sources */,
