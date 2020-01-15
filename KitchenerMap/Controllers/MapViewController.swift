@@ -27,6 +27,9 @@ class MapViewController: UIViewController {
     private var userAnnotation: UserAnnotation?
     private var layer: GMSURLTileLayer?
     private var secondLayer: GMSURLTileLayer?
+    private var thirdLayer: GMSURLTileLayer?
+    private var modernLayerA: GMSURLTileLayer?
+    private var modernLayerB: GMSURLTileLayer?
     private var layerWMS: GMSURLTileLayer?
     
     private var longPressMarker: GMSMarker?
@@ -34,8 +37,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = LocaleHelper.shared.language == .greek ? "Xάρτης Kitchener" : "Kitchener Map"
-        setupTileRenderer()
-        getCardfromGeoserver()
+        setupTileRendererKitchener()
+        setWMSLayer()
         setupMapView()
         setUpNavigationBar()
         children.forEach{($0 as? MenuViewController)?.delegate = self}
@@ -62,7 +65,7 @@ class MapViewController: UIViewController {
         centerMapOnLocation(location: cyprusCenter)
     }
     
-    private func getCardfromGeoserver() {
+    private func setWMSLayer() {
         let layerWMS = WMSTileOverlay()
         // Implement GMSTileURLConstructor
         // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
@@ -89,7 +92,7 @@ class MapViewController: UIViewController {
         mapView.animate(to: camera)
     }
 
-    private func setupTileRenderer() {
+    private func setupTileRendererKitchener() {
         let urls: GMSTileURLConstructor = {(x, y, zoom) in
             let reversedY = Int(pow(Double(2), Double(zoom))) - Int(y) - 1
             let newTemplate = "https://gaia.hua.gr/tms/kitchener_review/\(zoom)/\(x)/\(reversedY).jpg"
@@ -99,7 +102,6 @@ class MapViewController: UIViewController {
         layer?.zIndex = 100
         layer?.tileSize = 256
         layer?.map = mapView
-        setupTileRendererLeukosia()
     }
     
     
@@ -115,6 +117,40 @@ class MapViewController: UIViewController {
         secondLayer?.map = mapView
     }
     
+    private func setupTileRendererLimasol() {
+        let urls: GMSTileURLConstructor = {(x, y, zoom) in
+            let reversedY = Int(pow(Double(2), Double(zoom))) - Int(y) - 1
+            let newTemplate = "https://gaia.hua.gr/tms/kitchener_limassol_plan/\(zoom)/\(x)/\(reversedY).png"
+            return URL(string: newTemplate)
+        }
+        thirdLayer = GMSURLTileLayer(urlConstructor: urls)
+        thirdLayer?.zIndex = 101
+        thirdLayer?.tileSize = 256
+        thirdLayer?.map = mapView
+    }
+    
+    private func setupTileRendererModernA() {
+        let urls: GMSTileURLConstructor = {(x, y, zoom) in
+            let newTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/\(zoom)/\(y)/\(x).png"
+            return URL(string: newTemplate)
+        }
+        modernLayerA = GMSURLTileLayer(urlConstructor: urls)
+        modernLayerA?.zIndex = 102
+        modernLayerA?.tileSize = 256
+        modernLayerA?.map = mapView
+    }
+    
+    private func setupTileRendererModernB() {
+        let urls: GMSTileURLConstructor = {(x, y, zoom) in
+            let newTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/\(zoom)/\(y)/\(x).png"
+            return URL(string: newTemplate)
+        }
+        modernLayerB = GMSURLTileLayer(urlConstructor: urls)
+        modernLayerB?.zIndex = 103
+        modernLayerB?.tileSize = 256
+        modernLayerB?.map = mapView
+    }
+    
     @objc private func clearFilters() {
         LayersHelper.shared.layers = []
         children.forEach {
@@ -123,7 +159,7 @@ class MapViewController: UIViewController {
         layerWMS?.clearTileCache()
         layerWMS?.map = nil
         layerWMS = nil
-        getCardfromGeoserver()
+        setWMSLayer()
     }
     
     @objc private func toggleDrawer() {
@@ -207,14 +243,55 @@ extension MapViewController: MenuDelegate {
     }
     
     func didSelectMapLayer(_ layer: LayerX) {
-        // TODO: add or remove map layers
+        switch layer.userOrder {
+        case 2:
+            if layer.src.contains("limassol") {
+                if thirdLayer == nil {
+                    setupTileRendererLimasol()
+                } else {
+                    thirdLayer?.map = nil
+                    thirdLayer = nil
+                }
+            } else if layer.src.contains("nicosia") {
+                if secondLayer == nil {
+                    setupTileRendererLeukosia()
+                } else {
+                    secondLayer?.map = nil
+                    secondLayer = nil
+                }
+            } else if layer.src.contains("kitchener") {
+                if self.layer == nil {
+                    setupTileRendererKitchener()
+                } else {
+                    self.layer?.map = nil
+                    self.layer = nil
+                }
+            }
+        case 4:
+            if modernLayerA == nil {
+                setupTileRendererModernA()
+            } else {
+                modernLayerA?.map = nil
+                modernLayerA = nil
+            }
+        case 5:
+            if modernLayerB == nil {
+                setupTileRendererModernB()
+            } else {
+                modernLayerB?.map = nil
+                modernLayerB = nil
+            }
+        default:
+            break
+        }
+        didSelectMapLayer()
     }
     
     func didSelectMapLayer() {
         layerWMS?.clearTileCache()
         layerWMS?.map = nil
         layerWMS = nil
-        getCardfromGeoserver()
+        setWMSLayer()
     }
     
     func didSelect(feature: Feature) {

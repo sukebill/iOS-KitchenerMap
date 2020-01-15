@@ -24,7 +24,7 @@ class MapLayersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.expandableDelegate = self
-        tableView.animation = .automatic
+        tableView.animation = .left
     }
     
     func clearSelections() {
@@ -51,7 +51,9 @@ extension MapLayersViewController: ExpandableDelegate {
         var cells: [UITableViewCell] = []
         for item in layers {
             let cell = tableView.dequeueReusableCell(withClass: MapLayerTableViewCell.self)
-            cell.setUp(name: isGreek ? item.name.el : item.name.en, layerId: item.src, layerX: item) 
+            cell.setUp(name: isGreek ? item.name.el : item.name.en,
+                       layerId: item.src,
+                       layerX: item)
             cells.append(cell)
         }
         return cells

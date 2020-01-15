@@ -23,10 +23,11 @@ class LayersHelper {
                                 "kitchener:text_town_group," +
                                 "kitchener:toponym_po"
     private(set) var data: HuaSettings?
-    var layers: [String] = []
+    var layers: [LayerX] = []
     var formattedLayers: String {
         var result = ""
-        for item in layers {
+        let sortedLayers = layers.sorted { $0.userOrder < $1.userOrder }.map { $0.src }
+        for item in sortedLayers {
             result += item + ","
         }
         result = result.replacingOccurrences(of: "null,", with: "")

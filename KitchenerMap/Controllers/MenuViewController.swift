@@ -139,6 +139,10 @@ extension MenuViewController {
     private func mapLayersSetup() {
         let vc = children.filter { $0 is MapLayersViewController }.first as? MapLayersViewController
         vc?.onMapLayerSelectionChanged = { [weak self] layer in
+            if let layer = layer, layer.type == "tile" {
+                self?.delegate?.didSelectMapLayer(layer)
+                return
+            }
             self?.delegate?.didSelectMapLayer()
         }
     }
