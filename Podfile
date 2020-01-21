@@ -9,4 +9,5 @@ target 'KitchenerMap' do
   pod 'ExpandableCell'
   pod 'M13Checkbox'
   pod 'Alamofire'
+  pod 'MapCache'
 end

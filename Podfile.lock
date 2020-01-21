@@ -7,6 +7,7 @@ PODS:
   - GoogleMaps/Maps (3.0.3):
     - GoogleMaps/Base
   - M13Checkbox (3.3.2)
+  - MapCache (0.6.0)
   - SwifterSwift (5.0.0):
     - SwifterSwift/AppKit (= 5.0.0)
     - SwifterSwift/CoreGraphics (= 5.0.0)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - ExpandableCell
   - GoogleMaps
   - M13Checkbox
+  - MapCache
   - SwifterSwift
 
 SPEC REPOS:
@@ -40,6 +42,7 @@ SPEC REPOS:
     - ExpandableCell
     - GoogleMaps
     - M13Checkbox
+    - MapCache
     - SwifterSwift
 
 SPEC CHECKSUMS:
@@ -47,8 +50,9 @@ SPEC CHECKSUMS:
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   M13Checkbox: d75dca81d61c9903e7f091f32b35a3254bc97dce
+  MapCache: 8afa98ddc3539a384ba75b019284cded95aaccab
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
 
-PODFILE CHECKSUM: aa3f2e2e63d95797faba911b75b796730b36fe41
+PODFILE CHECKSUM: 26c691eb9893c700af2c3d9fe999cc119e16e509
 
 COCOAPODS: 1.6.1

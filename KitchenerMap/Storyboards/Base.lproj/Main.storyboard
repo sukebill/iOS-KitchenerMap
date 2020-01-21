@@ -16,9 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-HU-fRF" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-HU-fRF">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-IA-jZd">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                    </mapView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Tm8-IA-jZd" secondAttribute="trailing" id="1km-Ss-ShR"/>
+                                    <constraint firstItem="Tm8-IA-jZd" firstAttribute="top" secondItem="VyN-HU-fRF" secondAttribute="top" id="L2u-ow-eZM"/>
+                                    <constraint firstItem="Tm8-IA-jZd" firstAttribute="leading" secondItem="VyN-HU-fRF" secondAttribute="leading" id="MrL-cN-s2h"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tm8-IA-jZd" secondAttribute="bottom" id="QzH-eC-176"/>
+                                </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQB-ee-uqc" customClass="KMSlider" customModule="KitchenerMap" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="568" width="320" height="44"/>
@@ -81,7 +92,7 @@
                     <connections>
                         <outlet property="lefMenuContainer" destination="0ga-6C-ofl" id="JCz-bD-g4k"/>
                         <outlet property="leftMenuTrailingConstraint" destination="1oI-iY-8aF" id="k7p-WH-kq3"/>
-                        <outlet property="mapView" destination="VyN-HU-fRF" id="lze-hj-uA0"/>
+                        <outlet property="mapView" destination="Tm8-IA-jZd" id="jBV-qw-qZN"/>
                         <outlet property="menuBackground" destination="z4A-BS-rvS" id="Yka-hF-3Ae"/>
                         <outlet property="slider" destination="GQB-ee-uqc" id="J36-1g-I2U"/>
                         <outlet property="sliderTopConstraint" destination="hww-KP-9mQ" id="gFt-LQ-Isi"/>
@@ -944,7 +955,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="484"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>

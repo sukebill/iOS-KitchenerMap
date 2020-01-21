@@ -10,10 +10,11 @@ import UIKit
 import SwifterSwift
 import MapKit
 import GoogleMaps
+import MapCache
 
 class MapViewController: UIViewController {
     
-    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var leftMenuTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var lefMenuContainer: UIView!
     @IBOutlet weak var menuBackground: UIView!
@@ -58,38 +59,34 @@ class MapViewController: UIViewController {
     
     private func setupMapView() {
         mapView.delegate = self
-        mapView.isMyLocationEnabled = true
-        mapView.setMinZoom(7, maxZoom: 17.99)
-        mapView.isIndoorEnabled = false
-        mapView.settings.myLocationButton = true
+        mapView.showsUserLocation = true
+        mapView.isZoomEnabled = true
+//        mapView.setMinZoom(7, maxZoom: 17.99)
+//        mapView.isIndoorEnabled = false
+//        mapView.settings.myLocationButton = true
         centerMapOnLocation(location: cyprusCenter)
     }
-    
+    var mkOverlay: WMSMKTileOverlay?
     private func setWMSLayer() {
         let layerWMS = WMSTileOverlay()
-        // Implement GMSTileURLConstructor
-        // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
-        let urls: GMSTileURLConstructor = { (x: UInt, y: UInt, zoom: UInt) -> URL? in
-            let bbox = layerWMS.bboxFromXYZ(x, y: y, z: zoom)
-            var urlkin = layerWMS.url
-            urlkin = urlkin.replacingOccurrences(of: "%f", with: "\(bbox.left)")
-            urlkin = urlkin.replacingOccurrences(of: "%e", with: "\(bbox.bottom)")
-            urlkin = urlkin.replacingOccurrences(of: "%d", with: "\(bbox.right)")
-            urlkin = urlkin.replacingOccurrences(of: "%g", with: "\(bbox.top)")
-            urlkin = urlkin.replacingOccurrences(of: "%s", with: LayersHelper.shared.formattedLayers)
-            return URL(string: urlkin)
+        
+        if mkOverlay != nil {
+            mapView.removeOverlay(mkOverlay!)
         }
         
-        self.layerWMS = GMSURLTileLayer(urlConstructor: urls)
-        self.layerWMS?.opacity = 1
-        self.layerWMS?.zIndex = 200
-        self.layerWMS?.tileSize = 256
-        self.layerWMS?.map = mapView
+        let urlkin = layerWMS.url.replacingOccurrences(of: "%s", with: LayersHelper.shared.formattedLayers)
+        mkOverlay = WMSMKTileOverlay(urlArg: urlkin, useMercatorArg: true)
+        mkOverlay?.canReplaceMapContent = false
+        mkOverlay?.alpha = 1
+        mapView.addOverlay(mkOverlay!)
     }
     
     private func centerMapOnLocation(location: CLLocationCoordinate2D) {
-        let camera = GMSCameraPosition(target: location, zoom: 12)
-        mapView.animate(to: camera)
+        let region = MKCoordinateRegion(center: location,
+                                        span: MKCoordinateSpan(latitudeDelta: 1.3,
+                                                               longitudeDelta: 1.3))
+
+        mapView.setRegion(region, animated: true)
     }
 
     private func setupTileRendererKitchener() {
@@ -101,7 +98,13 @@ class MapViewController: UIViewController {
         layer = GMSURLTileLayer(urlConstructor: urls)
         layer?.zIndex = 100
         layer?.tileSize = 256
-        layer?.map = mapView
+//        layer?.map = mapView
+        var config = MapCacheConfig(withUrlTemplate: "https://gaia.hua.gr/tms/kitchener_review/{z}/{x}/{y}.jpg")
+        config.cacheName = "Kitchener"
+        let mapCache = MapCache(withConfig: config)
+        mapCache.clear(completition: {})
+        mapCache.isYReversed = true
+        _ = mapView.useCache(mapCache)
     }
     
     
@@ -114,7 +117,7 @@ class MapViewController: UIViewController {
         secondLayer = GMSURLTileLayer(urlConstructor: urls)
         secondLayer?.zIndex = 101
         secondLayer?.tileSize = 256
-        secondLayer?.map = mapView
+//        secondLayer?.map = mapView
     }
     
     private func setupTileRendererLimasol() {
@@ -126,7 +129,7 @@ class MapViewController: UIViewController {
         thirdLayer = GMSURLTileLayer(urlConstructor: urls)
         thirdLayer?.zIndex = 101
         thirdLayer?.tileSize = 256
-        thirdLayer?.map = mapView
+//        thirdLayer?.map = mapView
     }
     
     private func setupTileRendererModernA() {
@@ -137,7 +140,7 @@ class MapViewController: UIViewController {
         modernLayerA = GMSURLTileLayer(urlConstructor: urls)
         modernLayerA?.zIndex = 102
         modernLayerA?.tileSize = 256
-        modernLayerA?.map = mapView
+//        modernLayerA?.map = mapView
     }
     
     private func setupTileRendererModernB() {
@@ -148,7 +151,7 @@ class MapViewController: UIViewController {
         modernLayerB = GMSURLTileLayer(urlConstructor: urls)
         modernLayerB?.zIndex = 103
         modernLayerB?.tileSize = 256
-        modernLayerB?.map = mapView
+//        modernLayerB?.map = mapView
     }
     
     @objc private func clearFilters() {
@@ -187,15 +190,27 @@ class MapViewController: UIViewController {
     
     private func addUserAnnotationOnMap(at coordinate: CLLocationCoordinate2D) {
         longPressMarker?.map = nil
-        mapView.selectedMarker = nil
+//        mapView.selectedMarker = nil
         let marker = GMSMarker(position: coordinate)
         let isGreek = LocaleHelper.shared.language == .greek
         marker.title = isGreek ? "Επιλεγμένο σημείο" : "Selected point"
         marker.snippet = isGreek ? "Θέλετε να αφήσετε σχόλιο;" : "would you like to add a comment?"
         marker.appearAnimation = .pop
-        marker.map = mapView
+//        marker.map = mapView
         longPressMarker = marker
-        mapView.selectedMarker = longPressMarker
+//        mapView.selectedMarker = longPressMarker
+    }
+}
+
+extension MapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is WMSMKTileOverlay {
+            let renderer = MKTileOverlayRenderer(overlay:overlay)
+            renderer.alpha = (overlay as! WMSMKTileOverlay).alpha
+            return renderer
+        }
+        return mapView.mapCacheRenderer(forOverlay: overlay)
     }
 }
 
@@ -234,7 +249,7 @@ extension MapViewController: MenuDelegate {
         openSlider()
         slider.onChangeAction = { newValue in
             self.layer?.opacity = newValue
-            self.updateNikosiaLayerLevel(self.mapView)
+//            self.updateNikosiaLayerLevel(self.mapView)
             self.layerWMS?.opacity = newValue
         }
         slider.onIdleAction = {

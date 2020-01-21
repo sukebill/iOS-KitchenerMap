@@ -15,7 +15,7 @@ struct WMSHelper {
                         "&version=1.3.0" +
                         "&request=GetMap" +
                         "&layers=%s" +
-                        "&bbox=%f,%e,%d,%g" +
+//                        "&bbox=%f,%e,%d,%g" +
                         "&width=256" +
                         "&height=256" +
                         "&srs=EPSG:3857" +
