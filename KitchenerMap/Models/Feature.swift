@@ -86,28 +86,41 @@ struct Geometry {
     typealias Location = (lat: Double, lng: Double)
     let isPoint: Bool
     let isMultiLineString: Bool
+    let isMultiPolygon: Bool
     var point: Location?
     var points: [Location]?
     
     init(with json: NSDictionary?) {
         isPoint = json?["type"] as? String == "Point"
         isMultiLineString = json?["type"] as? String == "MultiLineString"
+        isMultiPolygon = json?["type"] as? String == "MultiPolygon"
         if isPoint {
             let lng = (json?["coordinates"] as! [Double])[0]
             let lat = (json?["coordinates"] as! [Double])[1]
             point = (lat, lng)
         }
         if isMultiLineString {
-            let coordinates = json?["coordinates"] as? [NSArray]
             points = []
-            for item in coordinates ?? [] {
-                let realArray = item[0] as? NSArray
-                for realJson in realArray ?? [] {
-                    if let lng = (realJson as? [Double])?[0] ,
-                        let lat = (realJson as? [Double])?[1] {
-                        points?.append((lat, lng))
-                    }
-                }
+            guard let coordinates = json?["coordinates"] as? [NSArray] else { return }
+            guard coordinates.count > 0 else { return }
+            let realArray = coordinates[0]
+            for item in realArray where item as? [Double] != nil {
+                let lng = (item as! [Double])[0]
+                let lat = (item as! [Double])[1]
+                points?.append((lat, lng))
+            }
+        }
+        if isMultiPolygon {
+            points = []
+            guard let coordinates = json?["coordinates"] as? [NSArray] else { return }
+            guard coordinates.count > 0 else { return }
+            let realArray = coordinates[0]
+            guard realArray.count > 0 else { return }
+            guard let trueArray = realArray[0] as? NSArray else { return }
+            for item in trueArray where item as? [Double] != nil {
+                let lng = (item as! [Double])[0]
+                let lat = (item as! [Double])[1]
+                points?.append((lat, lng))
             }
         }
     }
