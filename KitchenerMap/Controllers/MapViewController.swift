@@ -160,6 +160,8 @@ class MapViewController: UIViewController {
         layerWMS?.map = nil
         layerWMS = nil
         setWMSLayer()
+        longPressMarker?.map = nil
+        longPressMarker = nil
     }
     
     @objc private func toggleDrawer() {
