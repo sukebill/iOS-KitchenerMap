@@ -20,6 +20,15 @@ class MapViewController: UIViewController {
     @IBOutlet weak var menuBackground: UIView!
     @IBOutlet weak var slider: KMSlider!
     @IBOutlet weak var sliderTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var featureWindow: UIView!
+    @IBOutlet weak var featureTitle: UILabel!
+    @IBOutlet weak var featureCategory: UILabel!
+    @IBOutlet weak var featureCloseButton: UIButton!
+    @IBOutlet weak var featurePoiName: UILabel!
+    @IBOutlet weak var featureNameGreek: UILabel!
+    @IBOutlet weak var featureNameEnglish: UILabel!
+    @IBOutlet weak var featureSeconsName: UILabel!
+    @IBOutlet weak var featureDistrict: UILabel!
     
     var tileRenderer: MKTileOverlayRenderer!
     private let cyprusCenter = CLLocationCoordinate2D(latitude: 34.997045, longitude: 33.190684)
@@ -32,8 +41,10 @@ class MapViewController: UIViewController {
     private var modernLayerA: GMSURLTileLayer?
     private var modernLayerB: GMSURLTileLayer?
     private var layerWMS: GMSURLTileLayer?
-    
+    private var polyline: GMSPolyline?
+    private var polygon: GMSPolygon?
     private var longPressMarker: GMSMarker?
+    private var selectedFeature: Feature?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,6 +172,8 @@ class MapViewController: UIViewController {
         layerWMS?.map = nil
         layerWMS = nil
         setWMSLayer()
+        longPressMarker?.map = nil
+        longPressMarker = nil
     }
     
     @objc private func toggleDrawer() {
@@ -210,6 +223,27 @@ extension MapViewController: MKMapViewDelegate {
         }
         return mapView.mapCacheRenderer(forOverlay: overlay)
     }
+    
+    private func showInfoWindow(feature: Feature) {
+        featureWindow.isHidden = false
+        let isGreek = LocaleHelper.shared.language == .greek
+        featureTitle.text = isGreek ? (feature.properties?.values?.nameEL ?? "Χωρίς Όνομα") : (feature.properties?.values?.nameEN ?? "No Name")
+        featureCategory.text = isGreek ? feature.properties?.values?.categoryEL : feature.properties?.values?.categoryEN
+        featurePoiName.text = feature.poiProperties.name
+        featurePoiName.superview?.isHidden = feature.poiProperties.name == nil
+        featureNameGreek.text = feature.poiProperties.nameGreek
+        featureNameGreek.superview?.isHidden = feature.poiProperties.nameGreek == nil
+        featureNameEnglish.text = feature.poiProperties.nameRoman
+        featureNameEnglish.superview?.isHidden = feature.poiProperties.nameRoman == nil
+        featureSeconsName.text = feature.poiProperties.secondName
+        featureSeconsName.superview?.isHidden = feature.poiProperties.secondName == nil
+        featureDistrict.text = feature.poiProperties.district
+        featureDistrict.superview?.isHidden = feature.poiProperties.district == nil
+    }
+    
+    @IBAction func onFeatureCloseTapped(_ sender: Any) {
+        featureWindow.isHidden = true
+    }
 }
 
 extension MapViewController: GMSMapViewDelegate {
@@ -225,10 +259,23 @@ extension MapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         updateNikosiaLayerLevel(mapView)
+        updateLemesosLayerLevel(mapView)
+        featureWindow.isHidden = true
     }
 
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         updateNikosiaLayerLevel(mapView)
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
+        switch overlay {
+        case polyline, polygon:
+            if let feature = selectedFeature {
+                showInfoWindow(feature: feature)
+            }
+        default:
+            return
+        }
     }
     
     private func updateNikosiaLayerLevel(_ mapView: GMSMapView) {
@@ -238,7 +285,17 @@ extension MapViewController: GMSMapViewDelegate {
             secondLayer?.opacity = opacity
         }
     }
+    
+    private func updateLemesosLayerLevel(_ mapView: GMSMapView) {
+        if (mapView.camera.zoom <= 15) {
+            thirdLayer?.opacity = 0
+        } else if let opacity = layer?.opacity {
+            thirdLayer?.opacity = opacity
+        }
+    }
 }
+
+// MARK: Menu Drawer
 
 extension MapViewController: MenuDelegate {
     
@@ -308,9 +365,57 @@ extension MapViewController: MenuDelegate {
     }
     
     func didSelect(feature: Feature) {
-        // TODO: zoom to feature location and open window
+        selectedFeature = feature
+        polyline?.map = nil
+        polygon?.map = nil
+        var points: [Geometry.Location] = []
+        if let point = feature.geometry?.point {
+            points.append(point)
+        }
+        if let geometryPoints = feature.geometry?.points {
+            points.append(contentsOf: geometryPoints)
+        }
+        
+        let path = GMSMutablePath()
+        if points.count > 1 {
+            points.forEach { path.add(CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lng))}
+            polyline = GMSPolyline(path: path)
+            polyline?.map = mapView
+            polyline?.strokeColor = .yellow
+            polyline?.strokeWidth = 10
+            polyline?.zIndex = 105
+            polyline?.isTappable = true
+            
+            let bounds = GMSCoordinateBounds(path: path)
+            let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
+            mapView.animate(with: update)
+        } else if points.count == 1 {
+            let point = points[0]
+            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng - 0.0004))
+            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng - 0.0004))
+            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng + 0.0004))
+            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng + 0.0004))
+            
+            polygon = GMSPolygon(path: path)
+            polygon?.strokeWidth = 10
+            polygon?.strokeColor = .yellow
+            polygon?.zIndex = 105
+            polygon?.isTappable = true
+            polygon?.map = mapView
+            
+            let update = GMSCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: point.lat,
+                                                                          longitude: point.lng),
+                                                   zoom: 14)
+            mapView.animate(with: update)
+        }
+        
+        showInfoWindow(feature: feature)
+        
+        closeDrawer()
     }
 }
+
+// MARK: Slider
 
 extension MapViewController {
     
@@ -331,11 +436,4 @@ extension MapViewController {
         })
         slider.close()
     }
-}
-
-let MERCATOR_OFFSET: Double = 268435456 // swiftlint:disable:this identifier_name
-let MERCATOR_RADIUS: Double = 85445659.44705395 // swiftlint:disable:this identifier_name
-struct PixelSpace {
-    public var x: Double // swiftlint:disable:this identifier_name
-    public var y: Double // swiftlint:disable:this identifier_name
 }

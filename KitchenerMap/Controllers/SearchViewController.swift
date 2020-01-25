@@ -68,6 +68,7 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let feature = searchResult?.features[indexPath.row] else { return }
         onFeatureSelected?(feature)
+        view.endEditing(true)
     }
 }
 
