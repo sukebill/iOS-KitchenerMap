@@ -44,6 +44,8 @@ class MapViewController: UIViewController {
 //    private var polygon: GMSPolygon?
 //    private var longPressMarker: GMSMarker?
     private var selectedFeature: Feature?
+    private var overlayAlpha: CGFloat = 1
+    private var isChangingAlpha: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,9 +147,25 @@ class MapViewController: UIViewController {
         children.forEach {
             ($0 as? MenuViewController)?.clearMapLayers()
         }
-//        layerWMS?.clearTileCache()
-//        layerWMS?.map = nil
-//        layerWMS = nil
+        if mkOverlay != nil {
+            mapView.removeOverlay(mkOverlay!)
+            mkOverlay = nil
+        }
+        if lemessosLayer != nil {
+            mapView.removeOverlay(lemessosLayer!)
+        }
+        if nicosiaLayer != nil {
+            mapView.removeOverlay(nicosiaLayer!)
+        }
+        if modernLayerA != nil {
+            mapView.removeOverlay(modernLayerA!)
+        }
+        if modernLayerB != nil {
+            mapView.removeOverlay(modernLayerB!)
+        }
+        if kitchenerLayer == nil {
+            setupTileRendererKitchener()
+        }
         setWMSLayer()
 //        longPressMarker?.map = nil
 //        longPressMarker = nil
@@ -198,7 +216,11 @@ extension MapViewController: MKMapViewDelegate {
             renderer.alpha = (overlay as! WMSMKTileOverlay).alpha
             return renderer
         }
-        return mapView.mapCacheRenderer(forOverlay: overlay)
+        let renderer = mapView.mapCacheRenderer(forOverlay: overlay)
+        if overlay is CachedTileOverlay {
+            renderer.alpha = overlayAlpha
+        }
+        return renderer
     }
     
     private func showInfoWindow(feature: Feature) {
@@ -279,14 +301,30 @@ extension MapViewController: MenuDelegate {
     func didTapFilter() {
         closeDrawer()
         openSlider()
-        slider.onChangeAction = { newValue in
-//            self.layer?.opacity = newValue
-//            self.updateNikosiaLayerLevel(self.mapView)
-//            self.layerWMS?.opacity = newValue
+        slider.onChangeAction = { [weak self] newValue in
+            self?.reloadRenderers(CGFloat(newValue))
         }
         slider.onIdleAction = {
             self.closeSlider()
         }
+    }
+    
+    func reloadRenderers(_ alpha: CGFloat) {
+        guard alpha != overlayAlpha else { return }
+        guard isChangingAlpha == false else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) { [weak self] in
+                self?.reloadRenderers(alpha)
+            }
+            return
+        }
+        isChangingAlpha = true
+        overlayAlpha = alpha
+        let overlays = mapView.overlays
+        mapView.removeOverlays(overlays)
+        [kitchenerLayer, lemessosLayer, nicosiaLayer, modernLayerA, modernLayerB].filter { $0 != nil }.forEach { layer in
+            mapView.addOverlay(layer!)
+        }
+        isChangingAlpha = false
     }
     
     func didSelectMapLayer(_ layer: LayerX) {
