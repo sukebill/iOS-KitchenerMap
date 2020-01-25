@@ -42,7 +42,7 @@ class MapViewController: UIViewController {
     private var mkOverlay: WMSMKTileOverlay?
 //    private var polyline: GMSPolyline?
 //    private var polygon: GMSPolygon?
-//    private var longPressMarker: GMSMarker?
+    private var longPressMarker: MKPointAnnotation?
     private var selectedFeature: Feature?
     private var overlayAlpha: CGFloat = 1
     private var isChangingAlpha: Bool = false
@@ -73,10 +73,20 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.isZoomEnabled = true
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
+        mapView.addGestureRecognizer(longPress)
 //        mapView.setMinZoom(7, maxZoom: 17.99)
 //        mapView.isIndoorEnabled = false
 //        mapView.settings.myLocationButton = true
         centerMapOnLocation(location: cyprusCenter)
+    }
+    
+    @objc func addAnnotation(gestureRecognizer:UIGestureRecognizer) {
+        
+        guard gestureRecognizer.state == .began else { return }
+        let touchPoint = gestureRecognizer.location(in: mapView)
+        let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+        addUserAnnotationOnMap(at: newCoordinates)
     }
 
     private func setWMSLayer() {
@@ -144,6 +154,10 @@ class MapViewController: UIViewController {
     
     @objc private func clearFilters() {
         LayersHelper.shared.layers = []
+        if longPressMarker != nil {
+            mapView.removeAnnotation(longPressMarker!)
+            longPressMarker = nil
+        }
         children.forEach {
             ($0 as? MenuViewController)?.clearMapLayers()
         }
@@ -167,8 +181,6 @@ class MapViewController: UIViewController {
             setupTileRendererKitchener()
         }
         setWMSLayer()
-//        longPressMarker?.map = nil
-//        longPressMarker = nil
     }
     
     @objc private func toggleDrawer() {
@@ -195,16 +207,18 @@ class MapViewController: UIViewController {
     }
     
     private func addUserAnnotationOnMap(at coordinate: CLLocationCoordinate2D) {
-//        longPressMarker?.map = nil
-//        mapView.selectedMarker = nil
-//        let marker = GMSMarker(position: coordinate)
+        if longPressMarker != nil {
+            mapView.removeAnnotation(longPressMarker!)
+            longPressMarker = nil
+        }
+        let longPressMarker = MKPointAnnotation()
         let isGreek = LocaleHelper.shared.language == .greek
-//        marker.title = isGreek ? "Επιλεγμένο σημείο" : "Selected point"
-//        marker.snippet = isGreek ? "Θέλετε να αφήσετε σχόλιο;" : "would you like to add a comment?"
-//        marker.appearAnimation = .pop
-//        marker.map = mapView
-//        longPressMarker = marker
-//        mapView.selectedMarker = longPressMarker
+        longPressMarker.title = isGreek ? "Επιλεγμένο σημείο" : "Selected point"
+        longPressMarker.coordinate = coordinate
+        longPressMarker.subtitle = isGreek ? "Θέλετε να αφήσετε σχόλιο;" : "would you like to add a comment?"
+        mapView.addAnnotation(longPressMarker)
+        self.longPressMarker = longPressMarker
+        mapView.selectAnnotation(longPressMarker, animated: true)
     }
 }
 
