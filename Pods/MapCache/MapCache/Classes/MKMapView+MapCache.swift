@@ -14,11 +14,10 @@ import MapKit
 extension MKMapView {
 
     /// Will tell the map to use the cache passed as parameter.
-    public func useCache(_ cache: MapCache) -> CachedTileOverlay {
+    public func useCache(_ cache: MapCache, isGeometryFlipped: Bool) -> CachedTileOverlay {
         
-        let tileServerOverlay = CachedTileOverlay(withCache: cache)
+        let tileServerOverlay = CachedTileOverlay(withCache: cache, isGeometryFlipped: isGeometryFlipped)
         tileServerOverlay.canReplaceMapContent = false
-//        tileServerOverlay.isGeometryFlipped = true
         if cache.config.maximumZ > 0 {
             tileServerOverlay.maximumZ = cache.config.maximumZ
         }

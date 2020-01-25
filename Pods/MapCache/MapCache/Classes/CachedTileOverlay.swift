@@ -18,10 +18,12 @@ public class CachedTileOverlay : MKTileOverlay {
     
     public var useCache: Bool = true
     
-    public init(withCache cache: MapCacheProtocol) {
+    public init(withCache cache: MapCacheProtocol, isGeometryFlipped: Bool) {
         mapCache = cache
         super.init(urlTemplate: mapCache.config.urlTemplate)
         canReplaceMapContent = false
+        self.isGeometryFlipped = isGeometryFlipped
+        tileSize = CGSize(width: 512, height: 512)
     }
     
     ///

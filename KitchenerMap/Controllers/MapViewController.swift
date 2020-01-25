@@ -102,9 +102,7 @@ class MapViewController: UIViewController {
         var config = MapCacheConfig(withUrlTemplate: "https://gaia.hua.gr/tms/kitchener_review/{z}/{x}/{y}.jpg")
         config.cacheName = "Kitchener"
         let mapCache = MapCache(withConfig: config)
-        mapCache.clear(completition: {})
-        mapCache.isYReversed = true
-        _ = mapView.useCache(mapCache)
+        _ = mapView.useCache(mapCache, isGeometryFlipped: true)
     }
     
     

@@ -67,7 +67,7 @@ public class MapCache : MapCacheProtocol {
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if error != nil {
                 print("!!! MapCache::loadTile Error for key= \(key)")
-                //print(error)
+                debugPrint(error)
                 result(nil,error)
                 return
             }
