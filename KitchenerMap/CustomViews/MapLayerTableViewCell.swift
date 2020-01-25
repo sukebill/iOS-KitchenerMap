@@ -30,6 +30,8 @@ class MapLayerTableViewCell: UITableViewCell {
     
     func toggle() {
         checkbox.toggleCheckState()
+        guard layerX.src.contains("http") == false else { return }
+        guard layerX.src.contains("{z}") == false else { return }
         if LayersHelper.shared.layers.contains(where: { (layer) -> Bool in
             layer.src == layerX.src
         }){

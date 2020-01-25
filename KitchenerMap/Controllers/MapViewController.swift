@@ -9,7 +9,6 @@
 import UIKit
 import SwifterSwift
 import MapKit
-import GoogleMaps
 import MapCache
 
 class MapViewController: UIViewController {
@@ -35,15 +34,15 @@ class MapViewController: UIViewController {
     private let cyprusNEBound = CLLocationCoordinate2D(latitude: 35.831610, longitude: 34.718857)
     private let cyprusSWBound = CLLocationCoordinate2D(latitude: 34.510659, longitude: 32.266127)
     private var userAnnotation: UserAnnotation?
-    private var layer: GMSURLTileLayer?
-    private var secondLayer: GMSURLTileLayer?
-    private var thirdLayer: GMSURLTileLayer?
-    private var modernLayerA: GMSURLTileLayer?
-    private var modernLayerB: GMSURLTileLayer?
-    private var layerWMS: GMSURLTileLayer?
-    private var polyline: GMSPolyline?
-    private var polygon: GMSPolygon?
-    private var longPressMarker: GMSMarker?
+    private var kitchenerLayer: CachedTileOverlay?
+    private var nicosiaLayer: CachedTileOverlay?
+    private var lemessosLayer: CachedTileOverlay?
+    private var modernLayerA: CachedTileOverlay?
+    private var modernLayerB: CachedTileOverlay?
+    private var mkOverlay: WMSMKTileOverlay?
+//    private var polyline: GMSPolyline?
+//    private var polygon: GMSPolygon?
+//    private var longPressMarker: GMSMarker?
     private var selectedFeature: Feature?
 
     override func viewDidLoad() {
@@ -77,7 +76,7 @@ class MapViewController: UIViewController {
 //        mapView.settings.myLocationButton = true
         centerMapOnLocation(location: cyprusCenter)
     }
-    var mkOverlay: WMSMKTileOverlay?
+
     private func setWMSLayer() {
         let layerWMS = WMSTileOverlay()
         
@@ -101,66 +100,44 @@ class MapViewController: UIViewController {
     }
 
     private func setupTileRendererKitchener() {
-        let urls: GMSTileURLConstructor = {(x, y, zoom) in
-            let reversedY = Int(pow(Double(2), Double(zoom))) - Int(y) - 1
-            let newTemplate = "https://gaia.hua.gr/tms/kitchener_review/\(zoom)/\(x)/\(reversedY).jpg"
-            return URL(string: newTemplate)
-        }
-        layer = GMSURLTileLayer(urlConstructor: urls)
-        layer?.zIndex = 100
-        layer?.tileSize = 256
-//        layer?.map = mapView
         var config = MapCacheConfig(withUrlTemplate: "https://gaia.hua.gr/tms/kitchener_review/{z}/{x}/{y}.jpg")
         config.cacheName = "Kitchener"
+        config.maximumZ = 16
         let mapCache = MapCache(withConfig: config)
-        _ = mapView.useCache(mapCache, isGeometryFlipped: true)
+        kitchenerLayer = mapView.useCache(mapCache, isGeometryFlipped: true)
     }
     
     
     private func setupTileRendererLeukosia() {
-        let urls: GMSTileURLConstructor = {(x, y, zoom) in
-            let reversedY = Int(pow(Double(2), Double(zoom))) - Int(y) - 1
-            let newTemplate = "https://gaia.hua.gr/tms/kitchener_nicosia_plan/\(zoom)/\(x)/\(reversedY).png"
-            return URL(string: newTemplate)
-        }
-        secondLayer = GMSURLTileLayer(urlConstructor: urls)
-        secondLayer?.zIndex = 101
-        secondLayer?.tileSize = 256
-//        secondLayer?.map = mapView
+        var config = MapCacheConfig(withUrlTemplate: "https://gaia.hua.gr/tms/kitchener_nicosia_plan/{z}/{x}/{y}.png")
+        config.cacheName = "Leukosia"
+        config.minimumZ = 15
+        let mapCache = MapCache(withConfig: config)
+        nicosiaLayer = mapView.useCache(mapCache, isGeometryFlipped: true)
     }
     
     private func setupTileRendererLimasol() {
-        let urls: GMSTileURLConstructor = {(x, y, zoom) in
-            let reversedY = Int(pow(Double(2), Double(zoom))) - Int(y) - 1
-            let newTemplate = "https://gaia.hua.gr/tms/kitchener_limassol_plan/\(zoom)/\(x)/\(reversedY).png"
-            return URL(string: newTemplate)
-        }
-        thirdLayer = GMSURLTileLayer(urlConstructor: urls)
-        thirdLayer?.zIndex = 101
-        thirdLayer?.tileSize = 256
-//        thirdLayer?.map = mapView
+        var config = MapCacheConfig(withUrlTemplate: "https://gaia.hua.gr/tms/kitchener_limassol_plan/{z}/{x}/{y}.png")
+        config.cacheName = "Limassol"
+        config.minimumZ = 15
+        let mapCache = MapCache(withConfig: config)
+        lemessosLayer = mapView.useCache(mapCache, isGeometryFlipped: true)
     }
     
     private func setupTileRendererModernA() {
-        let urls: GMSTileURLConstructor = {(x, y, zoom) in
-            let newTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/\(zoom)/\(y)/\(x).png"
-            return URL(string: newTemplate)
-        }
-        modernLayerA = GMSURLTileLayer(urlConstructor: urls)
-        modernLayerA?.zIndex = 102
-        modernLayerA?.tileSize = 256
-//        modernLayerA?.map = mapView
+        var config = MapCacheConfig(withUrlTemplate: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png")
+        config.cacheName = "World_Imagery"
+        let mapCache = MapCache(withConfig: config)
+        modernLayerA = mapView.useCache(mapCache, isGeometryFlipped: false)
+        modernLayerA?.tileSize = CGSize(width: 256, height: 256)
     }
     
     private func setupTileRendererModernB() {
-        let urls: GMSTileURLConstructor = {(x, y, zoom) in
-            let newTemplate = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/\(zoom)/\(y)/\(x).png"
-            return URL(string: newTemplate)
-        }
-        modernLayerB = GMSURLTileLayer(urlConstructor: urls)
-        modernLayerB?.zIndex = 103
-        modernLayerB?.tileSize = 256
-//        modernLayerB?.map = mapView
+        var config = MapCacheConfig(withUrlTemplate: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}.png")
+        config.cacheName = "World_Topo_Map"
+        let mapCache = MapCache(withConfig: config)
+        modernLayerB = mapView.useCache(mapCache, isGeometryFlipped: false)
+        modernLayerB?.tileSize = CGSize(width: 256, height: 256)
     }
     
     @objc private func clearFilters() {
@@ -168,12 +145,12 @@ class MapViewController: UIViewController {
         children.forEach {
             ($0 as? MenuViewController)?.clearMapLayers()
         }
-        layerWMS?.clearTileCache()
-        layerWMS?.map = nil
-        layerWMS = nil
+//        layerWMS?.clearTileCache()
+//        layerWMS?.map = nil
+//        layerWMS = nil
         setWMSLayer()
-        longPressMarker?.map = nil
-        longPressMarker = nil
+//        longPressMarker?.map = nil
+//        longPressMarker = nil
     }
     
     @objc private func toggleDrawer() {
@@ -200,15 +177,15 @@ class MapViewController: UIViewController {
     }
     
     private func addUserAnnotationOnMap(at coordinate: CLLocationCoordinate2D) {
-        longPressMarker?.map = nil
+//        longPressMarker?.map = nil
 //        mapView.selectedMarker = nil
-        let marker = GMSMarker(position: coordinate)
+//        let marker = GMSMarker(position: coordinate)
         let isGreek = LocaleHelper.shared.language == .greek
-        marker.title = isGreek ? "Επιλεγμένο σημείο" : "Selected point"
-        marker.snippet = isGreek ? "Θέλετε να αφήσετε σχόλιο;" : "would you like to add a comment?"
-        marker.appearAnimation = .pop
+//        marker.title = isGreek ? "Επιλεγμένο σημείο" : "Selected point"
+//        marker.snippet = isGreek ? "Θέλετε να αφήσετε σχόλιο;" : "would you like to add a comment?"
+//        marker.appearAnimation = .pop
 //        marker.map = mapView
-        longPressMarker = marker
+//        longPressMarker = marker
 //        mapView.selectedMarker = longPressMarker
     }
 }
@@ -246,54 +223,54 @@ extension MapViewController: MKMapViewDelegate {
     }
 }
 
-extension MapViewController: GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        addUserAnnotationOnMap(at: coordinate)
-    }
-    
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        if marker == longPressMarker {
-            Route.feedback(coordinates: marker.position).push(from: self)
-        }
-    }
-    
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        updateNikosiaLayerLevel(mapView)
-        updateLemesosLayerLevel(mapView)
-        featureWindow.isHidden = true
-    }
-
-    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-        updateNikosiaLayerLevel(mapView)
-    }
-    
-    func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
-        switch overlay {
-        case polyline, polygon:
-            if let feature = selectedFeature {
-                showInfoWindow(feature: feature)
-            }
-        default:
-            return
-        }
-    }
-    
-    private func updateNikosiaLayerLevel(_ mapView: GMSMapView) {
-        if (mapView.camera.zoom <= 15) {
-            secondLayer?.opacity = 0
-        } else if let opacity = layer?.opacity {
-            secondLayer?.opacity = opacity
-        }
-    }
-    
-    private func updateLemesosLayerLevel(_ mapView: GMSMapView) {
-        if (mapView.camera.zoom <= 15) {
-            thirdLayer?.opacity = 0
-        } else if let opacity = layer?.opacity {
-            thirdLayer?.opacity = opacity
-        }
-    }
-}
+//extension MapViewController: GMSMapViewDelegate {
+//    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+//        addUserAnnotationOnMap(at: coordinate)
+//    }
+//
+//    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+//        if marker == longPressMarker {
+//            Route.feedback(coordinates: marker.position).push(from: self)
+//        }
+//    }
+//
+//    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+//        updateNikosiaLayerLevel(mapView)
+//        updateLemesosLayerLevel(mapView)
+//        featureWindow.isHidden = true
+//    }
+//
+//    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+//        updateNikosiaLayerLevel(mapView)
+//    }
+//
+//    func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
+//        switch overlay {
+//        case polyline, polygon:
+//            if let feature = selectedFeature {
+//                showInfoWindow(feature: feature)
+//            }
+//        default:
+//            return
+//        }
+//    }
+//
+//    private func updateNikosiaLayerLevel(_ mapView: GMSMapView) {
+//        if (mapView.camera.zoom <= 15) {
+//            secondLayer?.opacity = 0
+//        } else if let opacity = layer?.opacity {
+//            secondLayer?.opacity = opacity
+//        }
+//    }
+//
+//    private func updateLemesosLayerLevel(_ mapView: GMSMapView) {
+//        if (mapView.camera.zoom <= 15) {
+//            thirdLayer?.opacity = 0
+//        } else if let opacity = layer?.opacity {
+//            thirdLayer?.opacity = opacity
+//        }
+//    }
+//}
 
 // MARK: Menu Drawer
 
@@ -303,9 +280,9 @@ extension MapViewController: MenuDelegate {
         closeDrawer()
         openSlider()
         slider.onChangeAction = { newValue in
-            self.layer?.opacity = newValue
+//            self.layer?.opacity = newValue
 //            self.updateNikosiaLayerLevel(self.mapView)
-            self.layerWMS?.opacity = newValue
+//            self.layerWMS?.opacity = newValue
         }
         slider.onIdleAction = {
             self.closeSlider()
@@ -316,39 +293,39 @@ extension MapViewController: MenuDelegate {
         switch layer.userOrder {
         case 2:
             if layer.src.contains("limassol") {
-                if thirdLayer == nil {
+                if lemessosLayer == nil {
                     setupTileRendererLimasol()
                 } else {
-                    thirdLayer?.map = nil
-                    thirdLayer = nil
+                    mapView.removeOverlay(lemessosLayer!)
+                    lemessosLayer = nil
                 }
             } else if layer.src.contains("nicosia") {
-                if secondLayer == nil {
+                if nicosiaLayer == nil {
                     setupTileRendererLeukosia()
                 } else {
-                    secondLayer?.map = nil
-                    secondLayer = nil
+                    mapView.removeOverlay(nicosiaLayer!)
+                    nicosiaLayer = nil
                 }
             } else if layer.src.contains("kitchener") {
-                if self.layer == nil {
+                if kitchenerLayer == nil {
                     setupTileRendererKitchener()
                 } else {
-                    self.layer?.map = nil
-                    self.layer = nil
+                    mapView.removeOverlay(kitchenerLayer!)
+                    kitchenerLayer = nil
                 }
             }
         case 4:
             if modernLayerA == nil {
                 setupTileRendererModernA()
             } else {
-                modernLayerA?.map = nil
+                mapView.removeOverlay(modernLayerA!)
                 modernLayerA = nil
             }
         case 5:
             if modernLayerB == nil {
                 setupTileRendererModernB()
             } else {
-                modernLayerB?.map = nil
+                mapView.removeOverlay(modernLayerB!)
                 modernLayerB = nil
             }
         default:
@@ -358,56 +335,56 @@ extension MapViewController: MenuDelegate {
     }
     
     func didSelectMapLayer() {
-        layerWMS?.clearTileCache()
-        layerWMS?.map = nil
-        layerWMS = nil
+//        layerWMS?.clearTileCache()
+//        layerWMS?.map = nil
+//        layerWMS = nil
         setWMSLayer()
     }
     
     func didSelect(feature: Feature) {
         selectedFeature = feature
-        polyline?.map = nil
-        polygon?.map = nil
-        var points: [Geometry.Location] = []
-        if let point = feature.geometry?.point {
-            points.append(point)
-        }
-        if let geometryPoints = feature.geometry?.points {
-            points.append(contentsOf: geometryPoints)
-        }
-        
-        let path = GMSMutablePath()
-        if points.count > 1 {
-            points.forEach { path.add(CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lng))}
-            polyline = GMSPolyline(path: path)
-            polyline?.map = mapView
-            polyline?.strokeColor = .yellow
-            polyline?.strokeWidth = 10
-            polyline?.zIndex = 105
-            polyline?.isTappable = true
-            
-            let bounds = GMSCoordinateBounds(path: path)
-            let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
-            mapView.animate(with: update)
-        } else if points.count == 1 {
-            let point = points[0]
-            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng - 0.0004))
-            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng - 0.0004))
-            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng + 0.0004))
-            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng + 0.0004))
-            
-            polygon = GMSPolygon(path: path)
-            polygon?.strokeWidth = 10
-            polygon?.strokeColor = .yellow
-            polygon?.zIndex = 105
-            polygon?.isTappable = true
-            polygon?.map = mapView
-            
-            let update = GMSCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: point.lat,
-                                                                          longitude: point.lng),
-                                                   zoom: 14)
-            mapView.animate(with: update)
-        }
+//        polyline?.map = nil
+//        polygon?.map = nil
+//        var points: [Geometry.Location] = []
+//        if let point = feature.geometry?.point {
+//            points.append(point)
+//        }
+//        if let geometryPoints = feature.geometry?.points {
+//            points.append(contentsOf: geometryPoints)
+//        }
+//
+//        let path = GMSMutablePath()
+//        if points.count > 1 {
+//            points.forEach { path.add(CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lng))}
+//            polyline = GMSPolyline(path: path)
+//            polyline?.map = mapView
+//            polyline?.strokeColor = .yellow
+//            polyline?.strokeWidth = 10
+//            polyline?.zIndex = 105
+//            polyline?.isTappable = true
+//
+//            let bounds = GMSCoordinateBounds(path: path)
+//            let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
+//            mapView.animate(with: update)
+//        } else if points.count == 1 {
+//            let point = points[0]
+//            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng - 0.0004))
+//            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng - 0.0004))
+//            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng + 0.0004))
+//            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng + 0.0004))
+//
+//            polygon = GMSPolygon(path: path)
+//            polygon?.strokeWidth = 10
+//            polygon?.strokeColor = .yellow
+//            polygon?.zIndex = 105
+//            polygon?.isTappable = true
+//            polygon?.map = mapView
+//
+//            let update = GMSCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: point.lat,
+//                                                                          longitude: point.lng),
+//                                                   zoom: 14)
+//            mapView.animate(with: update)
+//        }
         
         showInfoWindow(feature: feature)
         
