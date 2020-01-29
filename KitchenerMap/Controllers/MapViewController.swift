@@ -223,6 +223,35 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.title == longPressMarker?.title {
+            let identifier = "longpress"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if annotationView == nil {
+                annotationView = MKPinAnnotationView(annotation: annotation,
+                                                     reuseIdentifier: identifier)
+                annotationView?.canShowCallout = true
+                let btn = UIButton(type: .detailDisclosure)
+                annotationView?.rightCalloutAccessoryView = btn
+//                let closeButton = UIButton(frame: btn.frame)
+//                closeButton.setTitle("X", for: .normal)
+//                closeButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+//                closeButton.setTitleColor(.red, for: .normal)
+//                annotationView?.leftCalloutAccessoryView = closeButton
+            } else {
+                annotationView?.annotation = annotation
+            }
+            return annotationView
+        } else {
+            return nil
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if view.reuseIdentifier == "longpress" {
+            Route.feedback(coordinates: longPressMarker!.coordinate).push(from: self)
+        }
+    }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is WMSMKTileOverlay {
