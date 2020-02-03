@@ -46,6 +46,7 @@ class MapViewController: UIViewController {
     private var selectedFeature: Feature?
     private var overlayAlpha: CGFloat = 1
     private var isChangingAlpha: Bool = false
+    private var gravoures: [MKPointAnnotation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class MapViewController: UIViewController {
         setUpNavigationBar()
         children.forEach{($0 as? MenuViewController)?.delegate = self}
         debugPrint(LayersHelper.shared.data.debugDescription)
+        RepresentationHelper.shared.load()
     }
     
     private func setUpNavigationBar() {
@@ -90,13 +92,11 @@ class MapViewController: UIViewController {
     }
 
     private func setWMSLayer() {
-        let layerWMS = WMSTileOverlay()
-        
         if mkOverlay != nil {
             mapView.removeOverlay(mkOverlay!)
         }
         
-        let urlkin = layerWMS.url.replacingOccurrences(of: "%s", with: LayersHelper.shared.formattedLayers)
+        let urlkin = WMSHelper.shared.mapLayersUrl.replacingOccurrences(of: "%s", with: LayersHelper.shared.formattedLayers)
         mkOverlay = WMSMKTileOverlay(urlArg: urlkin, useMercatorArg: true)
         mkOverlay?.canReplaceMapContent = false
         mkOverlay?.alpha = 1
@@ -242,6 +242,23 @@ extension MapViewController: MKMapViewDelegate {
                 annotationView?.annotation = annotation
             }
             return annotationView
+        } else if gravoures.contains(where: { (gravoura) -> Bool in
+            gravoura.coordinate.latitude == annotation.coordinate.latitude && gravoura.coordinate.longitude == annotation.coordinate.longitude
+        }) {
+            let identifier = "gravoura"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if annotationView == nil {
+                annotationView = MKPinAnnotationView(annotation: annotation,
+                                                     reuseIdentifier: identifier)
+                (annotationView as? MKPinAnnotationView)?.pinTintColor = UIColor.purple
+                annotationView?.canShowCallout = true
+                let image = UIView(frame: CGRect(x: 0, y: 0, width: 500, height: 90))
+                image.backgroundColor = .red
+                annotationView?.detailCalloutAccessoryView = image
+            } else {
+                annotationView?.annotation = annotation
+            }
+            return annotationView
         } else {
             return nil
         }
@@ -288,58 +305,30 @@ extension MapViewController: MKMapViewDelegate {
     }
 }
 
-//extension MapViewController: GMSMapViewDelegate {
-//    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-//        addUserAnnotationOnMap(at: coordinate)
-//    }
-//
-//    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-//        if marker == longPressMarker {
-//            Route.feedback(coordinates: marker.position).push(from: self)
-//        }
-//    }
-//
-//    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-//        updateNikosiaLayerLevel(mapView)
-//        updateLemesosLayerLevel(mapView)
-//        featureWindow.isHidden = true
-//    }
-//
-//    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-//        updateNikosiaLayerLevel(mapView)
-//    }
-//
-//    func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
-//        switch overlay {
-//        case polyline, polygon:
-//            if let feature = selectedFeature {
-//                showInfoWindow(feature: feature)
-//            }
-//        default:
-//            return
-//        }
-//    }
-//
-//    private func updateNikosiaLayerLevel(_ mapView: GMSMapView) {
-//        if (mapView.camera.zoom <= 15) {
-//            secondLayer?.opacity = 0
-//        } else if let opacity = layer?.opacity {
-//            secondLayer?.opacity = opacity
-//        }
-//    }
-//
-//    private func updateLemesosLayerLevel(_ mapView: GMSMapView) {
-//        if (mapView.camera.zoom <= 15) {
-//            thirdLayer?.opacity = 0
-//        } else if let opacity = layer?.opacity {
-//            thirdLayer?.opacity = opacity
-//        }
-//    }
-//}
-
 // MARK: Menu Drawer
 
 extension MapViewController: MenuDelegate {
+    func didSelectRepresentations() {
+        guard gravoures.isEmpty else {
+            mapView.removeAnnotations(gravoures)
+            gravoures = []
+            return
+        }
+        guard let data = RepresentationHelper.shared.data else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                self?.didSelectRepresentations()
+            }
+            return
+        }
+        data.features.forEach {
+            let marker = MKPointAnnotation()
+            marker.title = $0.properties.clearName
+            marker.coordinate = CLLocationCoordinate2D(latitude: $0.geometry.coordinates[1],
+                                                       longitude: $0.geometry.coordinates[0])
+            mapView.addAnnotation(marker)
+            gravoures.append(marker)
+        }
+    }
     
     func didTapFilter() {
         closeDrawer()
@@ -416,9 +405,6 @@ extension MapViewController: MenuDelegate {
     }
     
     func didSelectMapLayer() {
-//        layerWMS?.clearTileCache()
-//        layerWMS?.map = nil
-//        layerWMS = nil
         setWMSLayer()
     }
     

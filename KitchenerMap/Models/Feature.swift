@@ -37,7 +37,7 @@ struct Properties {
     init(with string: String?) {
         guard string != nil else { return }
         let escapedString = string!.replacingOccurrences(of: "\\", with: "")
-        guard let jsonArray = try? JSONSerialization.jsonObject(with: escapedString.data(using: .utf8)!, options : .allowFragments) as? [NSDictionary] else { return }
+        guard let jsonArray = ((try? JSONSerialization.jsonObject(with: escapedString.data(using: .utf8)!, options : .allowFragments) as? [NSDictionary]) as [NSDictionary]??) else { return }
         values = PropertyNames(with: jsonArray ?? [])
     }
 }

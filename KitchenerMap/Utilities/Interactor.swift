@@ -31,4 +31,12 @@ class Interactor {
             onCompletion(searchResult)
         }
     }
+    
+    func loadRepresentations(url: String, onCompletion: @escaping (Representation) -> Void) {
+        Alamofire.request(url, method: .get).responseJSON { (response) in
+            guard let data = response.result.value as? NSDictionary else { return }
+            let representation = Representation(with: data)
+            onCompletion(representation)
+        }
+    }
 }

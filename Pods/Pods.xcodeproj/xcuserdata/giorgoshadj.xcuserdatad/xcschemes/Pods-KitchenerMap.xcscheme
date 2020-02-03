@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A02FEDA5617B46C910C3CDC4A941288"
+               BlueprintIdentifier = "92FDFD677C0857B1586A021D64A9DE78"
                BuildableName = "Pods_KitchenerMap.framework"
                BlueprintName = "Pods-KitchenerMap"
                ReferencedContainer = "container:Pods.xcodeproj">

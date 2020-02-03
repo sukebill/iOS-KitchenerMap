@@ -464,10 +464,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oj7-Y0-Tnc">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="653.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="714.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-ig-DXv">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="641.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="702.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBh-Kz-TSG">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
@@ -554,18 +554,39 @@
                                                             <action selector="onLayersTapped:" destination="dK6-lP-nun" eventType="touchUpInside" id="5OT-aZ-rLw"/>
                                                         </connections>
                                                     </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-NA-NEC">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNB-Vx-tNj">
                                                         <rect key="frame" x="0.0" y="177" width="240" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="YNK-97-ILJ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBr-me-2Zk">
+                                                        <rect key="frame" x="0.0" y="183" width="240" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="j7m-wn-Q5A"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Representations">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onRepresentationTapped:" destination="dK6-lP-nun" eventType="touchUpInside" id="Ng2-pS-ba6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-NA-NEC">
+                                                        <rect key="frame" x="0.0" y="238" width="240" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="p8o-fg-kGS"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eB-hj-SMv">
-                                                        <rect key="frame" x="0.0" y="183" width="240" height="50"/>
+                                                        <rect key="frame" x="0.0" y="244" width="240" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" title="Transparency">
+                                                        <state key="normal" title="Background Basemaps">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -573,14 +594,14 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-xT-kBR">
-                                                        <rect key="frame" x="0.0" y="238" width="240" height="1"/>
+                                                        <rect key="frame" x="0.0" y="299" width="240" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="rSd-3m-bRo"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pl-gI-YOb">
-                                                        <rect key="frame" x="0.0" y="244" width="240" height="50"/>
+                                                        <rect key="frame" x="0.0" y="305" width="240" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Feedback">
@@ -591,14 +612,14 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdV-KO-2Sm">
-                                                        <rect key="frame" x="0.0" y="299" width="240" height="1"/>
+                                                        <rect key="frame" x="0.0" y="360" width="240" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="y4h-hi-xY0"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-wJ-2gG">
-                                                        <rect key="frame" x="0.0" y="305" width="240" height="50"/>
+                                                        <rect key="frame" x="0.0" y="366" width="240" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="About this App">
@@ -609,14 +630,14 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ga-UW-MdX">
-                                                        <rect key="frame" x="0.0" y="360" width="240" height="1"/>
+                                                        <rect key="frame" x="0.0" y="421" width="240" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="NV4-UM-uAR"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6km-XT-qx8">
-                                                        <rect key="frame" x="0.0" y="366" width="240" height="50"/>
+                                                        <rect key="frame" x="0.0" y="427" width="240" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Terms of service">
@@ -627,14 +648,14 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaO-Fp-bCu">
-                                                        <rect key="frame" x="0.0" y="421" width="240" height="1"/>
+                                                        <rect key="frame" x="0.0" y="482" width="240" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="mMh-iL-nEw"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-N9-G4d">
-                                                        <rect key="frame" x="0.0" y="427" width="240" height="50"/>
+                                                        <rect key="frame" x="0.0" y="488" width="240" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Privacy Policy">
@@ -645,21 +666,21 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-A7-7XG">
-                                                        <rect key="frame" x="0.0" y="482" width="240" height="1"/>
+                                                        <rect key="frame" x="0.0" y="543" width="240" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="So9-Fe-N1Z"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0K3-ff-KsS">
-                                                        <rect key="frame" x="0.0" y="488" width="240" height="91"/>
+                                                        <rect key="frame" x="0.0" y="549" width="240" height="91"/>
                                                         <state key="normal" image="silvia_Ιωαννου"/>
                                                         <connections>
                                                             <action selector="onSilviaTapped:" destination="dK6-lP-nun" eventType="touchUpInside" id="uqW-Do-BKb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNG-WE-9s5">
-                                                        <rect key="frame" x="0.0" y="584" width="240" height="57.5"/>
+                                                        <rect key="frame" x="0.0" y="645" width="240" height="57.5"/>
                                                         <state key="normal" image="Harokopio_University_Logo"/>
                                                         <connections>
                                                             <action selector="onHarokopioTapped:" destination="dK6-lP-nun" eventType="touchUpInside" id="4YY-QV-Nxn"/>
@@ -813,8 +834,11 @@
                         <outlet property="mapLayersButton" destination="e1g-GJ-Lar" id="63A-eR-OjN"/>
                         <outlet property="mapLayersView" destination="rx1-sx-Kvp" id="pjF-cz-eDa"/>
                         <outlet property="policyView" destination="9Gc-Yk-jGH" id="2kc-Yl-bTq"/>
+                        <outlet property="privacyButton" destination="zhz-N9-G4d" id="Mi3-dI-vvg"/>
+                        <outlet property="representationButton" destination="eBr-me-2Zk" id="CLK-EW-y6d"/>
                         <outlet property="searchButton" destination="Lk6-85-p8O" id="bnY-0Y-plC"/>
                         <outlet property="searchView" destination="ky8-8g-HUL" id="2TD-dz-NVz"/>
+                        <outlet property="termsButton" destination="6km-XT-qx8" id="Yvp-JW-38t"/>
                         <outlet property="termsView" destination="F29-nU-DkX" id="SIR-Zi-cLo"/>
                         <outlet property="titleLabel" destination="N84-0m-kEC" id="xvC-7e-jKp"/>
                         <outlet property="topView" destination="Ncb-Et-YVY" id="ScK-lZ-cvw"/>

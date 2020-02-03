@@ -183,7 +183,7 @@ class WMSMKTileOverlay: MKTileOverlay {
                            result(nil, error)
                        }
                        else {
-                        try? (data as NSData?)?.write(to: url1 as URL, options: .atomic)
+                        ((try? (data as NSData?)?.write(to: url1 as URL, options: .atomic)) as ()??)
                            result(data, error)
                        }
                    }).resume()

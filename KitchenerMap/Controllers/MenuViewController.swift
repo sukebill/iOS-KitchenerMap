@@ -13,7 +13,8 @@ protocol MenuDelegate: class {
     func didTapFilter()
     func didSelectMapLayer()
     func didSelect(feature: Feature)
-    func didSelectMapLayer(_ layer: LayerX) 
+    func didSelectMapLayer(_ layer: LayerX)
+    func didSelectRepresentations()
 }
 
 class MenuViewController: UIViewController {
@@ -31,6 +32,9 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var aboutView: UIView!
     @IBOutlet weak var termsView: UIView!
     @IBOutlet weak var policyView: UIView!
+    @IBOutlet weak var termsButton: UIButton!
+    @IBOutlet weak var privacyButton: UIButton!
+    @IBOutlet weak var representationButton: UIButton!
     
     var delegate: MenuDelegate?
 
@@ -132,6 +136,10 @@ class MenuViewController: UIViewController {
         [feedbackView, mapLayersView, searchView, topView, aboutView, termsView, policyView].forEach {
             $0?.isHidden = true
         }
+    }
+    
+    @IBAction func onRepresentationTapped(_ sender: UIButton) {
+        delegate?.didSelectRepresentations()
     }
 }
 

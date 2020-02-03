@@ -1,11 +1,9 @@
 PODS:
   - Alamofire (4.8.2)
   - ExpandableCell (1.3.0)
-  - GoogleMaps (3.0.3):
-    - GoogleMaps/Maps (= 3.0.3)
-  - GoogleMaps/Base (3.0.3)
-  - GoogleMaps/Maps (3.0.3):
-    - GoogleMaps/Base
+  - HCFramework (1.2.12)
+  - HCMapInfoView (1.0.0):
+    - HCFramework
   - M13Checkbox (3.3.2)
   - MapCache (0.6.0)
   - SwifterSwift (5.0.0):
@@ -31,7 +29,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - ExpandableCell
-  - GoogleMaps
+  - HCMapInfoView
   - M13Checkbox
   - MapCache
   - SwifterSwift
@@ -40,7 +38,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - ExpandableCell
-    - GoogleMaps
+    - HCFramework
+    - HCMapInfoView
     - M13Checkbox
     - MapCache
     - SwifterSwift
@@ -48,11 +47,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
-  GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
+  HCFramework: 9b1e47cb7f82ecc926eef4f6257f97f3117aa503
+  HCMapInfoView: 7613d773f231920a8f75d844bcdf402b5f9b6e56
   M13Checkbox: d75dca81d61c9903e7f091f32b35a3254bc97dce
   MapCache: 8afa98ddc3539a384ba75b019284cded95aaccab
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
 
-PODFILE CHECKSUM: 26c691eb9893c700af2c3d9fe999cc119e16e509
+PODFILE CHECKSUM: 3ca68a821c08c7f022f8be494a7c38b13b9961af
 
 COCOAPODS: 1.6.1
