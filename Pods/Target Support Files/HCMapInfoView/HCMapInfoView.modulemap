@@ -1,0 +1,6 @@
+framework module HCMapInfoView {
+  umbrella header "HCMapInfoView-umbrella.h"
+
+  export *
+  module * { export * }
+}
