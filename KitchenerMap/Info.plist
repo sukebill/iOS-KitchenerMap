@@ -45,6 +45,10 @@
     <string>This app wants to take pictures.</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>This app wants to use your photos.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>This application requires location services to show your location on the map</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>This application requires location services to show your location on the map</string>
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>

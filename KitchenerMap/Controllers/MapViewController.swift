@@ -12,6 +12,7 @@ import MapKit
 import MapCache
 import HCMapInfoView
 import SafariServices
+import CoreLocation
 
 class MapViewController: UIViewController {
     
@@ -42,19 +43,21 @@ class MapViewController: UIViewController {
     private var modernLayerA: CachedTileOverlay?
     private var modernLayerB: CachedTileOverlay?
     private var mkOverlay: WMSMKTileOverlay?
-//    private var polyline: GMSPolyline?
-//    private var polygon: GMSPolygon?
+    private var polyline: MKPolyline?
+    private var polygon: MKPolygon?
     private var longPressMarker: MKPointAnnotation?
     private var selectedFeature: Feature?
     private var overlayAlpha: CGFloat = 1
     private var isChangingAlpha: Bool = false
     private var gravoures: [HCAnnotation] = []
+    private var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = LocaleHelper.shared.language == .greek ? "Xάρτης Kitchener" : "Kitchener Map"
         setupTileRendererKitchener()
         setWMSLayer()
+        setUpLocationManager()
         setupMapView()
         setUpNavigationBar()
         children.forEach{($0 as? MenuViewController)?.delegate = self}
@@ -73,6 +76,13 @@ class MapViewController: UIViewController {
                                                             action: #selector(clearFilters))
     }
     
+    private func setUpLocationManager() {
+//        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
     private func setupMapView() {
         mapView.delegate = self
         mapView.showsUserLocation = true
@@ -80,8 +90,6 @@ class MapViewController: UIViewController {
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
         mapView.addGestureRecognizer(longPress)
 //        mapView.setMinZoom(7, maxZoom: 17.99)
-//        mapView.isIndoorEnabled = false
-//        mapView.settings.myLocationButton = true
         centerMapOnLocation(location: cyprusCenter)
     }
     
@@ -224,6 +232,8 @@ class MapViewController: UIViewController {
     }
 }
 
+// MARK: MKMapViewDelegate
+
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation.title == longPressMarker?.title {
@@ -277,6 +287,18 @@ extension MapViewController: MKMapViewDelegate {
             let renderer = MKTileOverlayRenderer(overlay:overlay)
             renderer.alpha = (overlay as! WMSMKTileOverlay).alpha
             return renderer
+        }
+        if overlay is MKPolyline {
+            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            polylineRenderer.strokeColor = .yellow
+            polylineRenderer.lineWidth = 5
+            return polylineRenderer
+        }
+        if overlay is MKPolygon {
+            let polygonRenderer = MKPolygonRenderer(overlay: overlay)
+            polygonRenderer.strokeColor = .yellow
+            polygonRenderer.lineWidth = 5
+            return polygonRenderer
         }
         let renderer = mapView.mapCacheRenderer(forOverlay: overlay)
         if overlay is CachedTileOverlay {
@@ -413,48 +435,46 @@ extension MapViewController: MenuDelegate {
     
     func didSelect(feature: Feature) {
         selectedFeature = feature
-//        polyline?.map = nil
-//        polygon?.map = nil
-//        var points: [Geometry.Location] = []
-//        if let point = feature.geometry?.point {
-//            points.append(point)
-//        }
-//        if let geometryPoints = feature.geometry?.points {
-//            points.append(contentsOf: geometryPoints)
-//        }
-//
-//        let path = GMSMutablePath()
-//        if points.count > 1 {
-//            points.forEach { path.add(CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lng))}
-//            polyline = GMSPolyline(path: path)
-//            polyline?.map = mapView
-//            polyline?.strokeColor = .yellow
-//            polyline?.strokeWidth = 10
-//            polyline?.zIndex = 105
-//            polyline?.isTappable = true
-//
-//            let bounds = GMSCoordinateBounds(path: path)
-//            let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
-//            mapView.animate(with: update)
-//        } else if points.count == 1 {
-//            let point = points[0]
-//            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng - 0.0004))
-//            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng - 0.0004))
-//            path.add(CLLocationCoordinate2D(latitude: point.lat + 0.0005, longitude: point.lng + 0.0004))
-//            path.add(CLLocationCoordinate2D(latitude: point.lat - 0.0005, longitude: point.lng + 0.0004))
-//
-//            polygon = GMSPolygon(path: path)
-//            polygon?.strokeWidth = 10
-//            polygon?.strokeColor = .yellow
-//            polygon?.zIndex = 105
-//            polygon?.isTappable = true
-//            polygon?.map = mapView
-//
-//            let update = GMSCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: point.lat,
-//                                                                          longitude: point.lng),
-//                                                   zoom: 14)
-//            mapView.animate(with: update)
-//        }
+        if polyline != nil {
+            mapView.removeOverlay(polyline!)
+            polyline = nil
+        }
+        if polygon != nil {
+            mapView.removeOverlay(polygon!)
+            polygon = nil
+        }
+        var points: [CLLocationCoordinate2D] = []
+        if let point = feature.geometry?.point {
+            points.append(CLLocationCoordinate2D(latitude: point.lat, longitude: point.lng))
+        }
+        if let geometryPoints = feature.geometry?.points {
+            points.append(contentsOf: geometryPoints.map {
+                CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lng)
+            })
+        }
+
+        if points.count > 1 {
+            polyline = MKPolyline(coordinates: points)
+            mapView.addOverlay(polyline!)
+            
+            let region = MKCoordinateRegion(polyline!.boundingMapRect)
+            let regionThatFits = mapView.regionThatFits(region)
+            mapView.setRegion(regionThatFits, animated: true)
+        } else if points.count == 1 {
+            let point = points[0]
+            var polygonPoints: [CLLocationCoordinate2D] = []
+            polygonPoints.append(CLLocationCoordinate2D(latitude: point.latitude - 0.0005, longitude: point.longitude - 0.0004))
+            polygonPoints.append(CLLocationCoordinate2D(latitude: point.latitude + 0.0005, longitude: point.longitude - 0.0004))
+            polygonPoints.append(CLLocationCoordinate2D(latitude: point.latitude + 0.0005, longitude: point.longitude + 0.0004))
+            polygonPoints.append(CLLocationCoordinate2D(latitude: point.latitude - 0.0005, longitude: point.longitude + 0.0004))
+            polygon = MKPolygon(coordinates: &polygonPoints, count: polygonPoints.count)
+            mapView.addOverlay(polygon!)
+            
+            let region = MKCoordinateRegion(polygon!.boundingMapRect)
+            var regionThatFits = mapView.regionThatFits(region)
+            regionThatFits.span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            mapView.setRegion(regionThatFits, animated: true)
+        }
         
         showInfoWindow(feature: feature)
         
