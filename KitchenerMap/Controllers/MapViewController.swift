@@ -10,6 +10,8 @@ import UIKit
 import SwifterSwift
 import MapKit
 import MapCache
+import HCMapInfoView
+import SafariServices
 
 class MapViewController: UIViewController {
     
@@ -46,7 +48,7 @@ class MapViewController: UIViewController {
     private var selectedFeature: Feature?
     private var overlayAlpha: CGFloat = 1
     private var isChangingAlpha: Bool = false
-    private var gravoures: [MKPointAnnotation] = []
+    private var gravoures: [HCAnnotation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -233,11 +235,6 @@ extension MapViewController: MKMapViewDelegate {
                 annotationView?.canShowCallout = true
                 let btn = UIButton(type: .detailDisclosure)
                 annotationView?.rightCalloutAccessoryView = btn
-//                let closeButton = UIButton(frame: btn.frame)
-//                closeButton.setTitle("X", for: .normal)
-//                closeButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
-//                closeButton.setTitleColor(.red, for: .normal)
-//                annotationView?.leftCalloutAccessoryView = closeButton
             } else {
                 annotationView?.annotation = annotation
             }
@@ -245,23 +242,28 @@ extension MapViewController: MKMapViewDelegate {
         } else if gravoures.contains(where: { (gravoura) -> Bool in
             gravoura.coordinate.latitude == annotation.coordinate.latitude && gravoura.coordinate.longitude == annotation.coordinate.longitude
         }) {
-            let identifier = "gravoura"
-            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            if annotationView == nil {
-                annotationView = MKPinAnnotationView(annotation: annotation,
-                                                     reuseIdentifier: identifier)
-                (annotationView as? MKPinAnnotationView)?.pinTintColor = UIColor.purple
-                annotationView?.canShowCallout = true
-                let image = UIView(frame: CGRect(x: 0, y: 0, width: 500, height: 90))
-                image.backgroundColor = .red
-                annotationView?.detailCalloutAccessoryView = image
-            } else {
-                annotationView?.annotation = annotation
+            return HCPinAnnotationView.hcCreateDefaultPin(forMap: mapView, forAnnotation: annotation, withPinColor: .purple, withReuseIdentifier: "gravoura", showCallout: true, withClass: GravouraView.self, mapInfoViewName: "GravouraView", infoViewSize: CGSize(width: 320, height: 160)) { (infoView) in
+                debugPrint(infoView)
+                guard infoView as? GravouraView != nil else { return }
+                (infoView as? GravouraView)?.name = annotation.title ?? ""
+                (infoView as? GravouraView)?.image = annotation.subtitle ?? ""
+                (infoView as? GravouraView)?.refresh()
+                (infoView as? GravouraView)?.onTap = { [weak self] name, image in
+                    self?.onGravouraDetailsTapped(name: name, image: image)
+                }
             }
-            return annotationView
         } else {
             return nil
         }
+    }
+    
+    private func onGravouraDetailsTapped(name: String?, image: String?) {
+        let link = RepresentationHelper.shared.data?.features.filter {
+            $0.properties.clearName == name && $0.properties.thumbnail == image
+        }.first?.properties.link
+        guard let linkString = link, let url = URL(string: "https://gaia.hua.gr/" +  linkString) else { return }
+        let svc = SFSafariViewController(url: url)
+        present(svc, animated: true, completion: nil)
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -321,8 +323,9 @@ extension MapViewController: MenuDelegate {
             return
         }
         data.features.forEach {
-            let marker = MKPointAnnotation()
+            let marker = HCAnnotation()
             marker.title = $0.properties.clearName
+            marker.subtitle = $0.properties.thumbnail
             marker.coordinate = CLLocationCoordinate2D(latitude: $0.geometry.coordinates[1],
                                                        longitude: $0.geometry.coordinates[0])
             mapView.addAnnotation(marker)

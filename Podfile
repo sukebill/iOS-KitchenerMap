@@ -10,5 +10,5 @@ target 'KitchenerMap' do
   pod 'Alamofire'
   pod 'MapCache'
   pod 'HCMapInfoView'
-#  pod 'Kingfisher' '~> 5.2.0'
+  pod 'Kingfisher', '~> 5.7.0'
 end

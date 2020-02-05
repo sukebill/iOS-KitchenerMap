@@ -55,7 +55,7 @@ open class HCAnnotationView: MKAnnotationView, HCAnnotationDelegate
     ///   - infoViewSize: Desired size for info view. If not defined, the view will use its size from the nib file.
     ///   - showInfoViewHandler: Handler for showing info view. The intention is to use this handler to update the generated view with desired data.
     /// - Returns: Custom pin, i.e. custom map annotation (HCAnnotationView instance).
-    open static func hcCreatePin<T:HCMapInfoView>(forMap map:MKMapView, forAnnotation annotation:MKAnnotation, withPinImage pinImage:UIImage? = nil, pinCenterOffset:CGPoint? = nil, withReuseIdentifier reuseIdentifier:String, showCallout:Bool = true, withClass mapInfoViewClass:T.Type? = nil, mapInfoViewName mapInfoViewNibName:String? = nil, infoViewSize:CGSize? = nil, showInfoViewHandler:ShowInfoViewCompletionHandler? = nil) -> HCAnnotationView?
+    public static func hcCreatePin<T:HCMapInfoView>(forMap map:MKMapView, forAnnotation annotation:MKAnnotation, withPinImage pinImage:UIImage? = nil, pinCenterOffset:CGPoint? = nil, withReuseIdentifier reuseIdentifier:String, showCallout:Bool = true, withClass mapInfoViewClass:T.Type? = nil, mapInfoViewName mapInfoViewNibName:String? = nil, infoViewSize:CGSize? = nil, showInfoViewHandler:ShowInfoViewCompletionHandler? = nil) -> HCAnnotationView?
     {
         var pin = map.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? HCAnnotationView
         if pin == nil

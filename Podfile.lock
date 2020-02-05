@@ -4,6 +4,7 @@ PODS:
   - HCFramework (1.2.12)
   - HCMapInfoView (1.0.0):
     - HCFramework
+  - Kingfisher (5.7.1)
   - M13Checkbox (3.3.2)
   - MapCache (0.6.0)
   - SwifterSwift (5.0.0):
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - Alamofire
   - ExpandableCell
   - HCMapInfoView
+  - Kingfisher (~> 5.7.0)
   - M13Checkbox
   - MapCache
   - SwifterSwift
@@ -40,6 +42,7 @@ SPEC REPOS:
     - ExpandableCell
     - HCFramework
     - HCMapInfoView
+    - Kingfisher
     - M13Checkbox
     - MapCache
     - SwifterSwift
@@ -49,10 +52,11 @@ SPEC CHECKSUMS:
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   HCFramework: 9b1e47cb7f82ecc926eef4f6257f97f3117aa503
   HCMapInfoView: 7613d773f231920a8f75d844bcdf402b5f9b6e56
+  Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   M13Checkbox: d75dca81d61c9903e7f091f32b35a3254bc97dce
   MapCache: 8afa98ddc3539a384ba75b019284cded95aaccab
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
 
-PODFILE CHECKSUM: 3ca68a821c08c7f022f8be494a7c38b13b9961af
+PODFILE CHECKSUM: ec5ba88dde7b4889787e4f32dcab85ddccbe2871
 
 COCOAPODS: 1.6.1

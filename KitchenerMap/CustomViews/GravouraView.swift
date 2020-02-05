@@ -8,15 +8,24 @@
 
 import Foundation
 import MapKit
+import HCMapInfoView
+import Kingfisher
 
-class GravouraView: NSObject, MKAnnotation {
+class GravouraView: HCMapInfoView {
     
-    var coordinate: CLLocationCoordinate2D
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var subtitle: UILabel!
+    
     var name: String?
-    var link: String?
-    var image: UIImage?
+    var image: String?
+    var onTap: ((String?, String?) -> Void)?
     
-    init(coordinate: CLLocationCoordinate2D) {
-        self.coordinate = coordinate
+    func refresh() {
+        subtitle.text = name
+        imageView.kf.setImage(with: URL(string: "https://gaia.hua.gr/" + (image ?? "")))
+    }
+    
+    @IBAction func onButtonPressed(_ sender: Any) {
+        onTap?(name, image)
     }
 }
