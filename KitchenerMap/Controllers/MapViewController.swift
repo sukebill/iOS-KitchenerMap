@@ -89,7 +89,6 @@ class MapViewController: UIViewController {
         mapView.isZoomEnabled = true
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
         mapView.addGestureRecognizer(longPress)
-//        mapView.setMinZoom(7, maxZoom: 17.99)
         centerMapOnLocation(location: cyprusCenter)
     }
     
@@ -305,6 +304,19 @@ extension MapViewController: MKMapViewDelegate {
             renderer.alpha = overlayAlpha
         }
         return renderer
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        let coordinate = CLLocationCoordinate2DMake(mapView.region.center.latitude,
+                                                    mapView.region.center.longitude)
+        var span = mapView.region.span
+        if span.latitudeDelta < 0.002 { // MIN LEVEL
+            span = MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
+        } else if span.latitudeDelta > 1.3 { // MAX LEVEL
+            span = MKCoordinateSpan(latitudeDelta: 1.3, longitudeDelta: 1.3)
+        }
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        mapView.setRegion(region, animated:true)
     }
     
     private func showInfoWindow(feature: Feature) {
