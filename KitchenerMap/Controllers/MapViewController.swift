@@ -90,14 +90,24 @@ class MapViewController: UIViewController {
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
         mapView.addGestureRecognizer(longPress)
         centerMapOnLocation(location: cyprusCenter)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(loadFeature))
+        mapView.addGestureRecognizer(tap)
     }
     
-    @objc func addAnnotation(gestureRecognizer:UIGestureRecognizer) {
-        
+    @objc func addAnnotation(gestureRecognizer: UIGestureRecognizer) {
         guard gestureRecognizer.state == .began else { return }
         let touchPoint = gestureRecognizer.location(in: mapView)
         let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
         addUserAnnotationOnMap(at: newCoordinates)
+    }
+    
+    @objc func loadFeature(gestureRecognizer: UIGestureRecognizer) {
+        let touchPoint = gestureRecognizer.location(in: mapView)
+        let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+        Interactor.shared.loadFeatureOnLocation(newCoordinates) { [weak self] (feature) in
+            guard let feature = feature else { return }
+            self?.showInfoWindow(feature: feature)
+        }
     }
 
     private func setWMSLayer() {
@@ -189,6 +199,8 @@ class MapViewController: UIViewController {
         if kitchenerLayer == nil {
             setupTileRendererKitchener()
         }
+        mapView.removeAnnotations(gravoures)
+        gravoures = []
         setWMSLayer()
     }
     
@@ -484,7 +496,7 @@ extension MapViewController: MenuDelegate {
             
             let region = MKCoordinateRegion(polygon!.boundingMapRect)
             var regionThatFits = mapView.regionThatFits(region)
-            regionThatFits.span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            regionThatFits.span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
             mapView.setRegion(regionThatFits, animated: true)
         }
         
