@@ -21,12 +21,14 @@ class Interactor {
                    "&resource=02422ff9-9e60-430f-bbc5-bb5324359198" +
                    "&srsName=EPSG:4326"
     
+    private var header = ["X-Application-Request-Origin":"mobileSet=mobileAPIuser1&mobileSubSet=OesomEtaT"]
+    
     private init() {}
     
     func textSearch(_ text: String, onCompletion: @escaping (SearchResult) -> Void) {
         let url = textSearchBaseUrl.replacingOccurrences(of: "$", with: text)
         
-        Alamofire.request(url, method: .get).responseJSON { response in
+        Alamofire.request(url, method: .get, headers: header).responseJSON { response in
             guard let data = response.result.value as? NSDictionary else { return }
             let searchResult = SearchResult(with: data)
             onCompletion(searchResult)
@@ -34,7 +36,7 @@ class Interactor {
     }
     
     func loadRepresentations(url: String, onCompletion: @escaping (Representation) -> Void) {
-        Alamofire.request(url, method: .get).responseJSON { (response) in
+        Alamofire.request(url, method: .get, headers: header).responseJSON { (response) in
             guard let data = response.result.value as? NSDictionary else { return }
             let representation = Representation(with: data)
             onCompletion(representation)
@@ -71,7 +73,7 @@ class Interactor {
         }
         baseUrl =  baseUrl.replacingOccurrences(of: "%t", with: layerString).replacingOccurrences(of: "%s", with: layerString)
         
-        Alamofire.request(baseUrl, method: .get).responseJSON { (response) in
+        Alamofire.request(baseUrl, method: .get, headers: header).responseJSON { (response) in
             guard let data = response.result.value as? NSDictionary else { return }
             let searchResult = SearchResult(with: data)
             onCompletion(searchResult.features.first)

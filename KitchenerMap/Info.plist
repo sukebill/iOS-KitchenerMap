@@ -49,6 +49,8 @@
     <string>This application requires location services to show your location on the map</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>This application requires location services to show your location on the map</string>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>

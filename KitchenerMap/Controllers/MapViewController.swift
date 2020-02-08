@@ -324,11 +324,13 @@ extension MapViewController: MKMapViewDelegate {
         var span = mapView.region.span
         if span.latitudeDelta < 0.002 { // MIN LEVEL
             span = MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
-        } else if span.latitudeDelta > 1.3 { // MAX LEVEL
-            span = MKCoordinateSpan(latitudeDelta: 1.3, longitudeDelta: 1.3)
+            let region = MKCoordinateRegion(center: coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+        } else if span.latitudeDelta > 2.5 { // MAX LEVEL
+            span = MKCoordinateSpan(latitudeDelta: 2.5, longitudeDelta: 2.5)
+            let region = MKCoordinateRegion(center: coordinate, span: span)
+            mapView.setRegion(region, animated: true)
         }
-        let region = MKCoordinateRegion(center: coordinate, span: span)
-        mapView.setRegion(region, animated:true)
     }
     
     private func showInfoWindow(feature: Feature) {

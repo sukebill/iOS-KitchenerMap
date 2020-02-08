@@ -21,14 +21,14 @@ class KMTileRendererLocal: MKTileOverlay {
     }
 }
 
-class KMTileRendererNetwork: MKTileOverlay {
-    
-    override func url(forTilePath path: MKTileOverlayPath) -> URL {
-        let reversedY = Int(pow(2.0, Double(path.z))) - path.y - 1
-        let pp = "https://gaia.hua.gr/tms/kitchener_review/\(path.z)/\(path.x)/\(reversedY).jpg"
-        return URL(string: pp)!
-    }
-}
+//class KMTileRendererNetwork: MKTileOverlay {
+//
+//    override func url(forTilePath path: MKTileOverlayPath) -> URL {
+//        let reversedY = Int(pow(2.0, Double(path.z))) - path.y - 1
+//        let pp = "https://gaia.hua.gr/tms/kitchener_review/\(path.z)/\(path.x)/\(reversedY).jpg"
+//        return URL(string: pp)!
+//    }
+//}
 
 extension String {
     
@@ -164,32 +164,34 @@ class WMSMKTileOverlay: MKTileOverlay {
     }
     
     override func loadTile(at path: MKTileOverlayPath, result: @escaping (Data?, Error?) -> Void) {
-         let url1 = self.urlForTilePath(path: path)
-               let filePath = getFilePathForURL(url: url1, folderName: TILE_CACHE)
-               let file = FileManager.default
-               if file.fileExists(atPath: filePath) {
-                   let tileData = try? NSData(contentsOfFile: filePath, options: .mappedIfSafe) as Data
-                   result(tileData, nil)
-               }
-               else {
-                   var request = URLRequest(url: url1 as URL)
-                   request.httpMethod = "GET"
-                   
-                   let session = URLSession.shared
-                   session.dataTask(with: request, completionHandler: {(data, response, error) in
+        let url1 = self.urlForTilePath(path: path)
+        let filePath = getFilePathForURL(url: url1, folderName: TILE_CACHE)
+        let file = FileManager.default
+        if file.fileExists(atPath: filePath) {
+            let tileData = try? NSData(contentsOfFile: filePath,
+                                       options: .mappedIfSafe) as Data
+               result(tileData, nil)
+        } else {
+            var request = URLRequest(url: url1 as URL)
+            request.httpMethod = "GET"
+            request.addValue("mobileSet=mobileAPIuser1&mobileSubSet=OesomEtaT",
+                             forHTTPHeaderField: "X-Application-Request-Origin")
+            let session = URLSession.shared
+            session.dataTask(with: request, completionHandler: {(data, response, error) in
                        
-                       if error != nil {
-                           print("Error downloading tile")
-                           result(nil, error)
-                       }
-                       else {
-                        ((try? (data as NSData?)?.write(to: url1 as URL, options: .atomic)) as ()??)
-                           result(data, error)
-                       }
-                   }).resume()
+                if error != nil {
+                    print("Error downloading tile")
+                    result(nil, error)
+                } else {
+                    ((try? (data as NSData?)?.write(to: url1 as URL, options: .atomic)) as ()??)
+                    result(data, error)
+                    guard data != nil else { return }
+                    self.cacheUrlToLocalFolder(url: url1,
+                                               data: data! as NSData,
+                                               folderName: self.TILE_CACHE)
+                }
+            }).resume()
 
-               }
+        }
     }
-    
-    
 }

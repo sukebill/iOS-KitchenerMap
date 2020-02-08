@@ -35,9 +35,10 @@ class LayersHelper {
         return result
     }
     private let url = "https://gaia.hua.gr/kitchener_review/js/settings_web.json"
+    private var header = ["X-Application-Request-Origin":"mobileSet=mobileAPIuser1&mobileSubSet=OesomEtaT"]
     
     private init() {
-        Alamofire.request(url, method: .get).responseJSON { [weak self] response in
+        Alamofire.request(url, method: .get, headers: header).responseJSON { [weak self] response in
             self?.data = HuaSettings(with: response.result.value as? NSDictionary)
         }
     }

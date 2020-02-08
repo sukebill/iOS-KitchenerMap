@@ -857,7 +857,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="484"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kpL-fC-h55" customClass="ExpandableTableView" customModule="ExpandableCell">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kpL-fC-h55">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="484"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -886,7 +886,7 @@
                                             <outlet property="layerGroupName" destination="VYu-ao-RXz" id="7GJ-Mn-aBO"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapLayerTableViewCell" id="RlG-AO-K2C" customClass="MapLayerTableViewCell" customModule="KitchenerMap" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapLayerTableViewCell" id="RlG-AO-K2C" customClass="MapLayerTableViewCell" customModule="KitchenerMap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="240" height="25.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RlG-AO-K2C" id="gBA-Mo-GBn">
@@ -935,7 +935,7 @@
                         <viewLayoutGuide key="safeArea" id="sfn-x7-MNZ"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="kpL-fC-h55" id="OI0-1a-FdP"/>
+                        <outlet property="tableView" destination="kpL-fC-h55" id="JAN-G2-Flo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLw-RQ-Cb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
