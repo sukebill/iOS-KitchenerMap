@@ -40,6 +40,8 @@ class LayersHelper {
     private init() {
         Alamofire.request(url, method: .get, headers: header).responseJSON { [weak self] response in
             self?.data = HuaSettings(with: response.result.value as? NSDictionary)
+            guard let kitchenerMapLayer = self?.data?.baseMapGroups.first?.layers.first else { return }
+            self?.layers.append(kitchenerMapLayer)
         }
     }
 }
