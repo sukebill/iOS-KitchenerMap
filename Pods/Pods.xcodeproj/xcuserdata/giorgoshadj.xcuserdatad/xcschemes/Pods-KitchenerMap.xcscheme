@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1110"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "314E20B9959F133DFF97653CC0D04325"
+               BlueprintIdentifier = "F9D091B7003205BF7BDCB88D8F030166"
                BuildableName = "Pods_KitchenerMap.framework"
                BlueprintName = "Pods-KitchenerMap"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -42,6 +42,20 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         mapLayersSetup()
         searchViewSetup()
+        setUpText()
+    }
+    
+    private func setUpText() {
+        let isGreek = LocaleHelper.shared.language == .greek
+        languaheLabel.text = isGreek ? "Γλώσσα:" : "Language:"
+        searchButton.setTitleForAllStates(isGreek ? "Αναζήτηση Σημείου" : "Search for a Place")
+        mapLayersButton.setTitleForAllStates(isGreek ? "Χαρτογραφικά Επίπεδα" : "Map Layers")
+        representationButton.setTitleForAllStates(isGreek ? "Αναπαραστάσεις" : "Representations")
+        transparencyButton.setTitleForAllStates(isGreek ? "Χαρτογραφικό Υπόβαθρο" : "Background Basemaps")
+        feedbackButton.setTitleForAllStates(isGreek ? "Ανατροφοδότηση" : "Feedback")
+        aboutButton.setTitleForAllStates(isGreek ? "Σχετικά με την Εφαρμογή" : "About the App")
+        termsButton.setTitleForAllStates(isGreek ? "Όροι Χρήσης" : "Terms of Service")
+        privacyButton.setTitleForAllStates(isGreek ? "Πολιτική Απορρήτου" : "Privacy Policy")
     }
     
     @IBAction func onGreekTapped(_ sender: Any) {
@@ -80,10 +94,6 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onTermsTapped(_ sender: Any) {
-//        titleLabel.text = LocaleHelper.shared.language == .greek ? "Όροι χρήσης" : "Terms of service"
-//
-//        topView.isHidden = false
-//        termsView.isHidden = false
         let isGreek = LocaleHelper.shared.language == .greek
         var urlString = "https://gaia.hua.gr/kitchener_review/terms_$.html"
         urlString = urlString.replacingOccurrences(of: "$", with: isGreek ? "el" : "en")
@@ -93,12 +103,6 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onPolicyTapped(_ sender: Any) {
-//        titleLabel.text = LocaleHelper.shared.language == .greek ? "Πολιτική απορρήτου" : "Privacy policy"
-//
-//        topView.isHidden = false
-//        policyView.isHidden = false
-//        let vc = children.filter { $0 is PolicyViewController }.first as? PolicyViewController
-//        vc?.load()
         let isGreek = LocaleHelper.shared.language == .greek
         var urlString = "https://gaia.hua.gr/kitchener_review/privacy_$.html"
         urlString = urlString.replacingOccurrences(of: "$", with: isGreek ? "el" : "en")

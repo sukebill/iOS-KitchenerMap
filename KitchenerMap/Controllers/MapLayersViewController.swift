@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ExpandableCell
 
 class MapLayersViewController: UIViewController {
     

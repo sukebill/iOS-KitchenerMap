@@ -36,7 +36,6 @@
 		338575172258F9200047D467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338575152258F9200047D467 /* Main.storyboard */; };
 		338575192258F92D0047D467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338575182258F92D0047D467 /* Assets.xcassets */; };
 		3385751C2258F92D0047D467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3385751A2258F92D0047D467 /* LaunchScreen.storyboard */; };
-		339A5F8523815F3000C5E511 /* MapLayerGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339A5F8423815F3000C5E511 /* MapLayerGroupCell.swift */; };
 		339A5F872381A53000C5E511 /* MapLayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339A5F862381A53000C5E511 /* MapLayerTableViewCell.swift */; };
 		33D894DA23BE240A00B95CF0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D894D923BE240A00B95CF0 /* AboutViewController.swift */; };
 		33D894DC23BE2EB200B95CF0 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D894DB23BE2EB200B95CF0 /* TermsViewController.swift */; };
@@ -78,7 +77,6 @@
 		338575182258F92D0047D467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3385751B2258F92D0047D467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3385751D2258F92D0047D467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		339A5F8423815F3000C5E511 /* MapLayerGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayerGroupCell.swift; sourceTree = "<group>"; };
 		339A5F862381A53000C5E511 /* MapLayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayerTableViewCell.swift; sourceTree = "<group>"; };
 		33D894D923BE240A00B95CF0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		33D894DB23BE2EB200B95CF0 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +136,34 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		3354E09E23EF204900BBFDA4 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				334DCEE5225A086800043AAF /* KMSlider.swift */,
+				334DCEE3225A07FA00043AAF /* KMSlider.xib */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		3354E09F23EF205700BBFDA4 /* Gravoura */ = {
+			isa = PBXGroup;
+			children = (
+				3318DB9723E8B63800F48A23 /* GravouraView.swift */,
+				33E4367923EB4792005E9EFD /* GravouraView.xib */,
+			);
+			path = Gravoura;
+			sourceTree = "<group>";
+		};
+		3354E0A023EF206B00BBFDA4 /* MapLayersCells */ = {
+			isa = PBXGroup;
+			children = (
+				339A5F862381A53000C5E511 /* MapLayerTableViewCell.swift */,
+				3354E09A23EEF89400BBFDA4 /* MapLayersHeader.swift */,
+				3354E09C23EEF91D00BBFDA4 /* MapLayersHeader.xib */,
+			);
+			path = MapLayersCells;
+			sourceTree = "<group>";
+		};
 		338575052258F91F0047D467 = {
 			isa = PBXGroup;
 			children = (
@@ -191,16 +217,11 @@
 		338575242258F9900047D467 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				334DCEE3225A07FA00043AAF /* KMSlider.xib */,
-				334DCEE5225A086800043AAF /* KMSlider.swift */,
+				3354E0A023EF206B00BBFDA4 /* MapLayersCells */,
+				3354E09F23EF205700BBFDA4 /* Gravoura */,
+				3354E09E23EF204900BBFDA4 /* Slider */,
 				33390D04229948C40002B020 /* UserAnnotation.swift */,
-				339A5F8423815F3000C5E511 /* MapLayerGroupCell.swift */,
-				339A5F862381A53000C5E511 /* MapLayerTableViewCell.swift */,
 				3306345C23941D4000DD3857 /* SearchResultTableViewCell.swift */,
-				3318DB9723E8B63800F48A23 /* GravouraView.swift */,
-				33E4367923EB4792005E9EFD /* GravouraView.xib */,
-				3354E09A23EEF89400BBFDA4 /* MapLayersHeader.swift */,
-				3354E09C23EEF91D00BBFDA4 /* MapLayersHeader.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -328,7 +349,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KitchenerMap/Pods-KitchenerMap-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ExpandableCell/ExpandableCell.framework",
 				"${BUILT_PRODUCTS_DIR}/HCFramework/HCFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/HCMapInfoView/HCMapInfoView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -341,7 +361,6 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandableCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCMapInfoView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -377,7 +396,6 @@
 				334DCEE0225A059700043AAF /* MenuViewController.swift in Sources */,
 				33D894DE23BE313E00B95CF0 /* PolicyViewController.swift in Sources */,
 				3306345923940D6700DD3857 /* SearchViewController.swift in Sources */,
-				339A5F8523815F3000C5E511 /* MapLayerGroupCell.swift in Sources */,
 				3306345D23941D4000DD3857 /* SearchResultTableViewCell.swift in Sources */,
 				3306345B239413A500DD3857 /* Interactor.swift in Sources */,
 				334122D0235C6D0E00DB0F19 /* SearchResult.swift in Sources */,

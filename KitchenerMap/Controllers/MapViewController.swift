@@ -51,6 +51,7 @@ class MapViewController: UIViewController {
     private var isChangingAlpha: Bool = false
     private var gravoures: [HCAnnotation] = []
     private var locationManager = CLLocationManager()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,18 +67,18 @@ class MapViewController: UIViewController {
     }
     
     private func setUpNavigationBar() {
+        let isGreek = LocaleHelper.shared.language == .greek
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"),
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(toggleDrawer))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear",
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: isGreek ? "Επαναφορά" : "Clear",
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(clearFilters))
     }
     
     private func setUpLocationManager() {
-//        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
@@ -331,6 +332,16 @@ extension MapViewController: MKMapViewDelegate {
             let region = MKCoordinateRegion(center: coordinate, span: span)
             mapView.setRegion(region, animated: true)
         }
+//        let isLatOutOfBounds = coordinate.latitude > cyprusNEBound.latitude || coordinate.latitude < cyprusSWBound.latitude
+//        let isLonOutOfBounds = coordinate.longitude > cyprusNEBound.latitude || coordinate.longitude < cyprusSWBound.longitude
+//        if isLatOutOfBounds {
+//            var region: MKCoordinateRegion
+//            if coordinate.latitude > cyprusNEBound.latitude {
+//                region = MKCoordinateRegion(center: cyprusNEBound, span: span)
+//            }
+//        } else if isLonOutOfBounds {
+//
+//        }
     }
     
     private func showInfoWindow(feature: Feature) {

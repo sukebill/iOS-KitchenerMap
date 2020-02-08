@@ -29,13 +29,11 @@ public class MapCache : MapCacheProtocol {
     }
     
     public func url(forTilePath path: MKTileOverlayPath) -> URL {
-        //print("CachedTileOverlay:: url() urlTemplate: \(urlTemplate)")
         var urlString = config.urlTemplate.replacingOccurrences(of: "{z}", with: String(path.z))
         urlString = urlString.replacingOccurrences(of: "{x}", with: String(path.x))
         urlString = urlString.replacingOccurrences(of: "{y}", with: String(path.realY(isReversed: isYReversed)))
     
         urlString = urlString.replacingOccurrences(of: "{s}", with: config.roundRobinSubdomain() ?? "")
-        print("MapCache::url() urlString: \(urlString)")
         return URL(string: urlString)!
     }
     
