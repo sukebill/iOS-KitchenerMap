@@ -22,6 +22,7 @@ public class MapCache : MapCacheProtocol {
     public var diskCache : DiskCache
     let operationQueue = OperationQueue()
     public var isYReversed: Bool = false
+    public var hasHeader: Bool = false
     
     public init(withConfig config: MapCacheConfig ) {
         self.config = config
@@ -52,8 +53,10 @@ public class MapCache : MapCacheProtocol {
             let url = self.url(forTilePath: path)
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
-            request.addValue("mobileSet=mobileAPIuser1&mobileSubSet=OesomEtaT",
-                                    forHTTPHeaderField: "X-Application-Request-Origin")
+            if self.hasHeader {
+                request.addValue("private-user=mobileAPIuser1&private-pw=OesomEtaT",
+                                 forHTTPHeaderField: "X-Credentials")
+            }
             debugPrint ("MapCache::loadTile() url=\(url)")
             debugPrint("Requesting data....");
             let task = URLSession.shared.dataTask(with: request) {(data, response, error) in

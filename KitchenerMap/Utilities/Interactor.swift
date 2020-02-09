@@ -18,10 +18,9 @@ class Interactor {
                    "&typeName=kitchener:parametric_search_table2" +
                    "&outputFormat=application/json" +
                    "&viewparams=term:$" +
-                   "&resource=02422ff9-9e60-430f-bbc5-bb5324359198" +
                    "&srsName=EPSG:4326"
     
-    private var header = ["X-Application-Request-Origin":"mobileSet=mobileAPIuser1&mobileSubSet=OesomEtaT"]
+    private var header = ["X-Credentials":"private-user=mobileAPIuser1&private-pw=OesomEtaT"]
     
     private init() {}
     
@@ -48,7 +47,7 @@ class Interactor {
         let lonSW = (location.longitude - 0.05).string
         let latNE = (location.latitude + 0.05).string
         let lonNE = (location.longitude + 0.05).string
-        var baseUrl = "https://gaia.hua.gr/geoserver/ows?service=WMS&resource=02422ff9-9e60-430f-bbc5-bb5324359198" +
+        var baseUrl = "https://gaia.hua.gr/geoserver/ows?service=WMS" +
                 "&version=1.3.0" +
                 "&request=GetFeatureInfo" +
                 "&SERVICE=WMS" +

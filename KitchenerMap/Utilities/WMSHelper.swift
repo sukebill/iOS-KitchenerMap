@@ -11,7 +11,7 @@ import Foundation
 struct WMSHelper {
     static let shared = WMSHelper()
     
-    var mapLayersUrl =  "https://gaia.hua.gr/geoserver/ows?service=WMS&resource=02422ff9-9e60-430f-bbc5-bb5324359198" +
+    var mapLayersUrl =  "https://gaia.hua.gr/geoserver/ows?service=WMS" +
                         "&version=1.3.0" +
                         "&request=GetMap" +
                         "&layers=%s" +
@@ -22,7 +22,7 @@ struct WMSHelper {
                         "&format=image/png" +
                         "&transparent=true"
     
-    var infoFormat = "https://gaia.hua.gr/geoserver/ows?service=WMS&resource=02422ff9-9e60-430f-bbc5-bb5324359198" +
+    var infoFormat = "https://gaia.hua.gr/geoserver/ows?service=WM" +
                         "&version=1.3.0" +
                         "&INFO_FORMAT=application/json" +
                         "&REQUEST=GetFeatureInfo" +

@@ -26,7 +26,7 @@ class LayersHelper {
     var layers: [LayerX] = []
     var formattedLayers: String {
         var result = ""
-        let sortedLayers = layers.sorted { $0.userOrder < $1.userOrder }.map { $0.src }
+        let sortedLayers = layers.filter { !$0.src.contains("http") && !$0.src.contains("{z}") }.sorted { $0.userOrder < $1.userOrder }.map { $0.src }
         for item in sortedLayers {
             result += item + ","
         }

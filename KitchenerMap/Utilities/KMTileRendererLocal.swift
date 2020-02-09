@@ -174,8 +174,8 @@ class WMSMKTileOverlay: MKTileOverlay {
         } else {
             var request = URLRequest(url: url1 as URL)
             request.httpMethod = "GET"
-            request.addValue("mobileSet=mobileAPIuser1&mobileSubSet=OesomEtaT",
-                             forHTTPHeaderField: "X-Application-Request-Origin")
+            request.addValue("private-user=mobileAPIuser1&private-pw=OesomEtaT",
+                             forHTTPHeaderField: "X-Credentials")
             let session = URLSession.shared
             session.dataTask(with: request, completionHandler: {(data, response, error) in
                        

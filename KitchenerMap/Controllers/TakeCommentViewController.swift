@@ -83,10 +83,10 @@ class TakeCommentViewController: UIViewController {
     
     private func openMailApp() {
         guard MFMailComposeViewController.canSendMail() else {
-            sendButton.setTitleForAllStates("No Account in Mail")
+            sendButton.setTitleForAllStates(isGreek ? "Δεν υπάρχει συνδεδεμένος λογαριασμός" :"No Account in Mail")
             return
         }
-        let emailTitle = "Feedback"
+        let emailTitle = isGreek ? "Ανατροφοδότηση" : "Feedback"
         let messageBody = "Coordinates \(location.latitude), \(location.longitude)\n\n\(textView.text ?? "")"
         let toRecipents = ["gaia_webmaster@hua.gr"]
         let mc: MFMailComposeViewController = MFMailComposeViewController()
@@ -94,8 +94,9 @@ class TakeCommentViewController: UIViewController {
         mc.setSubject(emailTitle)
         mc.setMessageBody(messageBody, isHTML: false)
         mc.setToRecipients(toRecipents)
-        guard let image = imageView.image?.compressedData() else { return }
-        mc.addAttachmentData(image, mimeType: "image/jpeg", fileName: "feedback_\(location.latitude)_\(location.longitude)_\(Date().string()).jpg")
+        if let image = imageView.image?.compressedData() {
+            mc.addAttachmentData(image, mimeType: "image/jpeg", fileName: "feedback_\(location.latitude)_\(location.longitude)_\(Date().string()).jpg")
+        }
         present(mc, animated: true)
     }
 }

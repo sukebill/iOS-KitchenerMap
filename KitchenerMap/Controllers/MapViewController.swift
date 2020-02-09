@@ -127,7 +127,7 @@ class MapViewController: UIViewController {
         let region = MKCoordinateRegion(center: location,
                                         span: MKCoordinateSpan(latitudeDelta: 1.3,
                                                                longitudeDelta: 1.3))
-
+        mapView.setUserTrackingMode(.followWithHeading, animated: true)
         mapView.setRegion(region, animated: true)
     }
 
@@ -136,6 +136,7 @@ class MapViewController: UIViewController {
         config.cacheName = "Kitchener"
         config.maximumZ = 16
         let mapCache = MapCache(withConfig: config)
+        mapCache.hasHeader = true
         kitchenerLayer = mapView.useCache(mapCache, isGeometryFlipped: true)
     }
     
@@ -145,6 +146,7 @@ class MapViewController: UIViewController {
         config.cacheName = "Leukosia"
         config.minimumZ = 15
         let mapCache = MapCache(withConfig: config)
+        mapCache.hasHeader = true
         nicosiaLayer = mapView.useCache(mapCache, isGeometryFlipped: true)
     }
     
@@ -153,6 +155,7 @@ class MapViewController: UIViewController {
         config.cacheName = "Limassol"
         config.minimumZ = 15
         let mapCache = MapCache(withConfig: config)
+        mapCache.hasHeader = true
         lemessosLayer = mapView.useCache(mapCache, isGeometryFlipped: true)
     }
     
@@ -214,6 +217,7 @@ class MapViewController: UIViewController {
         children.forEach {
             ($0 as? MenuViewController)?.reloadSelections()
         }
+        view.endEditing(true)
     }
     
     private func closeDrawer() {
@@ -222,6 +226,7 @@ class MapViewController: UIViewController {
             self.leftMenuTrailingConstraint.constant = 0
             self.view.layoutIfNeeded()
         })
+        view.endEditing(true)
     }
     
     @IBAction func onMenuBackgroundTapped(_ sender: Any) {
@@ -509,7 +514,7 @@ extension MapViewController: MenuDelegate {
             
             let region = MKCoordinateRegion(polygon!.boundingMapRect)
             var regionThatFits = mapView.regionThatFits(region)
-            regionThatFits.span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            regionThatFits.span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
             mapView.setRegion(regionThatFits, animated: true)
         }
         
