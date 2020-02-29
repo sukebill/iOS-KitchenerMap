@@ -51,8 +51,7 @@ class MapViewController: UIViewController {
     private var isChangingAlpha: Bool = false
     private var gravoures: [HCAnnotation] = []
     private var locationManager = CLLocationManager()
-    
-
+    private var currentLocation: CLLocation?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = LocaleHelper.shared.language == .greek ? "Xάρτης Kitchener" : "Kitchener Map"
@@ -94,6 +93,9 @@ class MapViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(loadFeature))
         mapView.addGestureRecognizer(tap)
     }
+    @IBAction func getMylocationClicked(_ sender: UIButton) {
+        getMyLocation()
+    }
     
     @objc func addAnnotation(gestureRecognizer: UIGestureRecognizer) {
         guard gestureRecognizer.state == .began else { return }
@@ -110,7 +112,12 @@ class MapViewController: UIViewController {
             self?.showInfoWindow(feature: feature)
         }
     }
-
+    private func getMyLocation() {
+        if let coor = mapView.userLocation.location?.coordinate{
+            mapView.setCenter(coor, animated: true)
+        }
+    
+    }
     private func setWMSLayer() {
         if mkOverlay != nil {
             mapView.removeOverlay(mkOverlay!)
@@ -546,3 +553,4 @@ extension MapViewController {
         slider.close()
     }
 }
+

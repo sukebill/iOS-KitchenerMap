@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="URD-Jb-70h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="URD-Jb-70h">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,13 +22,35 @@
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-IA-jZd">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                     </mapView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptw-rv-nry">
+                                        <rect key="frame" x="10" y="10" width="25" height="26"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urp-pI-yW2">
+                                        <rect key="frame" x="12" y="12" width="21" height="22"/>
+                                        <state key="normal" image="location" catalog="system"/>
+                                        <connections>
+                                            <action selector="getMylocationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfN-JF-FVY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Tm8-IA-jZd" secondAttribute="trailing" id="1km-Ss-ShR"/>
+                                    <constraint firstItem="urp-pI-yW2" firstAttribute="leading" secondItem="VyN-HU-fRF" secondAttribute="leading" constant="12" id="1sx-MI-HdQ"/>
+                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="top" secondItem="urp-pI-yW2" secondAttribute="top" constant="-2" id="84c-uo-27t"/>
                                     <constraint firstItem="Tm8-IA-jZd" firstAttribute="top" secondItem="VyN-HU-fRF" secondAttribute="top" id="L2u-ow-eZM"/>
                                     <constraint firstItem="Tm8-IA-jZd" firstAttribute="leading" secondItem="VyN-HU-fRF" secondAttribute="leading" id="MrL-cN-s2h"/>
                                     <constraint firstAttribute="bottom" secondItem="Tm8-IA-jZd" secondAttribute="bottom" id="QzH-eC-176"/>
+                                    <constraint firstItem="urp-pI-yW2" firstAttribute="top" secondItem="VyN-HU-fRF" secondAttribute="top" constant="12" id="Rg6-X0-e50"/>
+                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="trailing" secondItem="urp-pI-yW2" secondAttribute="trailing" constant="2" id="mjw-ZN-ySJ"/>
+                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="bottom" secondItem="urp-pI-yW2" secondAttribute="bottom" constant="2" id="nzi-Lk-hUd"/>
+                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="leading" secondItem="urp-pI-yW2" secondAttribute="leading" constant="-2" id="pTn-AL-9Cg"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QH-kX-Ewt">
@@ -1185,6 +1207,7 @@
         <image name="Harokopio_University_Logo" width="58.5" height="57.5"/>
         <image name="english_flag" width="512" height="512"/>
         <image name="greek_flag" width="250" height="250"/>
+        <image name="location" catalog="system" width="64" height="56"/>
         <image name="silvia_Ιωαννου" width="91" height="91"/>
     </resources>
 </document>
