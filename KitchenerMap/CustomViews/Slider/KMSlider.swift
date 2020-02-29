@@ -43,7 +43,9 @@ class KMSlider: UIView {
     func close() {
         timer?.invalidate()
     }
-    
+    func resetToDefaultValue() {
+        slider.value = 1.0
+    }
     @objc private func checkIfIdle() {
         guard Date().secondsSince(date) > 3 else {
             return

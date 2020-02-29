@@ -23,8 +23,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptw-rv-nry">
-                                        <rect key="frame" x="10" y="10" width="25" height="26"/>
+                                        <rect key="frame" x="12" y="12" width="27" height="26"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-8U-M5z">
+                                                <rect key="frame" x="3" y="3.5" width="21" height="19"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ty5-8U-M5z" firstAttribute="top" secondItem="Ptw-rv-nry" secondAttribute="top" constant="3" id="OOq-QO-Trj"/>
+                                            <constraint firstAttribute="bottom" secondItem="ty5-8U-M5z" secondAttribute="bottom" constant="3" id="WIu-T0-d26"/>
+                                            <constraint firstAttribute="trailing" secondItem="ty5-8U-M5z" secondAttribute="trailing" constant="3" id="ZrO-iz-tEW"/>
+                                            <constraint firstItem="ty5-8U-M5z" firstAttribute="leading" secondItem="Ptw-rv-nry" secondAttribute="leading" constant="3" id="vYC-Mc-foS"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="6"/>
@@ -32,8 +43,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urp-pI-yW2">
-                                        <rect key="frame" x="12" y="12" width="21" height="22"/>
-                                        <state key="normal" image="location" catalog="system"/>
+                                        <rect key="frame" x="6" y="6" width="30" height="34"/>
                                         <connections>
                                             <action selector="getMylocationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfN-JF-FVY"/>
                                         </connections>
@@ -42,15 +52,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Tm8-IA-jZd" secondAttribute="trailing" id="1km-Ss-ShR"/>
-                                    <constraint firstItem="urp-pI-yW2" firstAttribute="leading" secondItem="VyN-HU-fRF" secondAttribute="leading" constant="12" id="1sx-MI-HdQ"/>
-                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="top" secondItem="urp-pI-yW2" secondAttribute="top" constant="-2" id="84c-uo-27t"/>
+                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="top" secondItem="VyN-HU-fRF" secondAttribute="top" constant="12" id="E7S-Mj-bzU"/>
                                     <constraint firstItem="Tm8-IA-jZd" firstAttribute="top" secondItem="VyN-HU-fRF" secondAttribute="top" id="L2u-ow-eZM"/>
                                     <constraint firstItem="Tm8-IA-jZd" firstAttribute="leading" secondItem="VyN-HU-fRF" secondAttribute="leading" id="MrL-cN-s2h"/>
                                     <constraint firstAttribute="bottom" secondItem="Tm8-IA-jZd" secondAttribute="bottom" id="QzH-eC-176"/>
-                                    <constraint firstItem="urp-pI-yW2" firstAttribute="top" secondItem="VyN-HU-fRF" secondAttribute="top" constant="12" id="Rg6-X0-e50"/>
-                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="trailing" secondItem="urp-pI-yW2" secondAttribute="trailing" constant="2" id="mjw-ZN-ySJ"/>
-                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="bottom" secondItem="urp-pI-yW2" secondAttribute="bottom" constant="2" id="nzi-Lk-hUd"/>
-                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="leading" secondItem="urp-pI-yW2" secondAttribute="leading" constant="-2" id="pTn-AL-9Cg"/>
+                                    <constraint firstItem="urp-pI-yW2" firstAttribute="top" secondItem="VyN-HU-fRF" secondAttribute="top" constant="6" id="YOK-ts-QsQ"/>
+                                    <constraint firstItem="urp-pI-yW2" firstAttribute="leading" secondItem="VyN-HU-fRF" secondAttribute="leading" constant="6" id="iL1-Qm-GD1"/>
+                                    <constraint firstItem="Ptw-rv-nry" firstAttribute="leading" secondItem="VyN-HU-fRF" secondAttribute="leading" constant="12" id="ktF-0x-3FT"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QH-kX-Ewt">

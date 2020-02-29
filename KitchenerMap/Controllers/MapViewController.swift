@@ -183,6 +183,7 @@ class MapViewController: UIViewController {
     }
     
     @objc private func clearFilters() {
+        
         LayersHelper.shared.layers = []
         if longPressMarker != nil {
             mapView.removeAnnotation(longPressMarker!)
@@ -210,9 +211,13 @@ class MapViewController: UIViewController {
         if kitchenerLayer == nil {
             setupTileRendererKitchener()
         }
+        
         mapView.removeAnnotations(gravoures)
         gravoures = []
         setWMSLayer()
+        slider.resetToDefaultValue()
+        self.reloadRenderers(1.0)
+        
     }
     
     @objc private func toggleDrawer() {
