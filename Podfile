@@ -7,6 +7,7 @@ target 'KitchenerMap' do
   pod 'SwifterSwift'
   pod 'M13Checkbox'
   pod 'Alamofire'
+  pod 'Reachability'
   pod 'MapCache'
   pod 'HCMapInfoView'
   pod 'Kingfisher', '~> 5.7.0'

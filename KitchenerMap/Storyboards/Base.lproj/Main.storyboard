@@ -16,11 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sV7-fn-EIV">
+                                <rect key="frame" x="0.0" y="44" width="320" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K52-Ww-FQD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Δεν υπάρχει σύνδεση στο δίκτυο" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxE-Cq-PPE">
+                                                <rect key="frame" x="12" y="0.0" width="296" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.49803921568627452" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="KxE-Cq-PPE" firstAttribute="leading" secondItem="K52-Ww-FQD" secondAttribute="leading" constant="12" id="8sA-y7-LjN"/>
+                                            <constraint firstAttribute="trailing" secondItem="KxE-Cq-PPE" secondAttribute="trailing" constant="12" id="E0Z-09-7pa"/>
+                                            <constraint firstAttribute="bottom" secondItem="KxE-Cq-PPE" secondAttribute="bottom" id="IUJ-oQ-4Yv"/>
+                                            <constraint firstItem="KxE-Cq-PPE" firstAttribute="top" secondItem="K52-Ww-FQD" secondAttribute="top" id="elO-Er-D3c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-HU-fRF">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="94" width="320" height="474"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-IA-jZd">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptw-rv-nry">
                                         <rect key="frame" x="12" y="12" width="27" height="26"/>
@@ -298,17 +321,20 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GQB-ee-uqc" secondAttribute="trailing" id="E5Q-t5-X1i"/>
                             <constraint firstItem="VyN-HU-fRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G7S-It-p8r"/>
                             <constraint firstItem="z4A-BS-rvS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I8Y-0j-zQN"/>
-                            <constraint firstItem="VyN-HU-fRF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JCr-pA-IAj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="8QH-kX-Ewt" secondAttribute="bottom" constant="44" id="L06-Wd-YfI"/>
+                            <constraint firstItem="sV7-fn-EIV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LPz-ol-ABj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VyN-HU-fRF" secondAttribute="bottom" id="Lef-OD-cok"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z4A-BS-rvS" secondAttribute="bottom" id="NJY-Ur-O3f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sV7-fn-EIV" secondAttribute="trailing" id="Ptv-31-BLR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z4A-BS-rvS" secondAttribute="trailing" id="SeA-kL-1yx"/>
                             <constraint firstItem="8QH-kX-Ewt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wxa-uz-hbU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ga-6C-ofl" secondAttribute="bottom" id="hhP-n2-5tA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GQB-ee-uqc" secondAttribute="top" id="hww-KP-9mQ"/>
                             <constraint firstItem="z4A-BS-rvS" firstAttribute="leading" secondItem="0ga-6C-ofl" secondAttribute="trailing" id="sFq-i3-nhR"/>
                             <constraint firstItem="0ga-6C-ofl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="trx-LS-1ps"/>
+                            <constraint firstItem="sV7-fn-EIV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xfc-LG-1gr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VyN-HU-fRF" secondAttribute="trailing" id="ypT-Hm-fY8"/>
+                            <constraint firstItem="VyN-HU-fRF" firstAttribute="top" secondItem="sV7-fn-EIV" secondAttribute="bottom" id="zHu-9Q-0gY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -327,6 +353,8 @@
                         <outlet property="leftMenuTrailingConstraint" destination="1oI-iY-8aF" id="k7p-WH-kq3"/>
                         <outlet property="mapView" destination="Tm8-IA-jZd" id="jBV-qw-qZN"/>
                         <outlet property="menuBackground" destination="z4A-BS-rvS" id="Yka-hF-3Ae"/>
+                        <outlet property="noInternetLabel" destination="KxE-Cq-PPE" id="4JK-hD-kj0"/>
+                        <outlet property="noInternetView" destination="K52-Ww-FQD" id="9p3-b8-KP2"/>
                         <outlet property="slider" destination="GQB-ee-uqc" id="J36-1g-I2U"/>
                         <outlet property="sliderTopConstraint" destination="hww-KP-9mQ" id="gFt-LQ-Isi"/>
                     </connections>

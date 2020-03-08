@@ -13,6 +13,7 @@ import MapCache
 import HCMapInfoView
 import SafariServices
 import CoreLocation
+import Reachability
 
 class MapViewController: UIViewController {
     
@@ -31,6 +32,8 @@ class MapViewController: UIViewController {
     @IBOutlet weak var featureNameEnglish: UILabel!
     @IBOutlet weak var featureSeconsName: UILabel!
     @IBOutlet weak var featureDistrict: UILabel!
+    @IBOutlet weak var noInternetView: UIView!
+    @IBOutlet weak var noInternetLabel: UILabel!
     
     var tileRenderer: MKTileOverlayRenderer!
     private let cyprusCenter = CLLocationCoordinate2D(latitude: 34.997045, longitude: 33.190684)
@@ -52,9 +55,11 @@ class MapViewController: UIViewController {
     private var gravoures: [HCAnnotation] = []
     private var locationManager = CLLocationManager()
     private var currentLocation: CLLocation?
+    fileprivate let reachability = try? Reachability()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = LocaleHelper.shared.language == .greek ? "Xάρτης Kitchener" : "Kitchener Map"
+        setUpNoInternetView()
         setupTileRendererKitchener()
         setWMSLayer()
         setUpLocationManager()
@@ -64,7 +69,9 @@ class MapViewController: UIViewController {
         debugPrint(LayersHelper.shared.data.debugDescription)
         RepresentationHelper.shared.load()
     }
-    
+    private func setUpNoInternetView() {
+        noInternetLabel.text = LocaleHelper.shared.language == .greek ? "Δεν υπάρχει σύνδεση στο δίκτυο" : "No internet connection"
+    }
     private func setUpNavigationBar() {
         let isGreek = LocaleHelper.shared.language == .greek
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"),

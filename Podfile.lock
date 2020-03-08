@@ -6,6 +6,7 @@ PODS:
   - Kingfisher (5.7.1)
   - M13Checkbox (3.3.2)
   - MapCache (0.6.0)
+  - Reachability (3.2)
   - SwifterSwift (5.0.0):
     - SwifterSwift/AppKit (= 5.0.0)
     - SwifterSwift/CoreGraphics (= 5.0.0)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.7.0)
   - M13Checkbox
   - MapCache
+  - Reachability
   - SwifterSwift
 
 SPEC REPOS:
@@ -42,6 +44,7 @@ SPEC REPOS:
     - Kingfisher
     - M13Checkbox
     - MapCache
+    - Reachability
     - SwifterSwift
 
 SPEC CHECKSUMS:
@@ -51,8 +54,9 @@ SPEC CHECKSUMS:
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   M13Checkbox: d75dca81d61c9903e7f091f32b35a3254bc97dce
   MapCache: 8afa98ddc3539a384ba75b019284cded95aaccab
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
 
-PODFILE CHECKSUM: 36dc3430176d1183990ba6d38eb1f65cf520e43d
+PODFILE CHECKSUM: 9ece79bb4b8c4c725b9cbd15a8190853d8557272
 
 COCOAPODS: 1.6.1
