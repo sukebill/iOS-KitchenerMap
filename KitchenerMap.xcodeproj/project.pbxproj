@@ -31,6 +31,7 @@
 		334DCEE6225A086800043AAF /* KMSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334DCEE5225A086800043AAF /* KMSlider.swift */; };
 		3354E09B23EEF89400BBFDA4 /* MapLayersHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354E09A23EEF89400BBFDA4 /* MapLayersHeader.swift */; };
 		3354E09D23EEF91D00BBFDA4 /* MapLayersHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3354E09C23EEF91D00BBFDA4 /* MapLayersHeader.xib */; };
+		335D7DBE24181C35005E412C /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D7DBD24181C35005E412C /* UIView + Extensions.swift */; };
 		338575122258F9200047D467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338575112258F9200047D467 /* AppDelegate.swift */; };
 		338575142258F9200047D467 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338575132258F9200047D467 /* MapViewController.swift */; };
 		338575172258F9200047D467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338575152258F9200047D467 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		334DCEE5225A086800043AAF /* KMSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMSlider.swift; sourceTree = "<group>"; };
 		3354E09A23EEF89400BBFDA4 /* MapLayersHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayersHeader.swift; sourceTree = "<group>"; };
 		3354E09C23EEF91D00BBFDA4 /* MapLayersHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapLayersHeader.xib; sourceTree = "<group>"; };
+		335D7DBD24181C35005E412C /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		3385750E2258F9200047D467 /* KitchenerMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitchenerMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338575112258F9200047D467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338575132258F9200047D467 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				3306345A239413A500DD3857 /* Interactor.swift */,
 				3306345E239428F300DD3857 /* Router.swift */,
 				3318DB9523E8A66A00F48A23 /* RepresentationHelper.swift */,
+				335D7DBD24181C35005E412C /* UIView + Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -354,7 +357,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/MapCache/MapCache.framework",
-				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -392,6 +395,7 @@
 				33D894DA23BE240A00B95CF0 /* AboutViewController.swift in Sources */,
 				33390D05229948C40002B020 /* UserAnnotation.swift in Sources */,
 				334DCEDA2259E9E600043AAF /* KMTileRendererLocal.swift in Sources */,
+				335D7DBE24181C35005E412C /* UIView + Extensions.swift in Sources */,
 				33D894DC23BE2EB200B95CF0 /* TermsViewController.swift in Sources */,
 				3318DB9823E8B63800F48A23 /* GravouraView.swift in Sources */,
 				339A5F872381A53000C5E511 /* MapLayerTableViewCell.swift in Sources */,

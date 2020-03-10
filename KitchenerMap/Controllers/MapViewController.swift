@@ -56,7 +56,11 @@ class MapViewController: UIViewController {
     private var locationManager = CLLocationManager()
     private var currentLocation: CLLocation?
     fileprivate let reachability = try? Reachability()
-    override func viewDidLoad() {
+     deinit {
+           reachability?.stopNotifier()
+      
+       }
+           override func viewDidLoad() {
         super.viewDidLoad()
         title = LocaleHelper.shared.language == .greek ? "Xάρτης Kitchener" : "Kitchener Map"
         setUpNoInternetView()
@@ -69,9 +73,22 @@ class MapViewController: UIViewController {
         debugPrint(LayersHelper.shared.data.debugDescription)
         RepresentationHelper.shared.load()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        do{
+            try reachability?.startNotifier()
+        }catch{
+            print("could not start reachability notifier")
+        }
+    }
     private func setUpNoInternetView() {
         noInternetLabel.text = LocaleHelper.shared.language == .greek ? "Δεν υπάρχει σύνδεση στο δίκτυο" : "No internet connection"
-    }
+          reachability?.whenUnreachable = { [weak self] _ in
+            self?.noInternetView.isHiddenAnimated(value: false)
+              }
+              reachability?.whenReachable = { [weak self] _ in
+                  self?.noInternetView.isHiddenAnimated(value: true)
+              }    }
     private func setUpNavigationBar() {
         let isGreek = LocaleHelper.shared.language == .greek
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"),

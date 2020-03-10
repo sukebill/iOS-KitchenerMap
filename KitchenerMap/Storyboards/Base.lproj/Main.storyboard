@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sV7-fn-EIV">
-                                <rect key="frame" x="0.0" y="44" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="0.0"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K52-Ww-FQD">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K52-Ww-FQD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Δεν υπάρχει σύνδεση στο δίκτυο" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxE-Cq-PPE">
-                                                <rect key="frame" x="12" y="0.0" width="296" height="50"/>
+                                                <rect key="frame" x="12" y="0.0" width="296" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -40,10 +40,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-HU-fRF">
-                                <rect key="frame" x="0.0" y="94" width="320" height="474"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tm8-IA-jZd">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptw-rv-nry">
                                         <rect key="frame" x="12" y="12" width="27" height="26"/>
@@ -522,10 +522,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oj7-Y0-Tnc">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="714.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="863"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-ig-DXv">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="702.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="851"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBh-Kz-TSG">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
@@ -731,14 +731,14 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0K3-ff-KsS">
-                                                        <rect key="frame" x="0.0" y="549" width="240" height="91"/>
+                                                        <rect key="frame" x="0.0" y="549" width="240" height="182"/>
                                                         <state key="normal" image="silvia_Ιωαννου"/>
                                                         <connections>
                                                             <action selector="onSilviaTapped:" destination="dK6-lP-nun" eventType="touchUpInside" id="uqW-Do-BKb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNG-WE-9s5">
-                                                        <rect key="frame" x="0.0" y="645" width="240" height="57.5"/>
+                                                        <rect key="frame" x="0.0" y="736" width="240" height="115"/>
                                                         <state key="normal" image="Harokopio_University_Logo"/>
                                                         <connections>
                                                             <action selector="onHarokopioTapped:" destination="dK6-lP-nun" eventType="touchUpInside" id="4YY-QV-Nxn"/>
