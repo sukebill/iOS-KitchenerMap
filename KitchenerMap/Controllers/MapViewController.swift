@@ -241,7 +241,7 @@ class MapViewController: UIViewController {
         setWMSLayer()
         slider.resetToDefaultValue()
         self.reloadRenderers(1.0)
-        
+        featureWindow.isHidden = true
     }
     
     @objc private func toggleDrawer() {

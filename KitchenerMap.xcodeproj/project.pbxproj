@@ -43,8 +43,23 @@
 		33D894DE23BE313E00B95CF0 /* PolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D894DD23BE313E00B95CF0 /* PolicyViewController.swift */; };
 		33E4367A23EB4792005E9EFD /* GravouraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E4367923EB4792005E9EFD /* GravouraView.xib */; };
 		33F5926C235B10AF00B9EC64 /* WmsTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5926B235B10AF00B9EC64 /* WmsTileOverlay.swift */; };
-		BC18203C569CB12E2AD3CDF9 /* Pods_KitchenerMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F51E9658868A3D327C4AD5 /* Pods_KitchenerMap.framework */; };
+		33FF229B241CF470002D15F5 /* Pods_KitchenerMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F51E9658868A3D327C4AD5 /* Pods_KitchenerMap.framework */; };
+		33FF229C241CF470002D15F5 /* Pods_KitchenerMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7F51E9658868A3D327C4AD5 /* Pods_KitchenerMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		33FF229D241CF470002D15F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33FF229C241CF470002D15F5 /* Pods_KitchenerMap.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3306345823940D6700DD3857 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC18203C569CB12E2AD3CDF9 /* Pods_KitchenerMap.framework in Frameworks */,
+				33FF229B241CF470002D15F5 /* Pods_KitchenerMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +274,7 @@
 				3385750B2258F9200047D467 /* Frameworks */,
 				3385750C2258F9200047D467 /* Resources */,
 				9F158EE27908EBE101461763 /* [CP] Embed Pods Frameworks */,
+				33FF229D241CF470002D15F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -564,7 +580,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 58SQJD39H6;
+				DEVELOPMENT_TEAM = QPXTTVL944;
 				INFOPLIST_FILE = KitchenerMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,7 +604,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 58SQJD39H6;
+				DEVELOPMENT_TEAM = QPXTTVL944;
 				INFOPLIST_FILE = KitchenerMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
