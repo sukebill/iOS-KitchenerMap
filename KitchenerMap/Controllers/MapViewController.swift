@@ -212,7 +212,7 @@ class MapViewController: UIViewController {
     @objc private func clearFilters() {
         
         LayersHelper.shared.layers = []
-        
+        LayersHelper.shared.reloadLayers()
         if longPressMarker != nil {
             mapView.removeAnnotation(longPressMarker!)
             longPressMarker = nil

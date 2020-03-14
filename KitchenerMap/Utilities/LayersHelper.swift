@@ -36,6 +36,11 @@ class LayersHelper {
     }
     private let url = "https://gaia.hua.gr/kitchener_review/js/settings_web.json"
     private var header = ["X-Application-Request-Origin":"mobileSet=mobileAPIuser1&mobileSubSet=OesomEtaT"]
+    func reloadLayers() {
+                   guard let kitchenerMapLayer = self.data?.baseMapGroups.first?.layers.first else { return }
+                   self.layers.append(kitchenerMapLayer)
+               }
+    
     
     private init() {
         Alamofire.request(url, method: .get, headers: header).responseJSON { [weak self] response in
