@@ -56,11 +56,11 @@ class MapViewController: UIViewController {
     private var locationManager = CLLocationManager()
     private var currentLocation: CLLocation?
     fileprivate let reachability = try? Reachability()
-     deinit {
-           reachability?.stopNotifier()
-      
-       }
-           override func viewDidLoad() {
+    deinit {
+        reachability?.stopNotifier()
+        
+    }
+    override func viewDidLoad() {
         super.viewDidLoad()
         title = LocaleHelper.shared.language == .greek ? "Xάρτης Kitchener" : "Kitchener Map"
         setUpNoInternetView()
@@ -83,12 +83,15 @@ class MapViewController: UIViewController {
     }
     private func setUpNoInternetView() {
         noInternetLabel.text = LocaleHelper.shared.language == .greek ? "Δεν υπάρχει σύνδεση στο δίκτυο" : "No internet connection"
-          reachability?.whenUnreachable = { [weak self] _ in
+        reachability?.whenUnreachable = { [weak self] _ in
             self?.noInternetView.isHiddenAnimated(value: false)
-              }
-              reachability?.whenReachable = { [weak self] _ in
-                  self?.noInternetView.isHiddenAnimated(value: true)
-              }    }
+        }
+        reachability?.whenReachable = { [weak self] _ in
+            self?.noInternetView.isHiddenAnimated(value: true)
+        }
+        
+    }
+    
     private func setUpNavigationBar() {
         let isGreek = LocaleHelper.shared.language == .greek
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"),
@@ -140,7 +143,7 @@ class MapViewController: UIViewController {
         if let coor = mapView.userLocation.location?.coordinate{
             mapView.setCenter(coor, animated: true)
         }
-    
+        
     }
     private func setWMSLayer() {
         if mkOverlay != nil {
@@ -161,7 +164,7 @@ class MapViewController: UIViewController {
         mapView.setUserTrackingMode(.followWithHeading, animated: true)
         mapView.setRegion(region, animated: true)
     }
-
+    
     private func setupTileRendererKitchener() {
         var config = MapCacheConfig(withUrlTemplate: "https://gaia.hua.gr/tms/kitchener_review/{z}/{x}/{y}.jpg")
         config.cacheName = "Kitchener"
@@ -209,6 +212,7 @@ class MapViewController: UIViewController {
     @objc private func clearFilters() {
         
         LayersHelper.shared.layers = []
+        
         if longPressMarker != nil {
             mapView.removeAnnotation(longPressMarker!)
             longPressMarker = nil
@@ -373,16 +377,16 @@ extension MapViewController: MKMapViewDelegate {
             let region = MKCoordinateRegion(center: coordinate, span: span)
             mapView.setRegion(region, animated: true)
         }
-//        let isLatOutOfBounds = coordinate.latitude > cyprusNEBound.latitude || coordinate.latitude < cyprusSWBound.latitude
-//        let isLonOutOfBounds = coordinate.longitude > cyprusNEBound.latitude || coordinate.longitude < cyprusSWBound.longitude
-//        if isLatOutOfBounds {
-//            var region: MKCoordinateRegion
-//            if coordinate.latitude > cyprusNEBound.latitude {
-//                region = MKCoordinateRegion(center: cyprusNEBound, span: span)
-//            }
-//        } else if isLonOutOfBounds {
-//
-//        }
+        //        let isLatOutOfBounds = coordinate.latitude > cyprusNEBound.latitude || coordinate.latitude < cyprusSWBound.latitude
+        //        let isLonOutOfBounds = coordinate.longitude > cyprusNEBound.latitude || coordinate.longitude < cyprusSWBound.longitude
+        //        if isLatOutOfBounds {
+        //            var region: MKCoordinateRegion
+        //            if coordinate.latitude > cyprusNEBound.latitude {
+        //                region = MKCoordinateRegion(center: cyprusNEBound, span: span)
+        //            }
+        //        } else if isLonOutOfBounds {
+        //
+        //        }
     }
     
     private func showInfoWindow(feature: Feature) {
@@ -530,7 +534,7 @@ extension MapViewController: MenuDelegate {
                 CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lng)
             })
         }
-
+        
         if points.count > 1 {
             polyline = MKPolyline(coordinates: points)
             mapView.addOverlay(polyline!)

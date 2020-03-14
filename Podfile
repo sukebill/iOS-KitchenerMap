@@ -11,4 +11,7 @@ target 'KitchenerMap' do
   pod 'MapCache'
   pod 'HCMapInfoView'
   pod 'Kingfisher', '~> 5.7.0'
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
 end
