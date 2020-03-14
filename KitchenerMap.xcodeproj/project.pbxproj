@@ -564,13 +564,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QPXTTVL944;
+				DEVELOPMENT_TEAM = 58SQJD39H6;
 				INFOPLIST_FILE = KitchenerMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hua.KitchenerMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hua.KitchenerMapApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KitchenerMap/KitchenerMap-Bridging-Header.h";
@@ -588,13 +588,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QPXTTVL944;
+				DEVELOPMENT_TEAM = 58SQJD39H6;
 				INFOPLIST_FILE = KitchenerMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hua.KitchenerMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hua.KitchenerMapApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "KitchenerMap/KitchenerMap-Bridging-Header.h";
